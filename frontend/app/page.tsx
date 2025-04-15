@@ -1,13 +1,34 @@
 // app/page.tsx
+"use client";
+
 import Image from 'next/image';
 import { Github, Linkedin, Instagram, ArrowRight } from 'lucide-react'; // Certifique-se que ArrowRight está importado
 import About from './components/about';
 import Projects from './components/projects';
 import Contact from './components/contact';
+import { useEffect, useState } from 'react';
+import LoadingScreen from './components/loading-screen';
 
 export default function Home() {
+  const [showLoading, setShowLoading] = useState(true);
+
   const coverSrc = "/cover.png";     // Imagem para a seção de capa no topo
-  const profileSrc = "/profile.png";   // Sua imagem de perfil
+  const profileSrc = "/profile.png"; 
+    // Sua imagem de perfil
+  // useEffect para esconder o loading após um tempo
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoading(false);
+    }, 3000); // Tempo em milissegundos (2.5 segundos) - ajuste como desejar
+
+    // Limpa o timer se o componente for desmontado antes
+    return () => clearTimeout(timer);
+  }, []); // Array vazio garante que rode apenas uma vez no mount
+
+  // Renderiza a tela de loading OU o conteúdo principal
+  if (showLoading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <> {/* Fragmento para agrupar as seções */}
