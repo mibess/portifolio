@@ -164,48 +164,118 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto flex max-w-sm justify-center">
-            <div className="absolute -inset-12 -z-10 rounded-full bg-amber-200/40 blur-3xl dark:bg-amber-500/20" />
-            <div className="relative w-full rounded-3xl border border-white/60 bg-white/70 p-8 shadow-2xl shadow-amber-100/40 backdrop-blur-lg dark:border-white/10 dark:bg-slate-900/70">
-              <div className="absolute right-8 top-8 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-600 shadow-sm dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-200">
-                Disponível para novos desafios
-              </div>
-              <div className="flex flex-col items-center gap-6">
-                <div className="relative">
-                  <div className="absolute -inset-2 rounded-full bg-amber-200/60 blur-md dark:bg-amber-500/30" />
-                  <div className="relative overflow-hidden rounded-full border-4 border-white shadow-lg dark:border-slate-800">
-                    <Image
-                      src={profileSrc}
-                      alt="Foto de Claudemir Custódio"
-                      width={260}
-                      height={260}
-                      priority
-                      className="h-40 w-40 object-cover md:h-52 md:w-52"
-                    />
-                  </div>
-                </div>
+        </div>
+      </section>
 
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-slate-800 dark:text-slate-100">
-                    Tech Lead & Full Stack
-                  </p>
-                  <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-                    Focado em microsserviços Java, front-end moderno e cloud.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-200">
-                  <span className="rounded-full border border-amber-200/70 bg-amber-100/80 px-3 py-1 dark:border-amber-400/40 dark:bg-amber-400/10">
-                    Java & Spring Boot
-                  </span>
-                  <span className="rounded-full border border-amber-200/70 bg-amber-100/80 px-3 py-1 dark:border-amber-400/40 dark:bg-amber-400/10">
-                    Angular & React
-                  </span>
-                  <span className="rounded-full border border-amber-200/70 bg-amber-100/80 px-3 py-1 dark:border-amber-400/40 dark:bg-amber-400/10">
-                    Cloud & DevOps
-                  </span>
-                </div>
+      <section
+        aria-labelledby="professional-radar-title"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-24 text-white"
+      >
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(253,230,138,0.18),_transparent_55%)] opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,_rgba(15,23,42,0.65),_transparent_60%)]" />
+        <div className="container relative mx-auto grid gap-16 px-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
+          <div className="relative mx-auto max-w-sm">
+            <div className="absolute -inset-10 bg-amber-500/30 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 p-8 shadow-2xl shadow-amber-500/20 backdrop-blur-xl">
+              <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-white/15 shadow-2xl shadow-amber-500/40">
+                <Image
+                  src={profileSrc}
+                  alt="Foto de Claudemir Custódio"
+                  width={420}
+                  height={420}
+                  priority
+                  className="h-full w-full object-cover"
+                />
               </div>
+              <p className="mt-6 text-center text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">
+                Claudemir Custódio
+              </p>
+              <p className="mt-2 text-center text-xs text-slate-200/80">
+                Tech Lead · Full Stack · Community Builder
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
+                Radar profissional
+              </span>
+              <h2
+                id="professional-radar-title"
+                className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl"
+              >
+                Arquitetando produtos resilientes com impacto real
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200">
+                Unindo arquitetura escalável, observabilidade e uma visão holística de produto,
+                traduzo desafios complexos em plataformas confiáveis. Busco times que queiram acelerar
+                roadmap digital com autonomia técnica e foco em métricas de negócio.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-amber-100">
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Remoto-first
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Arquitetura evolutiva
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Liderança técnica
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Mentoria de equipes
+              </span>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Agora
+                </p>
+                <p className="mt-3 text-sm text-slate-100">
+                  Evoluo microsserviços críticos na indústria de energia, com observabilidade ponta a
+                  ponta e experiências ricas em Angular e React.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Próximo passo
+                </p>
+                <p className="mt-3 text-sm text-slate-100">
+                  Liderar iniciativas de modernização que combinem arquitetura sustentável, cultura
+                  DevOps e foco obsessivo em valor para o usuário.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10 sm:col-span-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Disponibilidade
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-100">
+                  <li>- Projetos imersivos e consultorias técnicas de curto a médio prazo.</li>
+                  <li>- Liderança hands-on de squads ou células de arquitetura.</li>
+                  <li>- Mentorias para evolução de times em práticas modernas de engenharia.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="mailto:c.silverio@live.com"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20 transition-all hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Vamos falar sobre o seu projeto
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
+              <a
+                href="/Profile.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
+              >
+                Baixar currículo
+                <Download className="h-4 w-4" aria-hidden />
+              </a>
             </div>
           </div>
         </div>
