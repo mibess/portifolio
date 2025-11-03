@@ -91,21 +91,19 @@ export default function Home() {
           <div className="space-y-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
               <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
-              Criando experiências digitais memoráveis
+              Apaixonado por criar coisas novas e aprender constantemente
             </span>
 
             <div className="space-y-6">
               <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
                 Olá, eu sou Claudemir Custódio.
-                <span className="block text-transparent bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text dark:from-amber-400 dark:to-amber-200">
+                <div className="block text-transparent bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text dark:from-amber-400 dark:to-amber-200">
                   Desenvolvedor Full Stack.
-                </span>
+                </div>
               </h1>
               <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
-                Especialista em Java, Spring Boot, Angular e React, unindo arquitetura
-                limpa, testes automatizados e observabilidade para entregar plataformas
-                web resilientes. Movido por desafios complexos e por liderar iniciativas
-                que aceleram negócios.
+                Sou um desenvolvedor Full Stack experiente em Java, HTML, CSS e Javascript.
+                Além disso utilizo frameworks como Spring Boot, Primefaces, Angular, ReactJS. Sou movido por desafios complexos.
               </p>
             </div>
 
@@ -177,7 +175,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-sm">
             <div className="absolute -inset-10 bg-amber-500/30 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 p-8 shadow-2xl shadow-amber-500/20 backdrop-blur-xl">
-              <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-white/15 shadow-2xl shadow-amber-500/40">
+              <div className="relative w-full overflow-hidden">
                 <Image
                   src={profileSrc}
                   alt="Foto de Claudemir Custódio"
@@ -191,7 +189,7 @@ export default function Home() {
                 Claudemir Custódio
               </p>
               <p className="mt-2 text-center text-xs text-slate-200/80">
-                Tech Lead · Full Stack · Community Builder
+                Desenvolvedor · FullStack · JAVA
               </p>
             </div>
           </div>

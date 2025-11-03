@@ -4,23 +4,34 @@ import React from "react";
 
 const timeline = [
   {
-    role: "Desenvolvedor Full Stack Java",
-    company: "CCEE · alocado pela AMCom",
-    period: "2022 — atual",
+    role: "Desenvolvedor de Sistemas",
+    company: "AMcom · Squad CCEE",
+    period: "jan 2024 — atual",
     details: [
-      "Evoluo microsserviços críticos com Java, Spring Boot, mensageria e observabilidade completa.",
-      "Desenho e desenvolvo experiências em Angular e React focadas na jornada do usuário.",
-      "Lidero iniciativas de performance, qualidade e governança técnica com equipes multidisciplinares.",
+      "Desenvolvo novas funcionalidades e mantenho microsserviços críticos da CCEE usando Java, Spring Boot e banco Oracle.",
+      "Construo interfaces Angular com foco em desempenho e consistência da experiência do usuário.",
+      "Atuo com Git (GitHub/Bitbucket), Jira e práticas ágeis para garantir cadência e qualidade das entregas.",
     ],
   },
   {
     role: "Desenvolvedor Full Stack Java",
     company: "Rtools Desenvolvimento de Sistemas",
-    period: "2008 — 2022",
+    period: "jan 2010 — set 2023",
     details: [
-      "Conduzi modernização de módulos complexos, integrações bancárias e PIX.",
-      "Implementei arquitetura baseada em microserviços, CI/CD e monitoramento em AWS.",
-      "Atuei em todas as fases do produto: discovery, desenvolvimento, deploy e suporte.",
+      "Liderei soluções web para sindicatos e associações, cobrindo módulos de arrecadação, financeiro e social.",
+      "Implementei integrações bancárias (Itaú, BB, Santander, Bradesco, Caixa) e pagamentos via PIX.",
+      "Projetei microserviços para controle de acesso com cartão e biometria, aplicando as melhores práticas de desenvolvimento.",
+      "Migrei workloads para AWS EC2 com Docker, estruturando pipelines CI/CD e observabilidade contínua.",
+      "Produzi relatórios avançados com Jasper Reports e mantive bases PostgreSQL e MySQL.",
+    ],
+  },
+  {
+    role: "Instrutor de Informática",
+    company: "Master Company Informática",
+    period: "jan 2009 — dez 2009",
+    details: [
+      "Ministrei aulas de Photoshop, CorelDraw e Microsoft Office para turmas com diferentes níveis de conhecimento.",
+      "Desenvolvi materiais didáticos personalizados e apoiei projetos de design gráfico da escola.",
     ],
   },
 ];
