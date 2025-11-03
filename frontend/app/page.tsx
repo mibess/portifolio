@@ -33,6 +33,10 @@ export default function Home() {
 
   return (
     <> {/* Fragmento para agrupar as seções */}
+    
+      {/* Primeiro o stories com os projetos e depois restante do conteúdo da página */}
+      <ProjectStories />
+
       {/* === Seção da Imagem de Capa === */}
       <section id="cover" className="w-full h-30 md:h-40 lg:h-40 relative"> {/* Defina a altura desejada para a capa */}
         <Image
@@ -136,8 +140,7 @@ export default function Home() {
           </div>{/* Fim Coluna Texto */}
       </section>{/* Fim Container */}
 
-      {/* O restante do conteúdo da página (Sobre, Projetos, etc.) virá aqui abaixo */}
-      <ProjectStories />
+
 
       <section className="container mx-auto">
          

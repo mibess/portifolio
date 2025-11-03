@@ -39,10 +39,10 @@ export default function ProjectStories() {
   return (
     <section
       aria-labelledby="project-stories-title"
-      className="w-full border-y border-slate-200/60 dark:border-slate-800/80 bg-slate-900/5 dark:bg-slate-50/5 py-10"
+      className="w-full dark:border-slate-800/80 bg-slate-900/5 dark:bg-slate-50/5 py-10"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-amber-500/80 font-semibold">
               Destaques
@@ -59,7 +59,7 @@ export default function ProjectStories() {
             <button
               type="button"
               onClick={() => handleScroll("left")}
-              className="rounded-full border border-slate-300/50 dark:border-slate-700/50 p-2 text-slate-600 hover:text-amber-500 hover:border-amber-400/80 transition-colors"
+              className="rounded-full border border-slate-300/50 dark:border-slate-700/50 p-2 text-slate-600 hover:text-amber-500 hover:border-amber-400/80 transition-colors cursor-pointer"
               aria-label="Ver projetos anteriores"
             >
               <ChevronLeft className="w-5 h-5" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function ProjectStories() {
             <button
               type="button"
               onClick={() => handleScroll("right")}
-              className="rounded-full border border-slate-300/50 dark:border-slate-700/50 p-2 text-slate-600 hover:text-amber-500 hover:border-amber-400/80 transition-colors"
+              className="rounded-full border border-slate-300/50 dark:border-slate-700/50 p-2 text-slate-600 hover:text-amber-500 hover:border-amber-400/80 transition-colors cursor-pointer"
               aria-label="Ver próximos projetos"
             >
               <ChevronRight className="w-5 h-5" aria-hidden="true" />
@@ -76,12 +76,12 @@ export default function ProjectStories() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-900/5 via-slate-900/0 to-transparent dark:from-slate-900/70" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-900/5 via-slate-900/0 to-transparent dark:from-slate-900/70" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16" />
 
           <div
             ref={scrollContainerRef}
-            className="flex items-stretch gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700"
+            className="flex items-stretch gap-6 overflow-x-hidden py-6 snap-x snap-mandatory"
           >
             {projectsData.map((project) => {
               const primaryLink = getPrimaryLink(project);
@@ -92,7 +92,7 @@ export default function ProjectStories() {
                   href={primaryLink.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex w-48 shrink-0 snap-start flex-col items-center gap-3 rounded-3xl border border-slate-200/80 bg-white/70 p-4 text-center shadow-[0_12px_30px_-15px_rgba(15,23,42,0.35)] transition-all hover:-translate-y-1 hover:border-amber-400/80 hover:shadow-[0_18px_40px_-18px_rgba(245,158,11,0.45)] dark:border-slate-700/70 dark:bg-slate-900/60"
+                  className="group relative flex w-48 shrink-0 snap-start flex-col items-center gap-3 rounded-3xl border border-slate-200/80 bg-white/70 p-4 text-center transition-all hover:-translate-y-1 hover:border-amber-400/80 dark:border-slate-700/70 dark:bg-slate-900/60"
                 >
                   <span className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/5 via-transparent to-amber-600/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -126,7 +126,7 @@ export default function ProjectStories() {
             <button
               type="button"
               onClick={() => handleScroll("left")}
-              className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-amber-500"
+              className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-amber-500 cursor-pointer"
               aria-label="Ver projetos anteriores"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function ProjectStories() {
             <button
               type="button"
               onClick={() => handleScroll("right")}
-              className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-amber-500"
+              className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-amber-500 cursor-pointer"
               aria-label="Ver próximos projetos"
             >
               Próximo

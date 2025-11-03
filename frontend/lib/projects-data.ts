@@ -9,10 +9,29 @@ export interface ProjectInfo {
 
 export const projectsData: ProjectInfo[] = [
   {
+    title: "Plataforma EAD",
+    description:
+      "Projeto completo com Angular e Spring Boot. Baseado na arquitetura de micro serviços esse projeto é uma plataforma de cursos online com funcionalidades como autenticação, gerenciamento de cursos, aulas em vídeo e painel administrativo.",
+    imageUrl: "/logo-ead-plataform.png",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "PostgreSQL",
+      "Microserviços",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "AWS",
+    ],
+    githubUrl: "https://github.com/mibess/ead",
+    demoUrl: "https://ead.mibess.com.br",
+  },
+  {
     title: "Sistema de Login",
     description:
-      "Sistema de Login completo utilizando Spring Boot Google Auth e Keycloak",
-    imageUrl: "/login-api.png",
+      "Sistema de Login completo utilizando Spring Boot, Google Auth e Keycloak",
+    imageUrl: "/logo-auth-system.png",
     tags: [
       "Java",
       "Spring Boot",
@@ -28,10 +47,10 @@ export const projectsData: ProjectInfo[] = [
     demoUrl: "#",
   },
   {
-    title: "Banco de Sangue - Sistema de Processamento de Dados",
+    title: "Banco de Sangue",
     description:
-      "Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
-    imageUrl: "/citel-api.png",
+      "Sistema de Processamento de Dados - Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
+    imageUrl: "/logo-banco-de-sangue.png",
     tags: [
       "Java",
       "Spring Boot",
@@ -42,13 +61,13 @@ export const projectsData: ProjectInfo[] = [
       "GitHub Actions",
     ],
     githubUrl: "https://github.com/mibess/agencia-citel",
-    demoUrl: null,
+    demoUrl: "https://citel.mibess.com.br",
   },
   {
     title: "Criador de Cards",
     description:
       "Com essa aplicação podemos listar, cadastrar, editar e excluir um card de pensamento.",
-    imageUrl: "/chat-api.png",
+    imageUrl: "/logo-cards.png",
     tags: [
       "Angular",
       "Java",
@@ -62,5 +81,24 @@ export const projectsData: ProjectInfo[] = [
     ],
     githubUrl: "https://github.com/mibess/cards-ms",
     demoUrl: "https://cards.mibess.com.br/list-idea",
+  },  
+  {
+    title: "Gerenciador de Senhas",
+    description:
+      "Com essa aplicação podemos armazenar e gerenciar senhas pessoais",
+    imageUrl: "/logo-secrets.png",
+    tags: [
+      "Angular",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "TailwindCSS",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "AWS EC2",
+    ],
+    githubUrl: "https://github.com/mibess/secrets",
+    demoUrl: "https://secrets.mibess.com.br",
   },
 ];
