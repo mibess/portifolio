@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Github, Linkedin, Instagram, ArrowRight } from 'lucide-react'; // Certifique-se que ArrowRight está importado
 import About from './components/about';
 import Projects from './components/projects';
+import ProjectStories from './components/project-stories';
 import Contact from './components/contact';
 import { useEffect, useState } from 'react';
 import LoadingScreen from './components/loading-screen';
@@ -136,6 +137,8 @@ export default function Home() {
       </section>{/* Fim Container */}
 
       {/* O restante do conteúdo da página (Sobre, Projetos, etc.) virá aqui abaixo */}
+      <ProjectStories />
+
       <section className="container mx-auto">
          
         <About />
