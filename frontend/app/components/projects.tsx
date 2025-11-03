@@ -2,37 +2,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { Github, ExternalLink } from 'lucide-react'; // Importar ícones
-
-// Dados dos projetos (Placeholder) - Edite ou adicione seus projetos aqui
-const projectsData = [
-  {
-    title: "Sistema de Login",
-    description: "Sistema de Login completo utilizando Spring Boot Google Auth e Keycloak",
-    imageUrl: "/login-api.png", // Placeholder image
-    tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Keycloak', 'Docker', 'CI/CD', 'GitHub Actions', 'AWS'],
-    githubUrl: "https://github.com/mibess/auth",
-    demoUrl: "#" // Link para demo, se houver
-  },
-  {
-    title: "Banco de Sangue - Sistema de Processamento de Dados",
-    description: "Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
-    imageUrl: "/citel-api.png", // Placeholder image
-    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'AWS', 'Docker', 'CI/CD', 'GitHub Actions'],
-    githubUrl: "https://github.com/mibess/agencia-citel",
-    demoUrl: null // Sem link de demo para este
-  },
-  {
-    title: "Criador de Cards",
-    description: "Com essa aplicação podemos listar, cadastrar, editar e excluir um card de pensamento.",
-    imageUrl: "/chat-api.png", // Placeholder image
-    tags: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'TailwindCSS', 'Docker', 'CI/CD', 'GitHub Actions', 'AWS EC2'],
-    githubUrl: "https://github.com/mibess/cards-ms",
-    demoUrl: "https://cards.mibess.com.br/list-idea"
-  },
-];
+import { projectsData } from '@/lib/projects-data';
 
 // Componente do Card do Projeto (Opcional, mas organiza o código)
-const ProjectCard = ({ project }: { project: typeof projectsData[0] }) => (
+const ProjectCard = ({ project }: { project: (typeof projectsData)[number] }) => (
   <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700 flex flex-col h-full transform transition duration-300 hover:scale-[1.02] hover:shadow-xl">
     <div className="relative w-full h-48">
       <Image
