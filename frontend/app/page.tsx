@@ -38,7 +38,7 @@ export default function Home() {
   const stats = [
     {
       value: "18+",
-      label: "anos construindo soluções digitais robustas",
+      label: "anos construindo e aprendendo sobre tecnologia",
     },
     {
       value: "40+",
@@ -283,7 +283,7 @@ export default function Home() {
 
       <ProjectStories />
 
-      <section className="container mx-auto">
+      <section className="mx-auto">
         <About />
         <Projects />
         <Contact />
