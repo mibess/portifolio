@@ -37,16 +37,16 @@ export default function Home() {
 
   const stats = [
     {
-      value: "18+",
-      label: "anos construindo e aprendendo sobre tecnologia",
+      value: "14 anos",
+      label: "de experiência com Java, HTML, CSS e JavaScript em ambientes de missão crítica",
     },
     {
-      value: "40+",
-      label: "projetos entregues com foco em performance e UX",
+      value: "12 anos",
+      label: "orquestrando integrações bancárias e relatórios com Jasper Reports",
     },
     {
-      value: "100%",
-      label: "dedicação a boas práticas, testes e observabilidade",
+      value: "3 anos",
+      label: "guiando migração para AWS EC2 com Docker e pipelines CI/CD",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="space-y-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
               <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
-              Apaixonado por criar coisas novas e aprender constantemente
+              Java · Spring Boot · Angular · Integrações bancárias
             </span>
 
             <div className="space-y-6">
@@ -102,8 +102,10 @@ export default function Home() {
                 </div>
               </h1>
               <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
-                Sou um desenvolvedor Full Stack experiente em Java, HTML, CSS e Javascript.
-                Além disso utilizo frameworks como Spring Boot, Primefaces, Angular, ReactJS. Sou movido por desafios complexos.
+                Desenvolvedor Full Stack com foco em microsserviços Java e front-ends modernos.
+                Hoje, na AMcom, fortaleço os sistemas da CCEE com Spring Boot, Oracle e Angular.
+                Por 13 anos na Rtools entreguei módulos financeiros, integrações bancárias e PIX para
+                sindicatos e associações usando Primefaces, React e Jasper Reports.
               </p>
             </div>
 
@@ -203,27 +205,28 @@ export default function Home() {
                 id="professional-radar-title"
                 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl"
               >
-                Arquitetando produtos resilientes com impacto real
+                Fortalecendo microsserviços Java e plataformas web
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200">
-                Unindo arquitetura escalável, observabilidade e uma visão holística de produto,
-                traduzo desafios complexos em plataformas confiáveis. Busco times que queiram acelerar
-                roadmap digital com autonomia técnica e foco em métricas de negócio.
+                Na AMcom, alocado à CCEE, evoluo microsserviços críticos com Java, Spring Boot e Oracle,
+                além de interfaces Angular voltadas à performance. Foram 13 anos na Rtools entregando
+                soluções completas para sindicatos e associações, com integrações bancárias, PIX e módulos
+                financeiros. Atuo conectando backend sólido, front-end responsivo e entrega contínua confiável.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-amber-100">
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Remoto-first
+                Java & Spring Boot
               </span>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Arquitetura evolutiva
+                Angular & React
               </span>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Liderança técnica
+                Integrações bancárias
               </span>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Mentoria de equipes
+                CI/CD & AWS
               </span>
             </div>
 
@@ -233,8 +236,8 @@ export default function Home() {
                   Agora
                 </p>
                 <p className="mt-3 text-sm text-slate-100">
-                  Evoluo microsserviços críticos na indústria de energia, com observabilidade ponta a
-                  ponta e experiências ricas em Angular e React.
+                  Entregando novas funcionalidades e otimizações nos microsserviços da CCEE, com Java,
+                  Spring Boot, Oracle e Angular alinhados às rotinas regulatórias do setor elétrico.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
@@ -242,8 +245,8 @@ export default function Home() {
                   Próximo passo
                 </p>
                 <p className="mt-3 text-sm text-slate-100">
-                  Liderar iniciativas de modernização que combinem arquitetura sustentável, cultura
-                  DevOps e foco obsessivo em valor para o usuário.
+                  Acelerar roadmaps que precisem de microsserviços Java robustos, front-ends modernos e
+                  governança CI/CD para escala e observabilidade.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10 sm:col-span-2">
@@ -251,9 +254,9 @@ export default function Home() {
                   Disponibilidade
                 </p>
                 <ul className="mt-3 space-y-2 text-sm text-slate-100">
-                  <li>- Projetos imersivos e consultorias técnicas de curto a médio prazo.</li>
-                  <li>- Liderança hands-on de squads ou células de arquitetura.</li>
-                  <li>- Mentorias para evolução de times em práticas modernas de engenharia.</li>
+                  <li>- Evolução de microsserviços Java/Spring Boot e camadas web com Angular ou React.</li>
+                  <li>- Consultorias em integrações bancárias, cobrança automática e PIX.</li>
+                  <li>- Migrações para AWS EC2 com Docker, Git e pipelines de integração contínua.</li>
                 </ul>
               </div>
             </div>
