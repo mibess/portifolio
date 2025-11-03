@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { ThemeSwitcher } from "./theme-switcher";
 
 export default function Header() {
@@ -46,6 +48,23 @@ export default function Header() {
           </a>
 
           <div className="hidden h-6 w-px bg-amber-200 dark:bg-amber-900/50 md:block" />
+
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="border-amber-200 bg-amber-50/60 text-amber-900 hover:bg-amber-100 dark:border-amber-900/40 dark:bg-slate-950/40 dark:text-amber-100 dark:hover:bg-slate-900/60"
+          >
+            <a
+              href="/Profile.pdf"
+              download
+              aria-label="Baixar currículo em PDF"
+              className="flex items-center gap-2"
+            >
+              <Download className="size-4" aria-hidden="true" />
+              <span>Baixar currículo</span>
+            </a>
+          </Button>
 
           <ThemeSwitcher />
         </div>
