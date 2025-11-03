@@ -1,33 +1,53 @@
-import React from 'react';
-import { ThemeSwitcher } from './theme-switcher';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export default function Header() {
   return (
-    <header className="py-4 shadow-md sticky top-0 z-50 opacity-90 backdrop-blur transition-all duration-300 bg-white dark:bg-slate-900">
-      <nav className="container mx-auto px-4 flex justify-between items-center">
-      <div>
-          {/* Usar Link para a home page */}
-          <Link href="/" className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
-            Mibess
-          </Link>
-        </div>
-        <div className="flex items-center space-x-4 md:space-x-6"> {/* Aumentado espaço em telas maiores */}
-          {/* Links de Navegação */}
-          <a href="#sobre" className="text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+    <header className="sticky top-0 z-50 border-b border-amber-200/60 dark:border-amber-900/30 bg-gradient-to-r from-amber-50/95 via-white/95 to-amber-100/80 dark:from-slate-950/90 dark:via-slate-900/90 dark:to-slate-950/90 backdrop-blur shadow-sm transition-all duration-300">
+      <nav className="container mx-auto flex items-center justify-between px-4 py-4">
+        <Link href="/" className="flex items-center gap-2" aria-label="Ir para a página inicial">
+          <Image
+            src="/logos/5 - horizontal.png"
+            alt="Logo Mibess em modo claro"
+            width={1000}
+            height={1000}
+            className="h-8 w-auto transition-opacity duration-300 dark:hidden"
+            priority
+          />
+          <Image
+            src="/logos/6 - horizontal.png"
+            alt="Logo Mibess em modo escuro"
+            width={1000}
+            height={1000}
+            className="hidden h-8 w-auto transition-opacity duration-300 dark:block"
+            priority
+          />
+        </Link>
+        <div className="flex items-center space-x-4 md:space-x-6">
+          <a
+            href="#sobre"
+            className="text-sm font-medium text-amber-900 transition-colors hover:text-amber-600 dark:text-amber-100 dark:hover:text-amber-300"
+          >
             Sobre
           </a>
-          <a href="#projetos" className="text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          <a
+            href="#projetos"
+            className="text-sm font-medium text-amber-900 transition-colors hover:text-amber-600 dark:text-amber-100 dark:hover:text-amber-300"
+          >
             Projetos
           </a>
-          <a href="#contato" className="text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          <a
+            href="#contato"
+            className="text-sm font-medium text-amber-900 transition-colors hover:text-amber-600 dark:text-amber-100 dark:hover:text-amber-300"
+          >
             Contato
           </a>
 
-          {/* Separador visual opcional */}
-          <div className="h-6 w-px bg-slate-300 dark:bg-slate-600 hidden md:block"></div>
+          <div className="hidden h-6 w-px bg-amber-200 dark:bg-amber-900/50 md:block" />
 
-          <ThemeSwitcher /> {/* Botão de tema */}
+          <ThemeSwitcher />
         </div>
       </nav>
     </header>
