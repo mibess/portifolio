@@ -51,7 +51,7 @@ export default function ProjectStories() {
               id="project-stories-title"
               className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-100"
             >
-              Projetos em foco
+              Projetos públicos
             </h2>
           </div>
 

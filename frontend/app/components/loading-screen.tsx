@@ -19,11 +19,6 @@ export default function LoadingScreen() {
           priority // Carregar logo com prioridade
         />
       </div>
-
-      {/* Texto Carregando */}
-      <p className="text-lg font-bold text-amber-600 dark:text-amber-400 animate-pulse">
-        Carregando...
-      </p>
     </div>
   );
 }
