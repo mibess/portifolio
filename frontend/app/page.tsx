@@ -38,7 +38,7 @@ export default function Home() {
   const stats = [
     {
       value: "14 anos",
-      label: "de experiência com Java, HTML, CSS e JavaScript em ambientes de missão crítica",
+      label: "de experiência com Java, HTML, CSS e JavaScript",
     },
     {
       value: "12 anos",
@@ -70,9 +70,12 @@ export default function Home() {
 
   return (
     <>
+
+      <ProjectStories />
+
       <section
         id="inicio"
-        className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-slate-100 py-24 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100"
+        className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-slate-100 py-12 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100"
       >
         <div className="absolute inset-0 -z-20">
           <Image
@@ -87,11 +90,11 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(252,211,77,0.25),_transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(253,230,138,0.15),_transparent_55%)]" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-white/80 via-transparent to-amber-100/40 dark:from-slate-950/80 dark:via-slate-900/40 dark:to-amber-500/10 backdrop-blur-[2px]" />
 
-        <div className="container relative mx-auto grid gap-16 px-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] lg:items-center">
+        <div className="container relative mx-auto px-4">
           <div className="space-y-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
               <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
-              Java · Spring Boot · Angular · Integrações bancárias
+              Java · Spring Boot · Angular · CI/CD · Inteligência Artificial
             </span>
 
             <div className="space-y-6">
@@ -102,10 +105,8 @@ export default function Home() {
                 </div>
               </h1>
               <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
-                Desenvolvedor Full Stack com foco em microsserviços Java e front-ends modernos.
-                Hoje, na AMcom, fortaleço os sistemas da CCEE com Spring Boot, Oracle e Angular.
-                Por 13 anos na Rtools entreguei módulos financeiros, integrações bancárias e PIX para
-                sindicatos e associações usando Primefaces, React e Jasper Reports.
+                Com foco em microsserviços Java e frontends modernos.
+                Hoje fortaleço os sistemas de clientes com Spring Boot, Angular e Oracle.
               </p>
             </div>
 
@@ -123,7 +124,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/80 px-6 py-3 text-sm font-semibold text-amber-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 dark:border-amber-500/40 dark:bg-transparent dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-amber-400/10"
               >
                 <Download className="h-4 w-4" aria-hidden />
-                Baixar currículo
+                Baixar Currículo
               </a>
             </div>
 
@@ -209,9 +210,9 @@ export default function Home() {
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200">
                 Na AMcom, alocado à CCEE, evoluo microsserviços críticos com Java, Spring Boot e Oracle,
-                além de interfaces Angular voltadas à performance. Foram 13 anos na Rtools entregando
+                além de interfaces Angular voltadas à performance. Foram 13 anos entregando
                 soluções completas para sindicatos e associações, com integrações bancárias, PIX e módulos
-                financeiros. Atuo conectando backend sólido, front-end responsivo e entrega contínua confiável.
+                financeiros. Atuo conectando backend, frontend responsivo e entrega contínua confiável.
               </p>
             </div>
 
@@ -223,10 +224,13 @@ export default function Home() {
                 Angular & React
               </span>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Integrações bancárias
+                Integrações
               </span>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
                 CI/CD & AWS
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Inteligência Artificial
               </span>
             </div>
 
@@ -236,19 +240,21 @@ export default function Home() {
                   Agora
                 </p>
                 <p className="mt-3 text-sm text-slate-100">
-                  Entregando novas funcionalidades e otimizações nos microsserviços da CCEE, com Java,
+                  Entregando novas funcionalidades e otimizações em microsserviços da CCEE, com Java,
                   Spring Boot, Oracle e Angular alinhados às rotinas regulatórias do setor elétrico.
                 </p>
               </div>
+              
               <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
                 <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
                   Próximo passo
                 </p>
                 <p className="mt-3 text-sm text-slate-100">
-                  Acelerar roadmaps que precisem de microsserviços Java robustos, front-ends modernos e
+                  Se tornar especialista e acelerar roadmaps que precisem de microsserviços robustos, frontends modernos e
                   governança CI/CD para escala e observabilidade.
                 </p>
               </div>
+
               <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10 sm:col-span-2">
                 <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
                   Disponibilidade
@@ -281,8 +287,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <ProjectStories />
 
       <section className="mx-auto">
         <About />

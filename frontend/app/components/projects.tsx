@@ -93,9 +93,7 @@ export default function Projects() {
             Projetos em destaque
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-            Seleção de produtos digitais onde atuei ponta a ponta — da concepção
-            ao monitoramento, sempre com atenção à performance, acessibilidade e
-            métricas de negócio.
+            Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento full-stack, arquitetura de microsserviços e soluções escaláveis.
           </p>
         </div>
 

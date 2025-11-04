@@ -58,8 +58,7 @@ export default function Contact() {
             Vamos construir algo impactante
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-            Aberto a novas oportunidades, projetos sob demanda e parcerias de
-            longo prazo. Escolha o canal que preferir e vamos conversar.
+            Aberto a novas oportunidades, e parcerias de longo prazo. Escolha o canal que preferir e vamos conversar.
           </p>
         </div>
 

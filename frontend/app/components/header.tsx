@@ -62,7 +62,7 @@ export default function Header() {
               className="flex items-center gap-2"
             >
               <Download className="size-4" aria-hidden="true" />
-              <span>Baixar currículo</span>
+              <span>Currículo</span>
             </a>
           </Button>
 

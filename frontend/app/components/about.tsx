@@ -50,7 +50,7 @@ const focusAreas = [
   {
     title: "DevOps & Cloud",
     description:
-      "CI/CD, Docker, pipelines automatizados e ambientes seguros em AWS e Azure.",
+      "CI/CD, Docker, pipelines automatizados e ambientes seguros em AWS ou VPS.",
   },
 ];
 
@@ -63,19 +63,19 @@ const skills = [
   "JavaScript",
   "HTML",
   "CSS",
+  "JSF",
   "Primefaces",
   "PostgreSQL",
   "MySQL",
   "Oracle",
   "Docker",
-  "AWS EC2",
+  "AWS",
   "CI/CD",
   "Git",
   "RabbitMQ",
   "Jasper Reports",
   "Integrações Bancárias",
   "Microservices",
-  "Clean Architecture",
   "Bitbucket",
   "Delphi",
 ];
@@ -96,9 +96,7 @@ export default function About() {
             Muito além de linhas de código
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
-            Tenho trajetória sólida entregando produtos digitais escaláveis para
-            setores regulados e ambientes de missão crítica. Minha abordagem une
-            estratégia, engenharia e empatia com as pessoas que usam o produto.
+            Tenho uma trajetória sólida na entrega de produtos digitais que unem desempenho, confiabilidade e impacto real. Atuo com foco em criar soluções escaláveis, especialmente em ambientes complexos e de alta responsabilidade. Minha abordagem combina estratégia, tecnologia e empatia — sempre com atenção às pessoas que usam o produto.
           </p>
         </div>
 

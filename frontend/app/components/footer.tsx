@@ -5,7 +5,7 @@ import { Github, Linkedin, Instagram } from 'lucide-react'; // Ícones
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-slate-200 dark:bg-slate-900 py-8 mt-16"> {/* Ajuste padding/margem */}
+    <footer className="dark:bg-slate-900 py-8 mt-16"> {/* Ajuste padding/margem */}
       <div className="container mx-auto px-4 text-center text-slate-600 dark:text-slate-400">
 
         {/* Links Sociais */}
