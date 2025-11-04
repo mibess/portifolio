@@ -11,11 +11,19 @@ export default function Header() {
       <nav className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2" aria-label="Ir para a página inicial">
           <Image
+            src="/logo.png"
+            alt="Logo Mibess"
+            width={1000}
+            height={1000}
+            className="h-8 w-auto transition-opacity duration-300 sm:hidden"
+            priority
+          />
+          <Image
             src="/logos/5 - horizontal.png"
             alt="Logo Mibess em modo claro"
             width={1000}
             height={1000}
-            className="h-8 w-auto transition-opacity duration-300 dark:hidden"
+            className="hidden h-8 w-auto transition-opacity duration-300 sm:block dark:sm:hidden"
             priority
           />
           <Image
@@ -23,7 +31,7 @@ export default function Header() {
             alt="Logo Mibess em modo escuro"
             width={1000}
             height={1000}
-            className="hidden h-8 w-auto transition-opacity duration-300 dark:block"
+            className="hidden h-8 w-auto transition-opacity duration-300 dark:sm:block"
             priority
           />
         </Link>
