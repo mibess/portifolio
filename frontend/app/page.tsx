@@ -1,156 +1,298 @@
 // app/page.tsx
 "use client";
 
-import Image from 'next/image';
-import { Github, Linkedin, Instagram, ArrowRight } from 'lucide-react'; // Certifique-se que ArrowRight está importado
-import About from './components/about';
-import Projects from './components/projects';
-import ProjectStories from './components/project-stories';
-import Contact from './components/contact';
-import { useEffect, useState } from 'react';
-import LoadingScreen from './components/loading-screen';
+import Image from "next/image";
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  ArrowRight,
+  Download,
+  Sparkles,
+} from "lucide-react";
+import About from "./components/about";
+import Projects from "./components/projects";
+import ProjectStories from "./components/project-stories";
+import Contact from "./components/contact";
+import { useEffect, useState } from "react";
+import LoadingScreen from "./components/loading-screen";
 
 export default function Home() {
   const [showLoading, setShowLoading] = useState(true);
 
-  const coverSrc = "/cover.png";     // Imagem para a seção de capa no topo
-  const profileSrc = "/profile.png"; 
-    // Sua imagem de perfil
-  // useEffect para esconder o loading após um tempo
+  const coverSrc = "/cover.png";
+  const profileSrc = "/profile.png";
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoading(false);
-    }, 3000); // Tempo em milissegundos (2.5 segundos) - ajuste como desejar
+    }, 3000);
 
-    // Limpa o timer se o componente for desmontado antes
     return () => clearTimeout(timer);
-  }, []); // Array vazio garante que rode apenas uma vez no mount
+  }, []);
 
-  // Renderiza a tela de loading OU o conteúdo principal
   if (showLoading) {
     return <LoadingScreen />;
   }
 
+  const stats = [
+    {
+      value: "14 anos",
+      label: "de experiência com Java, HTML, CSS e JavaScript",
+    },
+    {
+      value: "12 anos",
+      label: "orquestrando integrações bancárias e relatórios com Jasper Reports",
+    },
+    {
+      value: "3 anos",
+      label: "guiando migração para AWS EC2 com Docker e pipelines CI/CD",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/claudemircustodio",
+      label: "LinkedIn",
+      icon: <Linkedin className="h-4 w-4" aria-hidden />,
+    },
+    {
+      href: "https://github.com/mibess",
+      label: "GitHub",
+      icon: <Github className="h-4 w-4" aria-hidden />,
+    },
+    {
+      href: "https://www.instagram.com/csilverios/",
+      label: "Instagram",
+      icon: <Instagram className="h-4 w-4" aria-hidden />,
+    },
+  ];
+
   return (
-    <> {/* Fragmento para agrupar as seções */}
-    
-      {/* Primeiro o stories com os projetos e depois restante do conteúdo da página */}
+    <>
+
       <ProjectStories />
 
-      {/* === Seção da Imagem de Capa === */}
-      <section id="cover" className="w-full h-30 md:h-40 lg:h-40 relative"> {/* Defina a altura desejada para a capa */}
-        <Image
-          src={coverSrc}
-          alt="Imagem de Capa do Portfólio"
-          fill
-          className="object-cover"
-          priority
-        />
-         {/* Opcional: Adicionar um leve gradiente escuro sobre a capa para dar profundidade */}
-         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/20 dark:via-black/10 dark:to-black/40"></div>
-      </section>
+      <section
+        id="inicio"
+        className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-slate-100 py-12 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100"
+      >
+        <div className="absolute inset-0 -z-20">
+          <Image
+            src={coverSrc}
+            alt="Padrão abstrato como textura de fundo"
+            fill
+            priority
+            className="object-cover opacity-30 mix-blend-luminosity dark:opacity-25"
+          />
+        </div>
 
-      <section className="flex flex-col lg:flex-row items-center gap-12 container mx-auto relative p-16 md:py-20"> {/* Z-10 pode não ser mais necessário */}
-        
-          {/* Coluna da Imagem com efeito especial (mantido do seu código) */}
-          <div className="relative group flex-shrink-0">
-            <div className="absolute -inset-2 bg-amber-400/30 dark:bg-amber-600/20 rounded-full blur-md group-hover:opacity-80 transition-all duration-300"></div>
-            <div className="relative rounded-full p-1 bg-gradient-to-br from-amber-400 to-amber-600 dark:from-amber-500 dark:to-amber-700">
-              <Image
-                src={profileSrc} // Usando a variável definida no topo
-                alt="Foto de Claudemir Custódio"
-                width={280}
-                height={280}
-                className="rounded-full object-cover shadow-xl w-48 h-48 md:w-64 md:h-64 border-4 border-white dark:border-slate-800"
-                priority
-              />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(252,211,77,0.25),_transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(253,230,138,0.15),_transparent_55%)]" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-white/80 via-transparent to-amber-100/40 dark:from-slate-950/80 dark:via-slate-900/40 dark:to-amber-500/10 backdrop-blur-[2px]" />
+
+        <div className="container relative mx-auto px-4">
+          <div className="space-y-10">
+            <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
+              <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
+              Java · Spring Boot · Angular · CI/CD · Inteligência Artificial
+            </span>
+
+            <div className="space-y-6">
+              <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
+                Olá, eu sou Claudemir Custódio.
+                <div className="block text-transparent bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text dark:from-amber-400 dark:to-amber-200">
+                  Desenvolvedor Full Stack.
+                </div>
+              </h1>
+              <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
+                Com foco em microsserviços Java e frontends modernos.
+                Hoje fortaleço os sistemas de clientes com Spring Boot, Angular e Oracle.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href="#projetos"
+                className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
+              >
+                Ver projetos
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="/Profile.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/80 px-6 py-3 text-sm font-semibold text-amber-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 dark:border-amber-500/40 dark:bg-transparent dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-amber-400/10"
+              >
+                <Download className="h-4 w-4" aria-hidden />
+                Baixar Currículo
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+              <span className="font-medium text-slate-700 dark:text-slate-200">
+                Vamos nos conectar:
+              </span>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-amber-200/70 bg-white/80 text-amber-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white hover:text-amber-500 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-amber-400/10"
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/60 bg-white/70 p-6 text-slate-700 shadow-lg shadow-amber-100/40 backdrop-blur-md dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-200"
+                >
+                  <p className="text-3xl font-semibold text-amber-600 dark:text-amber-400">
+                    {stat.value}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Coluna do Texto (mantido do seu código) */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold mb-3 text-slate-900 dark:text-slate-100">
-              Claudemir <span className="text-amber-600 dark:text-amber-400">Custódio</span>
-            </h1>
+        </div>
+      </section>
 
-            <div className="relative mb-5">
-              <h2 className="text-xl md:text-2xl font-medium text-slate-700 dark:text-slate-300">
-                Desenvolvedor Full Stack
+      <section
+        aria-labelledby="professional-radar-title"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-24 text-white"
+      >
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(253,230,138,0.18),_transparent_55%)] opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,_rgba(15,23,42,0.65),_transparent_60%)]" />
+        <div className="container relative mx-auto grid gap-16 px-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
+          <div className="relative mx-auto max-w-sm">
+            <div className="absolute -inset-10 bg-amber-500/30 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 p-8 shadow-2xl shadow-amber-500/20 backdrop-blur-xl">
+              <div className="relative w-full overflow-hidden">
+                <Image
+                  src={profileSrc}
+                  alt="Foto de Claudemir Custódio"
+                  width={420}
+                  height={420}
+                  priority
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <p className="mt-6 text-center text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">
+                Claudemir Custódio
+              </p>
+              <p className="mt-2 text-center text-xs text-slate-200/80">
+                Desenvolvedor · FullStack · JAVA
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
+                Radar profissional
+              </span>
+              <h2
+                id="professional-radar-title"
+                className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl"
+              >
+                Fortalecendo microsserviços Java e plataformas web
               </h2>
-              {/* Linha decorativa sutil */}
-              <div className="absolute bottom-[-4px] left-0 w-2/3 h-1 bg-amber-300 dark:bg-amber-600/50 rounded-full"></div>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200">
+                Na AMcom, alocado à CCEE, evoluo microsserviços críticos com Java, Spring Boot e Oracle,
+                além de interfaces Angular voltadas à performance. Foram 13 anos entregando
+                soluções completas para sindicatos e associações, com integrações bancárias, PIX e módulos
+                financeiros. Atuo conectando backend, frontend responsivo e entrega contínua confiável.
+              </p>
             </div>
 
-            <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-              Desenvolvedor experiente em Java e frameworks modernos Spring Boot, Angular e React.
-              Meu objetivo hoje é continuar entregando soluções de alta qualidade que ajudem 
-              a impulsionar o crescimento dos negócios em que trabalho. 
-              Estou sempre buscando novas oportunidades de aprendizado e 
-              desenvolvimento para me tornar ainda melhor.
-            </p>
+            <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-amber-100">
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Java & Spring Boot
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Angular & React
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Integrações
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                CI/CD & AWS
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
+                Inteligência Artificial
+              </span>
+            </div>
 
-            {/* Botões e Links Sociais (mantido do seu código) */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">
-              <a
-                href="#projetos"
-                className="group relative flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-md shadow-lg transition-all duration-300 hover:shadow-amber-500/20 hover:-translate-y-0.5 w-full sm:w-auto text-center"
-              >
-                Meus Projetos
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Agora
+                </p>
+                <p className="mt-3 text-sm text-slate-100">
+                  Entregando novas funcionalidades e otimizações em microsserviços da CCEE, com Java,
+                  Spring Boot, Oracle e Angular alinhados às rotinas regulatórias do setor elétrico.
+                </p>
+              </div>
+              
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Próximo passo
+                </p>
+                <p className="mt-3 text-sm text-slate-100">
+                  Se tornar especialista e acelerar roadmaps que precisem de microsserviços robustos, frontends modernos e
+                  governança CI/CD para escala e observabilidade.
+                </p>
+              </div>
 
-              <a
-                href="#contato"
-                className="group relative flex items-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-md shadow-lg transition-all duration-300 hover:shadow-slate-700/20 hover:-translate-y-0.5 dark:bg-slate-600 dark:hover:bg-slate-500 w-full sm:w-auto text-center"
-              >
-                Contato
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <div className="flex space-x-3 mt-4 sm:mt-0 sm:ml-4"> {/* Ajuste margem e espaçamento social */}
-                <a
-                  href="https://www.linkedin.com/in/claudemircustodio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-amber-400 dark:hover:bg-amber-600 transition-all hover:-translate-y-0.5 shadow hover:shadow-amber-400/20"
-                >
-                  <Linkedin className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                </a>
-                <a
-                  href="https://github.com/mibess"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-amber-400 dark:hover:bg-amber-600 transition-all hover:-translate-y-0.5 shadow hover:shadow-amber-400/20"
-                >
-                  <Github className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                </a>
-                <a
-                  href="https://www.instagram.com/csilverios/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="p-3 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-amber-400 dark:hover:bg-amber-600 transition-all hover:-translate-y-0.5 shadow hover:shadow-amber-400/20"
-                >
-                  <Instagram className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                </a>
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10 sm:col-span-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
+                  Disponibilidade
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-100">
+                  <li>- Evolução de microsserviços Java/Spring Boot e camadas web com Angular ou React.</li>
+                  <li>- Consultorias em integrações bancárias, cobrança automática e PIX.</li>
+                  <li>- Migrações para AWS EC2 com Docker, Git e pipelines de integração contínua.</li>
+                </ul>
               </div>
             </div>
-          </div>{/* Fim Coluna Texto */}
-      </section>{/* Fim Container */}
 
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="mailto:c.silverio@live.com"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20 transition-all hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Vamos falar sobre o seu projeto
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
+              <a
+                href="/Profile.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
+              >
+                Baixar currículo
+                <Download className="h-4 w-4" aria-hidden />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-      <section className="container mx-auto">
-         
+      <section className="mx-auto">
         <About />
-
         <Projects />
-         
         <Contact />
-
-       </section>
+      </section>
     </>
   );
 }
