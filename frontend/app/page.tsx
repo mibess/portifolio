@@ -1,297 +1,357 @@
-// app/page.tsx
 "use client";
 
 import Image from "next/image";
 import {
   Github,
   Linkedin,
-  Instagram,
-  ArrowRight,
-  Download,
-  Sparkles,
+  Mail,
+  Cpu,
+  Server,
+  Code,
+  Cloud,
+  History,
+  Terminal,
+  ExternalLink,
+  MessageCircle
 } from "lucide-react";
-import About from "./components/about";
-import Projects from "./components/projects";
-import ProjectStories from "./components/project-stories";
-import Contact from "./components/contact";
-import { useEffect, useState } from "react";
-import LoadingScreen from "./components/loading-screen";
+import { projectsData } from "@/lib/projects-data";
+
+const timeline = [
+  {
+    role: "Desenvolvedor de Sistemas",
+    company: "AMcom · Squad CCEE",
+    period: "jan 2024 — atual",
+    details: [
+      "Desenvolvo novas funcionalidades e mantenho microsserviços críticos da CCEE usando Java, Spring Boot e banco Oracle.",
+      "Construo interfaces Angular com foco em desempenho e consistência da experiência do usuário.",
+      "Atuo com Git (GitHub/Bitbucket), Jira e práticas ágeis para garantir cadência e qualidade das entregas.",
+    ],
+  },
+  {
+    role: "Desenvolvedor Full Stack Java",
+    company: "Rtools Desenvolvimento de Sistemas",
+    period: "jan 2010 — set 2023",
+    details: [
+      "Liderei soluções web para sindicatos e associações, cobrindo módulos de arrecadação, financeiro e social.",
+      "Implementei integrações bancárias (Itaú, BB, Santander, Bradesco, Caixa) e pagamentos via PIX.",
+      "Projetei microserviços para controle de acesso com cartão e biometria, aplicando as melhores práticas de desenvolvimento.",
+      "Migrei workloads para AWS EC2 com Docker, estruturando pipelines CI/CD e observabilidade contínua.",
+      "Produzi relatórios avançados com Jasper Reports e mantive bases PostgreSQL e MySQL.",
+    ],
+  },
+  {
+    role: "Instrutor de Informática",
+    company: "Master Company Informática",
+    period: "jan 2009 — dez 2009",
+    details: [
+      "Ministrei aulas de Photoshop, CorelDraw e Microsoft Office para turmas com diferentes níveis de conhecimento.",
+      "Desenvolvi materiais didáticos personalizados e apoiei projetos de design gráfico da escola.",
+    ],
+  },
+];
+
+const skills = {
+  backend: ["Java", "Spring Boot", "JPA/Hibernate", "REST API", "DDD", "Microservices", "RabbitMQ"],
+  frontend: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS", "JSF", "Primefaces"],
+  infra: ["AWS EC2/S3/ECS", "Docker", "CI/CD", "PostgreSQL", "Oracle", "Git", "Bitbucket"]
+};
 
 export default function Home() {
-  const [showLoading, setShowLoading] = useState(true);
-
-  const coverSrc = "/cover.png";
-  const profileSrc = "/profile.png";
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (showLoading) {
-    return <LoadingScreen />;
-  }
-
-  const stats = [
-    {
-      value: "14 anos",
-      label: "de experiência com Java, HTML, CSS e JavaScript",
-    },
-    {
-      value: "12 anos",
-      label: "orquestrando integrações bancárias e relatórios com Jasper Reports",
-    },
-    {
-      value: "3 anos",
-      label: "guiando migração para AWS EC2 com Docker e pipelines CI/CD",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      href: "https://www.linkedin.com/in/claudemircustodio",
-      label: "LinkedIn",
-      icon: <Linkedin className="h-4 w-4" aria-hidden />,
-    },
-    {
-      href: "https://github.com/mibess",
-      label: "GitHub",
-      icon: <Github className="h-4 w-4" aria-hidden />,
-    },
-    {
-      href: "https://www.instagram.com/csilverios/",
-      label: "Instagram",
-      icon: <Instagram className="h-4 w-4" aria-hidden />,
-    },
-  ];
-
   return (
     <>
-
-      <ProjectStories />
-
-      <section
-        id="inicio"
-        className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-white to-slate-100 py-12 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100"
-      >
-        <div className="absolute inset-0 -z-20">
-          <Image
-            src={coverSrc}
-            alt="Padrão abstrato como textura de fundo"
-            fill
-            priority
-            className="object-cover opacity-30 mix-blend-luminosity dark:opacity-25"
-          />
+      {/* Navigation */}
+      <nav className="fixed w-full z-50 glass-panel border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex-shrink-0 text-neon-cyan font-display font-bold text-xl tracking-widest">
+              &lt;CC /&gt;
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-8 font-mono text-sm">
+                <a href="#about" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">DATA.resumo</a>
+                <a href="#stack" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">SYS.skills</a>
+                <a href="#xp" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">LOG.experiência</a>
+                <a href="#projects" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">PROJ.exec</a>
+                <a href="#contact" className="px-4 py-2 rounded border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all duration-300 shadow-neon-blue">INIT.contato</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </nav>
 
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(252,211,77,0.25),_transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(253,230,138,0.15),_transparent_55%)]" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-white/80 via-transparent to-amber-100/40 dark:from-slate-950/80 dark:via-slate-900/40 dark:to-amber-500/10 backdrop-blur-[2px]" />
+      {/* Hero Section */}
+      <section id="about" className="relative min-h-screen flex items-center justify-center pt-16">
+        {/* Grid Background Effect */}
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
-        <div className="container relative mx-auto px-4">
-          <div className="space-y-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
-              <Sparkles className="h-4 w-4 animate-pulse" aria-hidden />
-              Java · Spring Boot · Angular · CI/CD · Inteligência Artificial
-            </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <div className="relative inline-block mb-8 group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-white/20 bg-black">
+              <Image
+                src="/profile.png"
+                alt="Claudemir Custódio"
+                fill
+                className="object-cover opacity-90 hover:opacity-100 transition-opacity"
+                priority
+              />
+            </div>
+          </div>
 
-            <div className="space-y-6">
-              <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-                Olá, eu sou Claudemir Custódio.
-                <div className="block text-transparent bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text dark:from-amber-400 dark:to-amber-200">
-                  Desenvolvedor Full Stack.
-                </div>
-              </h1>
-              <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 md:text-lg">
-                Com foco em microsserviços Java e frontends modernos.
-                Hoje fortaleço os sistemas de clientes com Spring Boot, Angular e Oracle.
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 mb-4 tracking-tighter">
+            CLAUDEMIR CUSTÓDIO
+          </h1>
+          <h2 className="text-xl md:text-2xl text-neon-cyan mb-8 tracking-widest uppercase border-l-4 border-neon-purple pl-4 inline-block bg-white/5 py-1 pr-4 font-mono">
+            Full Stack Java Developer
+          </h2>
+
+          <p className="max-w-2xl mx-auto text-gray-400 text-sm md:text-base mb-10 leading-relaxed font-mono">
+            <span className="text-neon-purple">&gt;</span> Mais de 14 anos de experiência.<br />
+            <span className="text-neon-purple">&gt;</span> Especialista em arquitetura Java, Cloud AWS e Microsserviços.<br />
+            <span className="text-neon-purple">&gt;</span> Transformando ideias complexas em código eficiente.
+          </p>
+
+          <div className="flex justify-center gap-6 mb-12">
+            <a href="https://github.com/mibess" target="_blank" className="text-gray-400 hover:text-white hover:scale-110 transition-transform">
+              <Github className="w-8 h-8" />
+            </a>
+            <a href="https://www.linkedin.com/in/claudemircustodio" target="_blank" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-transform">
+              <Linkedin className="w-8 h-8" />
+            </a>
+            <a href="https://wa.me/5516997200212" target="_blank" className="text-gray-400 hover:text-green-400 hover:scale-110 transition-transform">
+              <MessageCircle className="w-8 h-8" />
+            </a>
+          </div>
+
+          <div className="flex justify-center">
+            <a
+              href="/Profile.pdf"
+              download="Claudemir_Custodio_CV.pdf"
+              className="group relative px-6 py-3 bg-transparent border border-neon-cyan/50 overflow-hidden rounded hover:border-neon-cyan transition-colors"
+            >
+              <div className="absolute inset-0 w-0 bg-neon-cyan transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+              <span className="relative group-hover:text-neon-cyan font-bold tracking-wider font-mono text-neon-cyan flex items-center">
+                <ExternalLink className="mr-2 w-4 h-4" /> BAIXAR CURRÍCULO
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Agora / Próximo Passo */}
+      <section className="py-10 bg-black/20 relative">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="glass-panel p-6 rounded-xl border-l-4 border-neon-cyan">
+              <h3 className="text-neon-cyan font-display font-bold text-lg mb-2">AGORA</h3>
+              <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                Entregando novas funcionalidades e otimizações em microsserviços da CCEE, com Java,
+                Spring Boot, Oracle e Angular alinhados às rotinas regulatórias do setor elétrico.
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a
-                href="#projetos"
-                className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-              >
-                Ver projetos
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="/Profile.pdf"
-                download
-                className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/80 px-6 py-3 text-sm font-semibold text-amber-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-200 dark:border-amber-500/40 dark:bg-transparent dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-amber-400/10"
-              >
-                <Download className="h-4 w-4" aria-hidden />
-                Baixar Currículo
-              </a>
+            <div className="glass-panel p-6 rounded-xl border-l-4 border-neon-purple">
+              <h3 className="text-neon-purple font-display font-bold text-lg mb-2">PRÓXIMO PASSO</h3>
+              <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                Se tornar especialista e acelerar roadmaps que precisem de microsserviços robustos, frontends modernos e
+                governança CI/CD para escala e observabilidade.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
-              <span className="font-medium text-slate-700 dark:text-slate-200">
-                Vamos nos conectar:
-              </span>
-              <div className="flex items-center gap-3">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={link.label}
-                    className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-amber-200/70 bg-white/80 text-amber-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white hover:text-amber-500 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-amber-400/10"
-                  >
-                    {link.icon}
-                  </a>
+      {/* Skills / Tech Stack (Terminal Style) */}
+      <section id="stack" className="py-20 bg-black/30 relative border-y border-white/5">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center mb-12">
+            <span className="text-neon-purple mr-4"><Cpu className="w-8 h-8" /></span>
+            <h3 className="text-3xl font-display font-bold text-white">SYSTEM.skills_load()</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card Backend */}
+            <div className="glass-panel p-6 rounded hover:border-neon-cyan transition-colors group">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-neon-cyan font-bold text-lg font-mono">Backend.Core</h4>
+                <Server className="text-gray-600 group-hover:text-neon-cyan w-6 h-6" />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skills.backend.map(skill => (
+                  <span key={skill} className="bg-gray-800 text-xs px-3 py-1 rounded border border-gray-700 font-mono text-gray-300">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-white/60 bg-white/70 p-6 text-slate-700 shadow-lg shadow-amber-100/40 backdrop-blur-md dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-200"
-                >
-                  <p className="text-3xl font-semibold text-amber-600 dark:text-amber-400">
-                    {stat.value}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+            {/* Card Frontend */}
+            <div className="glass-panel p-6 rounded hover:border-neon-purple transition-colors group">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-neon-purple font-bold text-lg font-mono">Frontend.UI</h4>
+                <Code className="text-gray-600 group-hover:text-neon-purple w-6 h-6" />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skills.frontend.map(skill => (
+                  <span key={skill} className="bg-gray-800 text-xs px-3 py-1 rounded border border-gray-700 font-mono text-gray-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Card DevOps/Cloud */}
+            <div className="glass-panel p-6 rounded hover:border-neon-green transition-colors group">
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-neon-green font-bold text-lg font-mono">Infra.Cloud</h4>
+                <Cloud className="text-gray-600 group-hover:text-neon-green w-6 h-6" />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skills.infra.map(skill => (
+                  <span key={skill} className="bg-gray-800 text-xs px-3 py-1 rounded border border-gray-700 font-mono text-gray-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-
         </div>
       </section>
 
-      <section
-        aria-labelledby="professional-radar-title"
-        className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-24 text-white"
-      >
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(253,230,138,0.18),_transparent_55%)] opacity-60" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,_rgba(15,23,42,0.65),_transparent_60%)]" />
-        <div className="container relative mx-auto grid gap-16 px-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
-          <div className="relative mx-auto max-w-sm">
-            <div className="absolute -inset-10 bg-amber-500/30 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 p-8 shadow-2xl shadow-amber-500/20 backdrop-blur-xl">
-              <div className="relative w-full overflow-hidden">
-                <Image
-                  src={profileSrc}
-                  alt="Foto de Claudemir Custódio"
-                  width={420}
-                  height={420}
-                  priority
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <p className="mt-6 text-center text-sm font-semibold uppercase tracking-[0.3em] text-amber-200">
-                Claudemir Custódio
-              </p>
-              <p className="mt-2 text-center text-xs text-slate-200/80">
-                Desenvolvedor · FullStack · JAVA
-              </p>
-            </div>
-          </div>
+      {/* Experience Log */}
+      <section id="xp" className="py-20 max-w-6xl mx-auto px-4">
+        <div className="flex items-center mb-12 justify-end">
+          <h3 className="text-3xl font-display font-bold text-white text-right">MISSION.log()</h3>
+          <span className="text-neon-cyan ml-4"><History className="w-8 h-8" /></span>
+        </div>
 
-          <div className="space-y-8">
-            <div>
-              <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
-                Radar profissional
-              </span>
-              <h2
-                id="professional-radar-title"
-                className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl"
-              >
-                Fortalecendo microsserviços Java e plataformas web
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-200">
-                Na AMcom, alocado à CCEE, evoluo microsserviços críticos com Java, Spring Boot e Oracle,
-                além de interfaces Angular voltadas à performance. Foram 13 anos entregando
-                soluções completas para sindicatos e associações, com integrações bancárias, PIX e módulos
-                financeiros. Atuo conectando backend, frontend responsivo e entrega contínua confiável.
-              </p>
-            </div>
+        <div className="relative pl-8 border-l-2 border-gray-800 space-y-12">
+          {timeline.map((item, index) => (
+            <div key={index} className="relative">
+              <div className="absolute -left-[41px] top-0 w-5 h-5 bg-neon-cyan rounded-full shadow-neon-blue"></div>
+              <div className="glass-panel p-8 rounded-xl hover:bg-white/5 transition-colors">
+                <div className="flex flex-col md:flex-row justify-between mb-4 border-b border-white/10 pb-4">
+                  <div>
+                    <h4 className="text-2xl font-bold text-white font-display">{item.company}</h4>
+                    <p className="text-neon-cyan font-mono">{item.role}</p>
+                  </div>
+                  <div className="text-right mt-2 md:mt-0">
+                    <span className="text-gray-500 font-mono text-sm">{item.period}</span>
+                  </div>
+                </div>
 
-            <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-amber-100">
-              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Java & Spring Boot
-              </span>
-              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Angular & React
-              </span>
-              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Integrações
-              </span>
-              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                CI/CD & AWS
-              </span>
-              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">
-                Inteligência Artificial
-              </span>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
-                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
-                  Agora
-                </p>
-                <p className="mt-3 text-sm text-slate-100">
-                  Entregando novas funcionalidades e otimizações em microsserviços da CCEE, com Java,
-                  Spring Boot, Oracle e Angular alinhados às rotinas regulatórias do setor elétrico.
-                </p>
-              </div>
-              
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10">
-                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
-                  Próximo passo
-                </p>
-                <p className="mt-3 text-sm text-slate-100">
-                  Se tornar especialista e acelerar roadmaps que precisem de microsserviços robustos, frontends modernos e
-                  governança CI/CD para escala e observabilidade.
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-inner shadow-amber-500/10 sm:col-span-2">
-                <p className="text-xs font-semibold uppercase tracking-wide text-amber-200">
-                  Disponibilidade
-                </p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-100">
-                  <li>- Evolução de microsserviços Java/Spring Boot e camadas web com Angular ou React.</li>
-                  <li>- Consultorias em integrações bancárias, cobrança automática e PIX.</li>
-                  <li>- Migrações para AWS EC2 com Docker, Git e pipelines de integração contínua.</li>
+                <ul className="space-y-4 text-gray-300 font-mono text-sm">
+                  {item.details.map((detail, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-neon-purple mr-2">➜</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="mailto:c.silverio@live.com"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20 transition-all hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Vamos falar sobre o seu projeto
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
-              <a
-                href="/Profile.pdf"
-                download
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
-              >
-                Baixar currículo
-                <Download className="h-4 w-4" aria-hidden />
-              </a>
-            </div>
+        {/* Education Grid */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="glass-panel p-6 border-t-4 border-neon-green">
+            <h5 className="text-neon-green font-mono text-sm mb-2">2023 // GRADUAÇÃO</h5>
+            <h4 className="text-xl font-bold text-white font-display">Engenharia de Software</h4>
+            <p className="text-gray-400 font-mono">ALURA</p>
+          </div>
+          <div className="glass-panel p-6 border-t-4 border-gray-600">
+            <h5 className="text-gray-400 font-mono text-sm mb-2">2008 - 2009 // TÉCNICO</h5>
+            <h4 className="text-xl font-bold text-white font-display">Informática & Gestão de TI</h4>
+            <p className="text-gray-400 font-mono">ETEC - Escola Técnica Estadual de SP</p>
+          </div>
+          <div className="glass-panel p-6 border-t-4 border-neon-purple">
+            <h5 className="text-neon-purple font-mono text-sm mb-2">IDIOMAS</h5>
+            <h4 className="text-xl font-bold text-white font-display">Português · Nativo</h4>
+            <p className="text-gray-400 font-mono">Inglês · Intermediário</p>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto">
-        <About />
-        <Projects />
-        <Contact />
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-black/30 relative border-y border-white/5">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center mb-12">
+            <span className="text-neon-purple mr-4"><Terminal className="w-8 h-8" /></span>
+            <h3 className="text-3xl font-display font-bold text-white">PROJ.exec()</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectsData.map((project) => (
+              <div key={project.title} className="glass-panel rounded-xl overflow-hidden group hover:border-neon-cyan transition-all duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute bottom-4 left-4 z-20">
+                    <h4 className="text-white font-bold font-display text-lg">{project.title}</h4>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-400 text-sm font-mono mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="text-[10px] px-2 py-1 rounded border border-gray-700 bg-gray-800 text-neon-cyan font-mono">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <a href={project.githubUrl} target="_blank" className="flex items-center text-xs font-bold text-white hover:text-neon-cyan transition-colors">
+                      <Github className="w-4 h-4 mr-2" /> CODE
+                    </a>
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a href={project.demoUrl} target="_blank" className="flex items-center text-xs font-bold text-white hover:text-neon-green transition-colors">
+                        <ExternalLink className="w-4 h-4 mr-2" /> DEMO
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact / Footer */}
+      <section id="contact" className="py-20 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-neon-cyan/10 to-transparent opacity-20 pointer-events-none"></div>
+
+        <div className="max-w-3xl mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-display font-bold mb-8 text-white">INICIAR CONEXÃO?</h2>
+          <p className="text-gray-400 mb-10 font-mono">Estou disponível para novos projetos e desafios na stack Java/Cloud.</p>
+
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <a href="mailto:c.silverio@live.com" className="group relative px-8 py-4 bg-transparent border border-white/30 overflow-hidden rounded hover:border-neon-cyan transition-colors">
+              <div className="absolute inset-0 w-0 bg-neon-cyan transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+              <span className="relative group-hover:text-neon-cyan font-bold tracking-wider font-mono flex items-center justify-center">
+                <Mail className="mr-2 w-5 h-5" /> ENVIAR EMAIL
+              </span>
+            </a>
+
+            <a href="https://wa.me/5516997200212" className="group relative px-8 py-4 bg-transparent border border-white/30 overflow-hidden rounded hover:border-neon-green transition-colors">
+              <div className="absolute inset-0 w-0 bg-neon-green transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+              <span className="relative group-hover:text-neon-green font-bold tracking-wider font-mono flex items-center justify-center">
+                <MessageCircle className="mr-2 w-5 h-5" /> WHATSAPP
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <footer className="mt-20 border-t border-white/5 pt-8 text-gray-600 text-sm font-mono">
+          <p>&copy; 2025 Claudemir Custódio. System.exit(0);</p>
+        </footer>
       </section>
     </>
   );
