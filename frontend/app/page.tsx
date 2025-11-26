@@ -94,8 +94,7 @@ export default function Home() {
                 fill
                 className="object-cover opacity-90 hover:opacity-100 transition-opacity"
                 priority
-                width={100}
-                height={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
