@@ -94,6 +94,8 @@ export default function Home() {
                 fill
                 className="object-cover opacity-90 hover:opacity-100 transition-opacity"
                 priority
+                width={100}
+                height={100}
               />
             </div>
           </div>
@@ -107,7 +109,7 @@ export default function Home() {
 
           <p className="max-w-2xl mx-auto text-gray-400 text-sm md:text-base mb-10 leading-relaxed font-mono">
             <span className="text-neon-purple">&gt;</span> Mais de 14 anos de experiência.<br />
-            <span className="text-neon-purple">&gt;</span> Especialista em arquitetura Java, Cloud AWS e Microsserviços.<br />
+            <span className="text-neon-purple">&gt;</span> Focado em arquitetura Java, Cloud AWS e Microsserviços.<br />
             <span className="text-neon-purple">&gt;</span> Transformando ideias complexas em código eficiente.
           </p>
 
