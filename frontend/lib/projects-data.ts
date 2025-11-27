@@ -8,6 +8,22 @@ export interface ProjectInfo {
 }
 
 export const projectsData: ProjectInfo[] = [
+    {
+    title: "Gerador UC",
+    description:
+      "Projeto completo com Javascript e Python. Esse projeto gera Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.",
+    imageUrl: "/logo-gerador-uc.png",
+    tags: [
+      "JavaScript",
+      "Python",
+      "Flask",
+      "TailwindCSS",
+      "Docker",
+      "CI/CD",
+    ],
+    githubUrl: "https://github.com/mibess/gerador-uc",
+    demoUrl: "https://geradoruc.mibess.com.br",
+  },
   {
     title: "Plataforma EAD",
     description:
