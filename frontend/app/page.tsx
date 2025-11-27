@@ -15,6 +15,7 @@ import {
   MessageCircle
 } from "lucide-react";
 import { projectsData } from "@/lib/projects-data";
+import Header from "./components/header";
 
 const timeline = [
   {
@@ -60,27 +61,10 @@ export default function Home() {
   return (
     <>
       {/* Navigation */}
-      <nav className="fixed w-full z-50 glass-panel border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex-shrink-0 text-neon-cyan font-display font-bold text-xl tracking-widest">
-              &lt;CC /&gt;
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8 font-mono text-sm">
-                <a href="#about" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">DATA.resumo</a>
-                <a href="#stack" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">SYS.skills</a>
-                <a href="#xp" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">LOG.experiência</a>
-                <a href="#projects" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">PROJ.exec</a>
-                <a href="#contact" className="px-4 py-2 rounded border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black transition-all duration-300 shadow-neon-blue">INIT.contato</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Header />
+      
       {/* Hero Section */}
-      <section id="about" className="relative min-h-screen flex items-center justify-center pt-16">
+      <section id="about" className="relative min-h-screen flex items-center justify-center py-16">
         {/* Grid Background Effect */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
