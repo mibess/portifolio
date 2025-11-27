@@ -46,7 +46,7 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Sistema de Login",
     description:
-      "Sistema de Login completo utilizando Spring Boot, Google Auth e Keycloak",
+      "Sistema de Login completo utilizando Spring Boot, Google Auth e Keycloak, com funcionalidades de autenticação, autorização e gerenciamento de usuários.",
     imageUrl: "/logo-auth-system.png",
     tags: [
       "Java",
@@ -101,7 +101,7 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Gerenciador de Senhas",
     description:
-      "Com essa aplicação podemos armazenar e gerenciar senhas pessoais",
+      "Com essa aplicação podemos armazenar e gerenciar senhas pessoais, garantindo segurança e facilidade de acesso.",
     imageUrl: "/logo-secrets.png",
     tags: [
       "Angular",
