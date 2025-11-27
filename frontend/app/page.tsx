@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Agora / Próximo Passo */}
-      <section className="py-10 bg-black/20 relative">
+      <section className="py-18 bg-black/20 relative">
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-2">
             <div className="glass-panel p-6 rounded-xl border-l-4 border-neon-cyan">
@@ -253,8 +253,9 @@ export default function Home() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
             <h5 className="text-purple-500 font-mono text-sm mb-2">IDIOMAS</h5>
-            <h4 className="text-xl font-bold text-gray-800 font-display">Português · Nativo</h4>
-            <p className="text-gray-500 font-mono">Inglês · Intermediário</p>
+            <h4 className="text-xl font-bold text-gray-800 font-display">Inglês · Intermediário</h4>
+            <p className="text-gray-500 font-mono">Espanhol · Básico</p>
+            <p className="text-gray-500 font-mono">Português · Nativo</p>
           </div>
         </div>
       </section>
