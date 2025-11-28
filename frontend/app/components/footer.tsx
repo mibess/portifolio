@@ -4,33 +4,33 @@ import { Mail, MessageCircle } from 'lucide-react';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer id="contact" className="py-20 text-center relative overflow-hidden">
+    <section id="contact" className="py-20 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-20 pointer-events-none"></div>
 
         <div className="max-w-3xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl font-display font-bold mb-8 text-gray-200">INICIAR CONEXÃO?</h2>
-          <p className="text-gray-300 mb-10 font-mono">Estou disponível para novos projetos e desafios na stack Java/Cloud.</p>
+            <h2 className="text-4xl font-display font-bold mb-8 text-gray-200">INICIAR CONEXÃO?</h2>
+            <p className="text-gray-300 mb-10 font-mono">Estou disponível para novos projetos e desafios na stack Java/Cloud.</p>
 
-          <div className="flex flex-col md:flex-row justify-center gap-4">
-            <a href="mailto:c.silverio@live.com" className="group relative px-8 py-4 bg-transparent border border-gray-300 overflow-hidden rounded hover:border-blue-500 transition-colors">
-              <div className="absolute inset-0 w-0 bg-blue-500 transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
-              <span className="relative group-hover:text-blue-500 font-bold tracking-wider font-mono flex items-center justify-center">
-                <Mail className="mr-2 w-5 h-5" /> ENVIAR EMAIL
-              </span>
-            </a>
+            <div className="flex flex-col md:flex-row justify-center gap-4">
+                <a href="mailto:c.silverio@live.com" className="group relative px-8 py-4 bg-transparent border border-gray-300 overflow-hidden rounded hover:border-blue-500 transition-colors">
+                    <div className="absolute inset-0 w-0 bg-blue-500 transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+                    <span className="relative group-hover:text-blue-500 font-bold tracking-wider font-mono flex items-center justify-center">
+                    <Mail className="mr-2 w-5 h-5" /> ENVIAR EMAIL
+                    </span>
+                </a>
 
-            <a href="https://wa.me/5516997200212" className="group relative px-8 py-4 bg-transparent border border-gray-300 overflow-hidden rounded hover:border-green-500 transition-colors">
-              <div className="absolute inset-0 w-0 bg-green-500 transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
-              <span className="relative group-hover:text-green-500 font-bold tracking-wider font-mono flex items-center justify-center">
-                <MessageCircle className="mr-2 w-5 h-5" /> WHATSAPP
-              </span>
-            </a>
-          </div>
+                <a href="https://wa.me/5516997200212" className="group relative px-8 py-4 bg-transparent border border-gray-300 overflow-hidden rounded hover:border-green-500 transition-colors">
+                    <div className="absolute inset-0 w-0 bg-green-500 transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+                    <span className="relative group-hover:text-green-500 font-bold tracking-wider font-mono flex items-center justify-center">
+                    <MessageCircle className="mr-2 w-5 h-5" /> WHATSAPP
+                    </span>
+                </a>
+            </div>
         </div>
 
         <footer className="mt-20 border-t border-gray-200 pt-8 text-gray-300 text-sm font-mono">
-          <p>&copy; {currentYear} Claudemir Custódio. System.exit(0);</p>
+            <p>&copy; {currentYear} Claudemir Custódio. System.exit(0);</p>
         </footer>
-      </footer>
+    </section>
   );
 }
