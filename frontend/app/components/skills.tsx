@@ -11,7 +11,7 @@ export default function Skills() {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex items-center mb-12">
                     <span className="text-blue-500 mr-4"><Cpu className="w-8 h-8" /></span>
-                    <h3 className="text-3xl font-display font-bold text-gray-800">SYSTEM.skills_load()</h3>
+                    <h3 className="text-3xl font-display font-bold text-gray-800">SYS.load_skills()</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
