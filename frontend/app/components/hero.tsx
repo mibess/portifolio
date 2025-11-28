@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Github, Linkedin, MessageCircle, ExternalLink } from "lucide-react";
+import { MessageCircle, ExternalLink, Linkedin } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
 
 export default function Hero() {
     return (
@@ -37,7 +38,7 @@ export default function Hero() {
 
                 <div className="flex justify-center gap-6 mb-12">
                     <a href="https://github.com/mibess" target="_blank" className="text-gray-400 hover:text-white hover:scale-110 transition-transform">
-                    <Github className="w-8 h-8" />
+                    <SiGithub className="w-8 h-8" />
                     </a>
                     <a href="https://www.linkedin.com/in/claudemircustodio" target="_blank" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-transform">
                     <Linkedin className="w-8 h-8" />
