@@ -9,9 +9,9 @@ export interface ProjectInfo {
 
 export const projectsData: ProjectInfo[] = [
     {
-    title: "Gerador UC",
+    title: "Gerador de UC",
     description:
-      "Projeto completo com Javascript e Python. Esse projeto gera Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.",
+      "Projeto completo com Javascript e Python. Esse projeto gera código de Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.",
     imageUrl: "/logo-gerador-uc.png",
     tags: [
       "JavaScript",

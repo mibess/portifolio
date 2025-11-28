@@ -29,7 +29,7 @@ export default function Footer() {
 
             <div className="mt-6 flex justify-center gap-4 text-sm text-gray-300 font-mono">
                 <a
-                    href="https://www.linkedin.com/in/claudemir-mibess"
+                    href="https://www.linkedin.com/in/claudemircustodio"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 hover:text-neon-cyan transition-colors duration-200"
