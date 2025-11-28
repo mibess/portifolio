@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ export default function Footer() {
 
         <div className="max-w-3xl mx-auto px-4 relative z-10">
             <h2 className="text-4xl font-display font-bold mb-8 text-gray-200">INICIAR CONEXÃO?</h2>
-            <p className="text-gray-300 mb-10 font-mono">Estou disponível para novos projetos e desafios na stack Java/Cloud.</p>
+            <p className="text-gray-300 mb-10 font-mono">Estou disponível para novos projetos e desafios.</p>
 
             <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a href="mailto:c.silverio@live.com" className="group relative px-8 py-4 bg-transparent border border-gray-300 overflow-hidden rounded hover:border-blue-500 transition-colors">
@@ -24,6 +24,27 @@ export default function Footer() {
                     <span className="relative group-hover:text-green-500 font-bold tracking-wider font-mono flex items-center justify-center">
                     <MessageCircle className="mr-2 w-5 h-5" /> WHATSAPP
                     </span>
+                </a>
+            </div>
+
+            <div className="mt-6 flex justify-center gap-4 text-sm text-gray-300 font-mono">
+                <a
+                    href="https://www.linkedin.com/in/claudemir-mibess"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-neon-cyan transition-colors duration-200"
+                    aria-label="LinkedIn de Claudemir Custódio"
+                >
+                    <Linkedin className="w-4 h-4" /> LinkedIn
+                </a>
+                <a
+                    href="https://github.com/mibess"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-neon-cyan transition-colors duration-200"
+                    aria-label="GitHub de Claudemir Custódio"
+                >
+                    <Github className="w-4 h-4" /> GitHub
                 </a>
             </div>
         </div>
