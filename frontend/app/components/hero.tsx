@@ -50,7 +50,7 @@ export default function Hero() {
 
                 <div className="flex justify-center">
                     <a
-                    href="/Profile.pdf"
+                    href="/Claudemir_Custodio_CV.pdf"
                     download="Claudemir_Custodio_CV.pdf"
                     className="group relative px-6 py-3 bg-transparent border border-neon-cyan/50 overflow-hidden rounded hover:border-neon-cyan transition-colors"
                     >
