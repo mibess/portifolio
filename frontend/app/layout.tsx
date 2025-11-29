@@ -82,29 +82,54 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+import Chat from "@/app/components/chat";
+
+
+
 export default function RootLayout({
+
   children,
+
 }: Readonly<{
+
   children: React.ReactNode;
+
 }>) {
+
   return (
+
     <html lang="pt-BR" className={`${jetbrainsMono.variable} ${orbitron.variable} scroll-smooth`} suppressHydrationWarning>
+
       <body className="bg-cyber-black text-slate-200 font-mono antialiased overflow-x-hidden selection:bg-neon-cyan selection:text-black">
+
         <Script
+
           id="claudemir-custodio-ld-json"
+
           type="application/ld+json"
+
           strategy="beforeInteractive"
+
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+
         />
+
         <ThemeProvider attribute="class" enableSystem defaultTheme="system" disableTransitionOnChange>
+
           <div className="scanline"></div>
+
           {children}
+
+          <Chat />
+
         </ThemeProvider>
+
       </body>
+
     </html>
 
-
   );
+
 }
 
 // <html lang="pt-BR" suppressHydrationWarning>
