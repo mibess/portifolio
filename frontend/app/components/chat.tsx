@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { Send, Bot, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 const Chat = () => {
@@ -26,7 +26,7 @@ const Chat = () => {
       setMessages([
         {
           sender: "bot",
-          text: "Olá! Como posso te ajudar a saber mais sobre o Claudemir?",
+          text: "Vamos conhecer um pouco mais do Claudemir?",
         },
       ]);
     }
@@ -79,15 +79,42 @@ const Chat = () => {
 
   return (
     <>
-      <Button
-        className="fixed bottom-4 right-4 rounded-full w-16 h-16"
-        onClick={toggleChat}
-      >
-        <Send className="h-8 w-8" />
-      </Button>
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        {!isOpen && (
+          <div className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg border border-slate-200">
+            Fale com o Mibee
+          </div>
+        )}
+        <Button
+          className="relative h-14 w-14 rounded-full bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_15px_35px_rgba(16,185,129,0.35)] transition duration-200 ease-out hover:scale-105 hover:shadow-[0_20px_45px_rgba(15,118,110,0.45)] cursor-pointer"
+          onClick={toggleChat}
+          aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
+          size="icon"
+        >
+          <span className="absolute inset-0 rounded-full bg-emerald-300 opacity-30 blur-lg animate-pulse pointer-events-none" />
+          <Bot className="relative h-7 w-7" />
+        </Button>
+      </div>
       {isOpen && (
-        <div className="fixed bottom-24 right-4 w-80 h-96 bg-white rounded-lg shadow-2xl flex flex-col">
+        <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-[420px] h-[520px] sm:w-[360px] sm:max-w-none md:w-[420px] bg-white rounded-xl shadow-2xl flex flex-col">
+          <div className="flex justify-between items-center p-4 border-b">
+            <h3 className="text-lg font-bold text-black">Mibee</h3>
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+              <X className="h-6 w-6 text-black" />
+            </Button>
+          </div>
           <div className="flex-1 p-4 overflow-y-auto">
+            <div className="mb-4 flex flex-col items-center text-center text-black">
+              <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg">
+                <Bot className="relative h-8 w-8" />
+              </div>
+              <div className="text-lg font-semibold">
+                Olá <span role="img" aria-label="mão acenando">👋</span>
+              </div>
+              <div className="text-sm text-slate-600">
+                Como posso te ajudar hoje?
+              </div>
+            </div>
             {messages.map((msg, index) => (
               <div
                 key={index}
