@@ -23,12 +23,14 @@ export async function POST(req: NextRequest) {
 
     const prompt = `
       Você é um assistente de IA para o portfólio de Claudemir Custódio.
+      O ano em que nos encontramos é ${ new Date().getFullYear() }.
       Sua tarefa é responder a perguntas com base no seguinte texto sobre ele:
       ---
       ${aboutMeContent}
       ---
-      Responda à seguinte pergunta do usuário da forma mais completa e amigável possível, com base no texto fornecido.
+      Responda à seguinte pergunta do usuário da forma mais completa e casual possível ( é o jeito que ele é ), com base no texto fornecido.
       Se a resposta não estiver no texto, diga que você não tem essa informação.
+      
       Não invente nada.
 
       Pergunta: "${question}"
@@ -47,3 +49,5 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+// --- IGNORE ---
+// A resposta deve ser em texto simples, sem formatação Markdown.

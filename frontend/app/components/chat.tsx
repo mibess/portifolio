@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +97,11 @@ const Chat = () => {
                     : "bg-blue-500 text-white self-end"
                 }`}
               >
-                {msg.text}
+                {msg.sender === "bot" ? (
+                  <ReactMarkdown>{msg.text}</ReactMarkdown>
+                ) : (
+                  msg.text
+                )}
               </div>
             ))}
             {isLoading && (
