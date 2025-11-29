@@ -8,6 +8,6 @@ export async function GET() {
     const content = fs.readFileSync(filePath, 'utf8');
     return NextResponse.json({ content });
   } catch (error) {
-    return NextResponse.json({ error: 'File not found' }, { status: 404 });
+    return NextResponse.json({ error: 'File not found ' + error }, { status: 404 });
   }
 }
