@@ -27,11 +27,11 @@ const timeline = [
     company: "Rtools Desenvolvimento de Sistemas",
     period: "jan 2010 — set 2023",
     details: [
-      "Liderei soluções web para sindicatos e associações, cobrindo módulos de arrecadação, financeiro e social.",
-      "Implementei integrações bancárias (Itaú, BB, Santander, Bradesco, Caixa) e pagamentos via PIX.",
-      "Projetei microserviços para controle de acesso com cartão e biometria, aplicando as melhores práticas de desenvolvimento.",
-      "Migrei workloads para AWS EC2 com Docker, estruturando pipelines CI/CD e observabilidade contínua.",
-      "Produzi relatórios avançados com Jasper Reports e mantive bases PostgreSQL e MySQL.",
+      "Desenvolvi uma aplicação de controle de acesso em catracas com cartões e biometria para academias, clubes e escolas (Java 7, MySQL, Swing).",
+      "Criei uma aplicação web para monitorar acessos em tempo real em monitores e dispositivos móveis (ReactJS, Spring Boot, REST, Docker, AWS ECS, GitHub Actions).",
+      "Modelei e implementei módulos de gestão para sindicatos e associações (Java, JSF, Primefaces, PostgreSQL, Jasper Reports).",
+      "Entreguei frontend para clientes acompanharem dados cadastrais, cobranças, agendamentos e homologações (Angular, Spring Boot, Docker, AWS, DDD).",
+      "Realizei testes unitários e de integração, migrei o monolito para AWS e mantive cadência com Scrum e Kanban usando GitHub/Bitbucket.",
     ],
   },
   {
@@ -111,10 +111,11 @@ export default function Home() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
-            <h5 className="text-purple-500 font-mono text-sm mb-2">IDIOMAS</h5>
-            <h4 className="text-xl font-bold text-gray-800 font-display">Inglês · Intermediário</h4>
-            <p className="text-gray-500 font-mono">Espanhol · Básico</p>
-            <p className="text-gray-500 font-mono">Português · Nativo</p>
+            <h5 className="text-purple-500 font-mono text-sm mb-2">LOCAL &amp; IDIOMA</h5>
+            <h4 className="text-xl font-bold text-gray-800 font-display">Ribeirão Preto · SP</h4>
+            <p className="text-gray-500 font-mono">Inglês · Intermediário</p>
+            <p className="text-gray-500 font-mono">Whatsapp: (16) 99720-0212</p>
+            <p className="text-gray-500 font-mono">Email: c.silverio@live.com</p>
           </div>
         </div>
       </section>
