@@ -92,14 +92,14 @@ const Chat = () => {
           size="icon"
         >
           <span className="absolute inset-0 rounded-full bg-emerald-300 opacity-30 blur-lg animate-pulse pointer-events-none" />
-          <Bot className="relative h-7 w-7" />
+          <Bot className="relative h-10 w-10" />
         </Button>
       </div>
       {isOpen && (
         <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-[420px] h-[520px] sm:w-[360px] sm:max-w-none md:w-[420px] bg-white rounded-xl shadow-2xl flex flex-col">
           <div className="flex justify-between items-center p-4 border-b">
             <h3 className="text-lg font-bold text-black">Mibee</h3>
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="cursor-pointer">
               <X className="h-6 w-6 text-black" />
             </Button>
           </div>
@@ -151,7 +151,7 @@ const Chat = () => {
               disabled={isLoading}
             />
             <Button
-              className="ml-2"
+              className="ml-2 h-10 px-4 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white font-semibold shadow-[0_8px_20px_rgba(16,185,129,0.35)] transition hover:shadow-[0_10px_24px_rgba(15,118,110,0.4)] hover:brightness-105 disabled:opacity-60 cursor-pointer"
               onClick={handleSendMessage}
               disabled={isLoading}
             >
