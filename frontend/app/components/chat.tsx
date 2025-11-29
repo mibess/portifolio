@@ -103,8 +103,8 @@ const Chat = () => {
               <X className="h-6 w-6 text-black" />
             </Button>
           </div>
-          <div className="flex-1 p-4 overflow-y-auto">
-            <div className="mb-4 flex flex-col items-center text-center text-black">
+          <div className="flex-1 p-4 overflow-y-auto flex flex-col gap-7">
+            <div className="mb-1 flex flex-col items-center text-center text-black">
               <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg">
                 <Bot className="relative h-8 w-8" />
               </div>
@@ -118,7 +118,7 @@ const Chat = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`my-2 p-2 rounded-lg ${
+                className={`p-2 rounded-lg ${
                   msg.sender === "bot"
                     ? "bg-gray-200 text-black"
                     : "bg-blue-500 text-white self-end"
@@ -132,8 +132,10 @@ const Chat = () => {
               </div>
             ))}
             {isLoading && (
-              <div className="my-2 p-2 rounded-lg bg-gray-200 text-black">
-                Digitando...
+              <div className="flex w-fit items-center gap-1 rounded-lg bg-gray-200 px-3 py-2 text-slate-700">
+                <span className="h-2 w-2 rounded-full bg-slate-500 animate-bounce [animation-delay:-0.2s]" />
+                <span className="h-2 w-2 rounded-full bg-slate-500 animate-bounce [animation-delay:0s]" />
+                <span className="h-2 w-2 rounded-full bg-slate-500 animate-bounce [animation-delay:0.2s]" />
               </div>
             )}
             <div ref={messagesEndRef} />
