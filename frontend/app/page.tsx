@@ -31,6 +31,7 @@ const timeline = [
       "Criei uma aplicação web para monitorar acessos em tempo real em monitores e dispositivos móveis (ReactJS, Spring Boot, REST, Docker, AWS ECS, GitHub Actions).",
       "Modelei e implementei módulos de gestão para sindicatos e associações (Java, JSF, Primefaces, PostgreSQL, Jasper Reports).",
       "Entreguei frontend para clientes acompanharem dados cadastrais, cobranças, agendamentos e homologações (Angular, Spring Boot, Docker, AWS, DDD).",
+      "Implementei integrações bancárias (Itaú, BB, Santander, Bradesco, Caixa) para a geração de boletos e remessa. Implementei o pagamento via PIX para alguns clientes.",
       "Realizei testes unitários e de integração, migrei o monolito para AWS e mantive cadência com Scrum e Kanban usando GitHub/Bitbucket.",
     ],
   },

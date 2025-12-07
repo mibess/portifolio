@@ -43,7 +43,7 @@ Sou um desenvolvedor Full Stack experiente em Java. Mais de 12 anos atuando no g
 
 ## Experiências
 
-### **AMCOM - SQUAD CCEE** (2023 - atual)
+### **AMCOM - SQUAD CCEE** (2024 - atual)
 *Desenvolvedor Full Stack Java* - Ribeirão Preto - SP
 
 - Desenvolvo novas funcionalidades e mantenho microsserviços críticos da CCEE usando Java, Spring Boot e banco Oracle.
@@ -61,6 +61,7 @@ Sou um desenvolvedor Full Stack experiente em Java. Mais de 12 anos atuando no g
 - Migrei software monolítico de servidores locais para AWS para diminuir bugs e melhorar manutenção e disponibilidade.
 - Trabalhei em equipe com metodologias Scrum e Kanban.
 - Participei de reuniões com clientes para definições de melhorias e ajustes técnicos.
+- Criei integrações via APIs com bancos como por exemplo: Itaú, Banco do Brasil, Santander, Bradesco, Caixa Econômica, entre outros, para a geração de boletos e remessa. Implementei o pagamento via PIX para alguns clientes.
 
 **Obs:** Embora tenha conhecimentos em Bancos de Dados NoSQL, Kubernetes e Grafana, essas tecnologias não foram aplicadas diretamente nas experiências profissionais que eu tenho.
 
