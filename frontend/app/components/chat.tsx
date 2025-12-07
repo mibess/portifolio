@@ -96,7 +96,7 @@ const Chat = () => {
         </Button>
       </div>
       {isOpen && (
-        <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-[420px] h-[520px] sm:w-[360px] sm:max-w-none md:w-[420px] bg-white rounded-xl shadow-2xl flex flex-col">
+        <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-[420px] h-[480px] sm:w-[360px] sm:max-w-none md:w-[420px] bg-white rounded-xl shadow-2xl flex flex-col">
           <div className="flex justify-between items-center p-4 border-b">
             <h3 className="text-lg font-bold text-black">Mibee</h3>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="cursor-pointer">
