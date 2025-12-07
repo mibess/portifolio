@@ -13,10 +13,10 @@ export default function Header() {
             <div className="flex-shrink-0 text-neon-cyan font-display font-bold text-xl tracking-widest">
               <Link href="/" className="flex items-center gap-2" aria-label="Ir para a página inicial">
                 <Image
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Logo Mibess"
-                  width={1000}
-                  height={1000}
+                  width={512}
+                  height={124}
                   className="h-8 w-auto transition-opacity duration-300"
                   priority
                 />
