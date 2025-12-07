@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,6 +51,16 @@ export default function Footer() {
         </div>
 
         <footer className="mt-20 border-t border-gray-200 pt-8 text-gray-300 text-sm font-mono">
+            <div className="flex justify-center mb-4">
+                <Image
+                    src="/logo.svg"
+                    alt="Logo Mibess"
+                    width={512}
+                    height={124}
+                    className="h-8 w-auto transition-opacity duration-300"
+                    priority
+                />
+            </div>
             <p>&copy; {currentYear} Claudemir Custódio. System.exit(0);</p>
         </footer>
     </section>
