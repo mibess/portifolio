@@ -118,14 +118,15 @@ const Chat = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`p-2 rounded-lg ${
-                  msg.sender === "bot"
+                className={`p-2 rounded-lg ${msg.sender === "bot"
                     ? "bg-gray-200 text-black"
                     : "bg-blue-500 text-white self-end"
-                }`}
+                  }`}
               >
                 {msg.sender === "bot" ? (
-                  <ReactMarkdown>{msg.text}</ReactMarkdown>
+                  <div className="prose prose-sm max-w-none text-black prose-p:leading-relaxed prose-pre:p-0">
+                    <ReactMarkdown>{msg.text}</ReactMarkdown>
+                  </div>
                 ) : (
                   msg.text
                 )}

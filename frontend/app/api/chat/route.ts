@@ -6,10 +6,15 @@ import path from "path";
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const aboutMeContent = getAboutMeContent();
-const MODEL_NAME = "gemini-3-flash-preview";
+//const MODEL_NAME = "gemini-3-flash-preview";
+const MODEL_NAME = "gemini-2.5-flash";
+//const MODEL_NAME = "gemini-3.1-pro-preview";
+//const MODEL_NAME = "gemini-3-pro-preview";
 
 export async function POST(req: NextRequest) {
   const { question } = await req.json();
+
+  console.log("Pergunta recebida:", question);
 
   if (!question) {
     return NextResponse.json(
@@ -35,6 +40,8 @@ export async function POST(req: NextRequest) {
       4. Responda de forma concisa. Use bullet points curtos se for listar tecnologias.
       5. Não invente nenhuma informação que não esteja no contexto.
       6. Responda apenas se o usuário perguntar ou disser algo.
+      7. Use espaçamentos entre parágrafos (\n\n) para facilitar a leitura.
+      8. IMPORTANTE: Formate TODA a sua resposta usando Markdown (como **negrito** e * listas). NUNCA envolva sua resposta em um bloco de código (ex: não comece a resposta com \`\`\`markdown).
     `;
 
     const result = await ai.models.generateContent({
@@ -45,7 +52,17 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    return NextResponse.json({ answer: result.text });
+    let answerText = result.text || "";
+
+    // Remove os blocos de código ```markdown que a IA possa gerar acidentalmente ao redor de todo o texto
+    answerText = answerText.replace(/^(?:```markdown\s*|```\s*)/i, '').replace(/\s*```$/i, '').trim();
+
+    // Em alguns casos o texto pode vir com literais \\n (escapados) em vez de quebras de linha reais.
+    answerText = answerText.replace(/\\n/g, '\n');
+
+    const response = NextResponse.json({ answer: answerText });
+    console.log("Resposta da IA:", response);
+    return response;
   } catch (error) {
     console.error("Erro na integração com o Gemini:", error);
     return NextResponse.json(
