@@ -74,7 +74,9 @@ export default function PersonalLife() {
                 src={selectedImage}
                 alt="Imagem Ampliada"
                 fill
-                quality={75}
+                quality={80}
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                priority
                 className="object-contain"
               />
             </div>

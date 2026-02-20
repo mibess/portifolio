@@ -75,7 +75,7 @@ export default function Home() {
         <div className="relative pl-8 border-l-2 border-gray-200 space-y-12">
           {timeline.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-[41px] top-0 w-5 h-5 bg-blue-500 rounded-full shadow-neon-blue shadow-lg"></div>
+              <div className="absolute -left-[41px] top-0 w-5 h-5 bg-blue-500 rounded-full shadow-neon-blue"></div>
 
               <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
                 <div className="flex flex-col md:flex-row justify-between mb-4 border-b border-gray-200 pb-4">
