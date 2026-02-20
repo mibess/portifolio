@@ -14,8 +14,6 @@ const MODEL_NAME = "gemini-2.5-flash";
 export async function POST(req: NextRequest) {
   const { question } = await req.json();
 
-  console.log("Pergunta recebida:", question);
-
   if (!question) {
     return NextResponse.json(
       { error: "A pergunta é obrigatória" },
@@ -61,7 +59,7 @@ export async function POST(req: NextRequest) {
     answerText = answerText.replace(/\\n/g, '\n');
 
     const response = NextResponse.json({ answer: answerText });
-    console.log("Resposta da IA:", response);
+
     return response;
   } catch (error) {
     console.error("Erro na integração com o Gemini:", error);
