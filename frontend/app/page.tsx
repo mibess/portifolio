@@ -10,6 +10,7 @@ import NextStep from "./components/next-step";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
+import PersonalLife from "./components/personal-life";
 
 const timeline = [
   {
@@ -51,7 +52,7 @@ export default function Home() {
     <>
       {/* Navigation */}
       <Header />
-      
+
       {/* Hero Section */}
       <Hero />
 
@@ -60,6 +61,9 @@ export default function Home() {
 
       {/* Skills / Tech Stack (Terminal Style) */}
       <Skills />
+
+      {/* Vida Pessoal / Insta Stories */}
+      <PersonalLife />
 
       {/* Experience Log */}
       <section id="xp" className="py-20 max-w-6xl mx-auto px-4">
@@ -104,7 +108,7 @@ export default function Home() {
             <h4 className="text-xl font-bold text-gray-800 font-display">Engenharia de Software</h4>
             <p className="text-gray-500 font-mono">ALURA</p>
           </div>
-          
+
           <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-gray-300">
             <h5 className="text-gray-500 font-mono text-sm mb-2">2008 - 2009 // TÉCNICO</h5>
             <h4 className="text-xl font-bold text-gray-800 font-display">Informática & Gestão de TI</h4>
