@@ -22,10 +22,13 @@ export default function PersonalLife() {
             Não é somente programação
           </h3>
         </div>
-        <p className="text-gray-200 max-w-2xl font-mono text-sm leading-relaxed">
-          Ter uma vida ativa fora das telas é fundamental para manter o
-          equilíbrio, a criatividade e a saúde. Momentos offline recarregam as
-          energias e nos tornam melhores até mesmo quando voltamos a programar.
+        <p className="flex flex-col items-start text-gray-200 font-mono text-sm leading-relaxed space-y-2">
+          <span>Acredito que um bom desenvolvedor não é formado apenas por código.</span>
+          <span>Fora das telas eu jogo futebol, toco violão, estudo coisas novas e passo tempo com minha família.</span>
+          <span>Esses momentos me ajudam a manter a mente leve, criativa e curiosa.</span>
+
+          <span>Programar exige foco e lógica — mas criar soluções exige energia, repertório e equilíbrio.</span>
+          <span>É no movimento, na música e nas conversas que muitas das minhas melhores ideias começam.</span>
         </p>
       </div>
 
@@ -41,7 +44,7 @@ export default function PersonalLife() {
                 src={img.src}
                 alt={img.alt}
                 fill
-                quality={100}
+                quality={75}
                 sizes="(max-width: 768px) 96px, 128px"
                 className="object-cover"
               />
@@ -71,7 +74,7 @@ export default function PersonalLife() {
                 src={selectedImage}
                 alt="Imagem Ampliada"
                 fill
-                quality={100}
+                quality={75}
                 className="object-contain"
               />
             </div>
