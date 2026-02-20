@@ -2,74 +2,184 @@
 
 **Desenvolvedor Full Stack em Java | Desenvolvimento de Aplicações Web**
 
-- **LinkedIn:** https://www.linkedin.com/in/claudemircustodio
-- **GitHub:** https://github.com/mibess
+🔗 **LinkedIn:** https://www.linkedin.com/in/claudemircustodio  
+💻 **GitHub:** https://github.com/mibess  
 
 ---
 
-## Resumo
+## 🚀 Resumo e Momento Atual
 
-Sou um desenvolvedor Full Stack experiente em Java. Mais de 12 anos atuando no gerenciamento e desenvolvimento de aplicações para empresas de médio porte, sindicatos e associações. Conhecimentos sólidos em Java, JSF e Primefaces.
+Sou um desenvolvedor Full Stack experiente em Java com mais de **14 anos de experiência** atuando no gerenciamento e desenvolvimento de aplicações.
 
----
+Tenho foco em:
 
-## Contato
+- Arquitetura Java
+- Cloud AWS
+- Microsserviços
+- Frontends modernos
+- Governança CI/CD
 
-- **Whatsapp:** (16) 99720-0212
-- **Email:** c.silverio@live.com
-- **Localização:** Ribeirão Preto - SP
+Transformo ideias complexas em código eficiente, escalável e bem estruturado.
 
----
+### 🎯 Próximo Passo / Objetivo Atual
 
-## Habilidades
+Meu objetivo é me tornar especialista e acelerar roadmaps que precisem de:
 
-- **Backend:** Java e Spring Boot.
-- **Frontend:** Primefaces, Angular, ReactJS.
-- **Banco de Dados:** PostgreSQL, MySQL e Oracle.
-- **Containers:** Docker.
-- **Cloud:** AWS Cloud.
-- **Metodologias:** Ágil.
-- **Testes:** Unitários e de Integração.
-- **Versionamento:** Git - Github, Bitbucket.
-- **CI/CD:** Criação e Manutenção de automação de software.
+- Microsserviços robustos
+- Frontends modernos
+- CI/CD com foco em escala e observabilidade
+
+Estou disponível para novos projetos e desafios.
 
 ---
 
-## Idioma
+## 📬 Contato
 
-- **Inglês:** Intermediário
-
----
-
-## Experiências
-
-### **AMCOM - SQUAD CCEE** (2024 - atual)
-*Desenvolvedor Full Stack Java* - Ribeirão Preto - SP
-
-- Desenvolvo novas funcionalidades e mantenho microsserviços críticos da CCEE usando Java, Spring Boot e banco Oracle.
-- Construo interfaces Angular com foco em desempenho e consistência da experiência do usuário.
-- Atuo com Git (GitHub/Bitbucket), Jira e práticas ágeis para garantir cadência e qualidade das entregas.
-
-### **RTOOLS DESENVOLVIMENTO DE SISTEMAS** (2010 - 2023)
-*Desenvolvedor Full Stack Java* - Ribeirão Preto - SP
-
-- Desenvolvi uma aplicação para o gerenciamento de acesso de clientes em catracas por meio de cartões ou biometrias para academias, clubes e escolas (Java 7, MySQL, Swing).
-- Criei uma aplicação web para monitorar o acesso dos clientes em tempo real, com visualização de dados em monitores e dispositivos móveis (ReactJS, Spring Boot, REST, Docker, AWS ECS, Git actions).
-- Contribuí no desenvolvimento de um software de gestão para médias empresas, sindicatos e associações, sendo responsável pelo desenvolvimento e modelagem de módulos (Java, JSF, Primefaces, PostgreSQL, Jasper Reports, Docker, Bitbucket, Pipelines, Amazon S3, EC2, Cloud Watch).
-- Desenvolvi uma aplicação frontend para clientes de sindicatos e associações para acesso a dados cadastrais, cobranças, agendamentos e homologações (Angular, Spring Boot, Docker, AWS, DDD).
-- Realizei testes unitários e de integração.
-- Migrei software monolítico de servidores locais para AWS para diminuir bugs e melhorar manutenção e disponibilidade.
-- Trabalhei em equipe com metodologias Scrum e Kanban.
-- Participei de reuniões com clientes para definições de melhorias e ajustes técnicos.
-- Criei integrações via APIs com bancos como por exemplo: Itaú, Banco do Brasil, Santander, Bradesco, Caixa Econômica, entre outros, para a geração de boletos e remessa. Implementei o pagamento via PIX para alguns clientes.
-
-**Obs:** Embora tenha conhecimentos em Bancos de Dados NoSQL, Kubernetes e Grafana, essas tecnologias não foram aplicadas diretamente nas experiências profissionais que eu tenho.
+📱 **WhatsApp:** (16) 99720-0212  
+📧 **Email:** c.silverio@live.com  
+📍 **Localização:** Ribeirão Preto - SP  
 
 ---
 
-## Formação e Cursos
+## 🛠️ Habilidades Técnicas
 
-- **ETEC - ESCOLA TÉCNICA ESTADUAL DE SÃO PAULO** (2008-2009)
-  - Técnico em Informática, Gestão de Projetos de TI
-- **ALURA** (2023)
-  - Engenharia de Software
+### Backend
+- Java
+- Spring Boot
+- JPA / Hibernate
+- REST API
+- DDD
+- Microservices
+- RabbitMQ
+- Python
+- Flask
+
+### Frontend
+- Angular
+- React
+- TypeScript
+- JavaScript
+- HTML
+- CSS
+- JSF
+- Primefaces
+
+### Infra & Cloud
+- AWS (EC2, S3, ECS)
+- Docker
+- CI/CD (GitHub Actions / Bitbucket Pipelines)
+- Git
+
+### Banco de Dados
+- PostgreSQL
+- Oracle
+- MySQL
+
+### Práticas e Metodologias
+- Ágil (Scrum / Kanban)
+- Testes Unitários
+- Testes de Integração
+
+---
+
+## ⭐ Projetos em Destaque
+
+### 🔹 Gerador de UC
+Projeto completo com JavaScript e Python (Flask, TailwindCSS, Docker).  
+Gera código de Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.
+
+### 🔹 Plataforma EAD
+Plataforma de cursos online utilizando Angular, Java Spring Boot, PostgreSQL e Microsserviços.  
+Possui autenticação, gerenciamento de cursos, aulas em vídeo e painel administrativo.
+
+### 🔹 Sistema de Login
+Sistema completo com Spring Boot, Google Auth e Keycloak (Angular, PostgreSQL).  
+Inclui autenticação, autorização e gerenciamento de usuários.
+
+### 🔹 Banco de Sangue
+Sistema web para processar dados de candidatos a doadores (Java, Spring Boot, PostgreSQL, AWS, Docker).
+
+### 🔹 Criador de Cards
+Aplicação para listar, cadastrar, editar e excluir cards de pensamento (Angular, Java Spring Boot, PostgreSQL, TailwindCSS).
+
+### 🔹 Gerenciador de Senhas
+Aplicação para armazenar e gerenciar senhas pessoais com segurança (Angular, Java Spring Boot, PostgreSQL, TailwindCSS).
+
+---
+
+## 💼 Experiências Profissionais
+
+### AMCOM - SQUAD CCEE  
+📅 Jan 2024 - Atual  
+📍 Ribeirão Preto - SP  
+**Desenvolvedor de Sistemas**
+
+- Desenvolvimento e manutenção de microsserviços críticos da CCEE (Java, Spring Boot, Oracle)
+- Construção de interfaces Angular com foco em performance
+- Uso de Git (GitHub/Bitbucket), Jira e práticas ágeis
+
+---
+
+### RTOOLS Desenvolvimento de Sistemas  
+📅 Jan 2010 - Set 2023  
+📍 Ribeirão Preto - SP  
+**Desenvolvedor Full Stack Java**
+
+- Sistema de controle de acesso via cartões e biometria (Java 7, MySQL, Swing)
+- Aplicação web para monitoramento em tempo real (ReactJS, Spring Boot, Docker, AWS ECS)
+- Software de gestão empresarial (Java, JSF, Primefaces, PostgreSQL, Jasper Reports, Docker, AWS)
+- Aplicação frontend para sindicatos e associações (Angular, Spring Boot, DDD)
+- Integrações bancárias (Itaú, Banco do Brasil, Santander, Bradesco, Caixa) para boletos e PIX
+- Migração de software monolítico para AWS
+
+---
+
+### MASTER COMPANY INFORMÁTICA  
+📅 Jan 2009 - Dez 2009  
+**Instrutor de Informática**
+
+- Aulas de Photoshop, CorelDraw e Microsoft Office
+- Desenvolvimento de materiais didáticos personalizados
+
+---
+
+## 📚 Formação e Cursos
+
+**ALURA (2023)** – Engenharia de Software  
+
+**ETEC - Escola Técnica Estadual de São Paulo (2008-2009)**  
+Técnico em Informática & Gestão de Projetos de TI  
+
+---
+
+## ⚖️ Não é Somente Programação
+
+Acredito que um bom desenvolvedor não é formado apenas por código.
+
+Fora das telas eu:
+
+- ⚽ Jogo futebol
+- 🎸 Toco violão
+- 📚 Estudo coisas novas
+- 👨‍👩‍👧 Passo tempo com minha família
+
+Esses momentos mantêm minha mente leve, criativa e curiosa.
+
+Programar exige foco e lógica — mas criar soluções exige energia, repertório e equilíbrio.  
+É no movimento, na música e nas conversas que muitas das minhas melhores ideias começam.
+
+---
+
+## 🤖 Diretrizes de Personalidade (Uso Interno)
+
+Claudemir é um desenvolvedor sênior, direto ao ponto, prático e apaixonado por código limpo e arquitetura bem feita.
+
+Ao apresentar seus projetos ou carreira:
+
+- Seja entusiasmado com tecnologia
+- Mantenha tom amigável e casual
+- Evite jargões corporativos excessivamente formais
+
+Se perguntarem sobre vida pessoal:
+- Mencione futebol, violão e família
+- Reforce a importância do equilíbrio para criatividade e lógica

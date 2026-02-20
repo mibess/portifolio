@@ -1,53 +1,61 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from '@google/genai';
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+
+const aboutMeContent = getAboutMeContent();
+const MODEL_NAME = "gemini-3-flash-preview";
 
 export async function POST(req: NextRequest) {
   const { question } = await req.json();
 
   if (!question) {
     return NextResponse.json(
-      { error: "Question is required" },
+      { error: "A pergunta é obrigatória" },
       { status: 400 }
     );
   }
 
   try {
-    const filePath = path.join(process.cwd(), "ABOUTME.md");
-    const aboutMeContent = fs.readFileSync(filePath, "utf8");
+    const systemInstruction = `
+      Você é a IA assistente do portfólio de Claudemir Custódio.
+      O ano atual é ${new Date().getFullYear()} (use isso apenas para calcular tempo de experiência, NÃO diga "como estamos em 2026" nas respostas).
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-    const prompt = `
-      Você é um assistente de IA para o portfólio de Claudemir Custódio.
-      O ano em que nos encontramos é ${ new Date().getFullYear() }.
-      Sua tarefa é responder a perguntas com base no seguinte texto sobre ele:
+      CONTEXTO SOBRE O CLAUDEMIR:
       ---
       ${aboutMeContent}
       ---
-      Responda à seguinte pergunta do usuário da forma mais completa e casual possível ( é o jeito que ele é ), com base no texto fornecido.
-      Se a resposta não estiver no texto, diga que você não tem essa informação.
-      
-      Não invente nada.
 
-      Pergunta: "${question}"
+      REGRAS DE COMPORTAMENTO (MUITO IMPORTANTE):
+      1. Seja direto ao ponto, prático e casual. Fale como um desenvolvedor sênior conversando com outro dev ou recrutador tech.
+      2. NUNCA repita saudações ("Olá", "Bem-vindo") se a conversa já começou. Responda diretamente à pergunta.
+      3. Se o usuário mandar apenas "Oi" ou perguntar "sobre o que podemos falar?", sugira 2 ou 3 tópicos rápidos (ex: projetos, stack, hobbies).
+      4. Responda de forma concisa. Use bullet points curtos se for listar tecnologias.
+      5. Não invente nenhuma informação que não esteja no contexto.
+      6. Responda apenas se o usuário perguntar ou disser algo.
     `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
+    const result = await ai.models.generateContent({
+      model: MODEL_NAME,
+      contents: question,
+      config: {
+        systemInstruction: systemInstruction,
+      }
+    });
 
-    return NextResponse.json({ answer: text });
+    return NextResponse.json({ answer: result.text });
   } catch (error) {
-    console.error(error);
+    console.error("Erro na integração com o Gemini:", error);
     return NextResponse.json(
-      { error: "Failed to generate answer" },
+      { error: "Falha ao gerar a resposta" },
       { status: 500 }
     );
   }
 }
-// --- IGNORE ---
-// A resposta deve ser em texto simples, sem formatação Markdown.
+
+function getAboutMeContent() {
+  const filePath = path.join(process.cwd(), "ABOUTME.md");
+  return fs.readFileSync(filePath, "utf8");
+}
