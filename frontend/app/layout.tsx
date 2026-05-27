@@ -23,7 +23,7 @@ const structuredData = {
   name: "Claudemir Custódio",
   jobTitle: "Full Stack Java Developer",
   url: siteMetadata.siteUrl,
-  email: "mailto:c.silverio@live.com",
+  email: "mailto:admin@mibess.com.br",
   image: `${siteMetadata.siteUrl}/profile.png`,
   sameAs: [
     "https://www.linkedin.com/in/claudemircustodio",
