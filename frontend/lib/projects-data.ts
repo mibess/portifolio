@@ -31,7 +31,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Projeto completo com Angular e Spring Boot. Baseado na arquitetura de micro serviços esse projeto é uma plataforma de cursos online com funcionalidades como autenticação, gerenciamento de cursos, aulas em vídeo e painel administrativo.",
     imageUrl: "/logo-ead-plataform.png",
-    videoUrl: "/video-ead.mov",
+    videoUrl: "",
     tags: [
       "Java",
       "Spring Boot",
@@ -51,7 +51,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Sistema de Login completo utilizando Spring Boot, Google Auth e Keycloak, com funcionalidades de autenticação, autorização e gerenciamento de usuários.",
     imageUrl: "/logo-auth-system.png",
-    videoUrl: "/video-auth.mov",
+    videoUrl: "",
     tags: [
       "Java",
       "Spring Boot",
@@ -71,7 +71,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Sistema de Processamento de Dados - Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
     imageUrl: "/logo-banco-de-sangue.png",
-    videoUrl: "/video-agencia-citel.mov",
+    videoUrl: "",
     tags: [
       "Java",
       "Spring Boot",
@@ -89,7 +89,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Com essa aplicação podemos listar, cadastrar, editar e excluir um card de pensamento.",
     imageUrl: "/logo-cards.png",
-    videoUrl: "/video-cards-ms.mov",
+    videoUrl: "/video-cards.mov",
     tags: [
       "Angular",
       "Java",
@@ -109,7 +109,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Com essa aplicação podemos armazenar e gerenciar senhas pessoais, garantindo segurança e facilidade de acesso.",
     imageUrl: "/logo-secrets.png",
-    videoUrl: "/video-secrets.mov",
+    videoUrl: "",
     tags: [
       "Angular",
       "Java",

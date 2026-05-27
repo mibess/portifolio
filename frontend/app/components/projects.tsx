@@ -116,7 +116,6 @@ export default function Projects() {
 
                 {/* Looping preview video of the project, placed below but inside the card */}
                 <div className="w-full px-10">
-
                   <ProjectVideoPreview videoUrl={project.videoUrl} title={project.title} />
                 </div>
               </article>

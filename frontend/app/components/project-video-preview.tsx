@@ -20,7 +20,7 @@ export const ProjectVideoPreview = ({ videoUrl, title }: { videoUrl?: string; ti
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03] rounded-2xl"
+          className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03] rounded-2xl"
           onError={() => setVideoError(true)}
           style={{ pointerEvents: "none" }}
         />
