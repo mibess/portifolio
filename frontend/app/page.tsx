@@ -75,9 +75,9 @@ export default function Home() {
         <div className="relative pl-8 border-l-2 border-gray-200 space-y-12">
           {timeline.map((item, index) => (
             <div key={index} className="relative">
-              <div className="absolute -left-[41px] top-0 w-5 h-5 bg-blue-500 rounded-full shadow-neon-blue"></div>
+              <div className="absolute -left-10.25 top-0 w-5 h-5 bg-blue-500 rounded-full shadow-neon-blue"></div>
 
-              <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+              <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-shadow">
                 <div className="flex flex-col md:flex-row justify-between mb-4 border-b border-gray-200 pb-4">
                   <div>
                     <h4 className="text-2xl font-bold text-gray-800 font-display">{item.company}</h4>
@@ -103,19 +103,19 @@ export default function Home() {
 
         {/* Education Grid */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+          <div className="bg-white p-6 rounded-3xl shadow-md border-t-4 border-green-500">
             <h5 className="text-green-500 font-mono text-sm mb-2">2023 // CURSO</h5>
             <h4 className="text-xl font-bold text-gray-800 font-display">Engenharia de Software</h4>
             <p className="text-gray-500 font-mono">ALURA</p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-gray-300">
+          <div className="bg-white p-6 rounded-3xl shadow-md border-t-4 border-gray-300">
             <h5 className="text-gray-500 font-mono text-sm mb-2">2008 - 2009 // TÉCNICO</h5>
             <h4 className="text-xl font-bold text-gray-800 font-display">Informática & Gestão de TI</h4>
             <p className="text-gray-500 font-mono">ETEC - Escola Técnica Estadual de SP</p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+          <div className="bg-white p-6 rounded-3xl shadow-md border-t-4 border-purple-500">
             <h5 className="text-purple-500 font-mono text-sm mb-2">LOCAL &amp; IDIOMA</h5>
             <h4 className="text-xl font-bold text-gray-800 font-display">Ribeirão Preto · SP</h4>
             <p className="text-gray-500 font-mono">Inglês · Intermediário</p>

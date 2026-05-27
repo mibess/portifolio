@@ -17,7 +17,7 @@ export default function Skills() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Card Backend */}
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow group">
+                    <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow group">
                         <div className="flex justify-between items-start mb-4">
                             <h4 className="text-blue-500 font-bold text-lg font-mono">Backend.Core</h4>
                             <Server className="text-gray-400 group-hover:text-blue-500 w-6 h-6" />
@@ -32,7 +32,7 @@ export default function Skills() {
                     </div>
 
                     {/* Card Frontend */}
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow group">
+                    <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow group">
                         <div className="flex justify-between items-start mb-4">
                             <h4 className="text-purple-500 font-bold text-lg font-mono">Frontend.UI</h4>
                             <Code className="text-gray-400 group-hover:text-purple-500 w-6 h-6" />
@@ -47,7 +47,7 @@ export default function Skills() {
                     </div>
 
                     {/* Card DevOps/Cloud */}
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow group">
+                    <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow group">
                         <div className="flex justify-between items-start mb-4">
                             <h4 className="text-green-500 font-bold text-lg font-mono">Infra.Cloud</h4>
                             <Cloud className="text-gray-400 group-hover:text-green-500 w-6 h-6" />
@@ -62,7 +62,7 @@ export default function Skills() {
                     </div>
 
                     {/* Card Practices */}
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow group">
+                    <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow group">
                         <div className="flex justify-between items-start mb-4">
                             <h4 className="text-emerald-500 font-bold text-lg font-mono">Ops.Práticas</h4>
                             <CheckCircle2 className="text-gray-400 group-hover:text-emerald-500 w-6 h-6" />

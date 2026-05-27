@@ -86,7 +86,7 @@ const Chat = () => {
           </div>
         )}
         <Button
-          className="relative h-14 w-14 rounded-full bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_15px_35px_rgba(16,185,129,0.35)] transition duration-200 ease-out hover:scale-105 hover:shadow-[0_20px_45px_rgba(15,118,110,0.45)] cursor-pointer"
+          className="relative h-14 w-14 rounded-full bg-linear-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_15px_35px_rgba(16,185,129,0.35)] transition duration-200 ease-out hover:scale-105 hover:shadow-[0_20px_45px_rgba(15,118,110,0.45)] cursor-pointer"
           onClick={toggleChat}
           aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
           size="icon"
@@ -96,7 +96,7 @@ const Chat = () => {
         </Button>
       </div>
       {isOpen && (
-        <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-[420px] h-[480px] sm:w-[360px] sm:max-w-none md:w-[420px] bg-white rounded-xl shadow-2xl flex flex-col">
+        <div className="fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-105 h-120 sm:w-90 sm:max-w-none md:w-105 bg-white rounded-3xl shadow-2xl flex flex-col">
           <div className="flex justify-between items-center p-4 border-b">
             <h3 className="text-lg font-bold text-black">Mibee</h3>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="cursor-pointer">
@@ -105,7 +105,7 @@ const Chat = () => {
           </div>
           <div className="flex-1 p-4 overflow-y-auto flex flex-col gap-7">
             <div className="mb-1 flex flex-col items-center text-center text-black">
-              <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg">
+              <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg">
                 <Bot className="relative h-8 w-8" />
               </div>
               <div className="text-lg font-semibold">
