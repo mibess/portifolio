@@ -2,6 +2,7 @@ export interface ProjectInfo {
   title: string;
   description: string;
   imageUrl: string;
+  videoUrl?: string;
   tags: string[];
   githubUrl: string;
   demoUrl: string | null;
@@ -13,6 +14,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Projeto completo com Javascript e Python. Esse projeto gera código de Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.",
     imageUrl: "/logo-gerador-uc.png",
+    videoUrl: "/video-gerador-uc.mov",
     tags: [
       "JavaScript",
       "Python",
@@ -29,6 +31,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Projeto completo com Angular e Spring Boot. Baseado na arquitetura de micro serviços esse projeto é uma plataforma de cursos online com funcionalidades como autenticação, gerenciamento de cursos, aulas em vídeo e painel administrativo.",
     imageUrl: "/logo-ead-plataform.png",
+    videoUrl: "/video-ead.mov",
     tags: [
       "Java",
       "Spring Boot",
@@ -48,6 +51,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Sistema de Login completo utilizando Spring Boot, Google Auth e Keycloak, com funcionalidades de autenticação, autorização e gerenciamento de usuários.",
     imageUrl: "/logo-auth-system.png",
+    videoUrl: "/video-auth.mov",
     tags: [
       "Java",
       "Spring Boot",
@@ -67,6 +71,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Sistema de Processamento de Dados - Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
     imageUrl: "/logo-banco-de-sangue.png",
+    videoUrl: "/video-agencia-citel.mov",
     tags: [
       "Java",
       "Spring Boot",
@@ -84,6 +89,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Com essa aplicação podemos listar, cadastrar, editar e excluir um card de pensamento.",
     imageUrl: "/logo-cards.png",
+    videoUrl: "/video-cards-ms.mov",
     tags: [
       "Angular",
       "Java",
@@ -103,6 +109,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Com essa aplicação podemos armazenar e gerenciar senhas pessoais, garantindo segurança e facilidade de acesso.",
     imageUrl: "/logo-secrets.png",
+    videoUrl: "/video-secrets.mov",
     tags: [
       "Angular",
       "Java",
@@ -118,3 +125,4 @@ export const projectsData: ProjectInfo[] = [
     demoUrl: "https://secrets.mibess.com.br",
   },
 ];
+
