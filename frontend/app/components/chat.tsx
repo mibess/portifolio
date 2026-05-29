@@ -20,6 +20,25 @@ const Chat = () => {
 
   useEffect(scrollToBottom, [messages]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const currentLocks = parseInt(document.body.getAttribute("data-scroll-locks") || "0", 10);
+    document.body.setAttribute("data-scroll-locks", String(currentLocks + 1));
+    document.body.classList.add("overflow-hidden");
+
+    return () => {
+      const locks = parseInt(document.body.getAttribute("data-scroll-locks") || "0", 10);
+      const newLocks = Math.max(0, locks - 1);
+      if (newLocks === 0) {
+        document.body.removeAttribute("data-scroll-locks");
+        document.body.classList.remove("overflow-hidden");
+      } else {
+        document.body.setAttribute("data-scroll-locks", String(newLocks));
+      }
+    };
+  }, [isOpen]);
+
   const toggleChat = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
