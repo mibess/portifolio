@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, HeartPulse } from "lucide-react";
 import Image from "next/image";
 
 interface ImageMeta {
@@ -52,10 +52,10 @@ const IMAGES: PersonalImage[] = [
   {
     id: 4,
     src: "/personal-4.jpg",
-    alt: "Hambúrgueres artesanais assando na grelha com fogo de chão ativo",
+    alt: "Culinária na brasa com fogo de chão ativo, representando a paixão por cozinhar em geral",
     category: "CULINARY_FLOW",
     tag: "🔥 HEAT_SANDBOX",
-    description: "Preparar hambúrgueres artesanais na brasa ativa com fogo de chão é um dos meus rituais favoritos de descompressão. Dominar a grelha e preparar uma boa comida é a minha forma de reunir pessoas e curtir conexões offline reais.",
+    description: "A arte da gastronomia, do fogo e da criação na cozinha. Explorar receitas, dominar a brasa e cozinhar em geral é o meu laboratório favorito de criatividade sensorial e descompressão. Para mim, preparar uma boa refeição é a melhor forma de reunir pessoas queridas e celebrar momentos offline reais.",
     meta: { ratio: "9:16", status: "ACTIVE", latency: "0ms", focus: "CRAFTING" }
   },
   {
@@ -128,9 +128,12 @@ export default function PersonalLife() {
             <span>STATUS: OFFLINE // BALANCING</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-100 tracking-tighter uppercase leading-[1.1]">
-            HUMAN.<span className="text-neon-cyan">core()</span>
-          </h3>
+          <div className="flex items-center space-x-3">
+            <HeartPulse className="w-8 h-8 md:w-10 md:h-10 text-neon-purple drop-shadow-[0_0_8px_rgba(188,19,254,0.5)] animate-pulse" style={{ animationDuration: "2s" }} />
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-gray-100 tracking-tighter leading-[1.1]">
+              HUMAN.<span className="text-neon-cyan">core()</span>
+            </h3>
+          </div>
 
           <div className="font-mono text-xs text-neon-purple font-bold tracking-wider uppercase">
             // O algoritmo por trás da lógica
