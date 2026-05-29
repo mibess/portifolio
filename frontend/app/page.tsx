@@ -66,21 +66,47 @@ export default function Home() {
       <PersonalLife />
 
       {/* Experience Log */}
-      <section id="xp" className="py-20 max-w-6xl mx-auto px-4">
+      <section id="xp" className="py-20 max-w-6xl mx-auto px-4 relative">
+        {/* Decorative glowing ambient backdrops */}
+        <div className="absolute top-0 left-1/4 w-80 h-80 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl pointer-events-none -z-10" />
+
         <div className="flex items-center mb-12 justify-end">
-          <h3 className="text-3xl font-display font-bold text-gray-200 text-right">MISSION.log()</h3>
-          <span className="text-blue-500 ml-4"><History className="w-8 h-8" /></span>
+          <div className="flex items-center space-x-2 text-[10px] font-mono text-gray-500 mr-4 hidden sm:flex">
+            <span>[XP_LOG: 3_MISSIONS_LOADED]</span>
+            <span>•</span>
+            <span>[STATUS: ARCHIVED]</span>
+          </div>
+          <h3 className="text-3xl font-display font-bold text-gray-200 text-right">
+            MISSION.<span className="text-neon-cyan">log()</span>
+          </h3>
+          <span className="text-neon-cyan ml-4 filter drop-shadow-[0_0_8px_rgba(0,243,255,0.4)]">
+            <History className="w-8 h-8" />
+          </span>
         </div>
 
         <div className="relative pl-8 border-l-2 border-gray-200 space-y-12">
           {timeline.map((item, index) => (
-            <div key={index} className="relative">
-              <div className="absolute -left-10.25 top-0 w-5 h-5 bg-blue-500 rounded-full shadow-neon-blue"></div>
+            <div key={index} className="relative group">
+              {/* Pulsing Concentric Interactive Timeline Node */}
+              <div className={`absolute -left-[43px] top-1.5 w-5 h-5 rounded-full bg-cyber-black border-2 flex items-center justify-center z-10 transition-all duration-500 group-hover:scale-110 ${
+                index === 0 ? "border-neon-cyan shadow-neon-blue" : "border-neon-purple shadow-neon-purple"
+              }`}>
+                <div className={`w-1.5 h-1.5 rounded-full ${
+                  index === 0 ? "bg-neon-cyan" : "bg-neon-purple"
+                }`} />
+                {index === 0 && (
+                  <div className="absolute inset-0 rounded-full bg-neon-cyan/40 animate-ping -z-10" />
+                )}
+              </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-shadow">
+              {/* Polished White Timeline Card */}
+              <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
                 <div className="flex flex-col md:flex-row justify-between mb-4 border-b border-gray-200 pb-4">
                   <div>
-                    <h4 className="text-2xl font-bold text-gray-800 font-display">{item.company}</h4>
+                    <h4 className="text-2xl font-bold text-gray-800 font-display">
+                      {item.company}
+                    </h4>
                     <p className="text-blue-500 font-mono">{item.role}</p>
                   </div>
                   <div className="text-right mt-2 md:mt-0">
