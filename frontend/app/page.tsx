@@ -68,8 +68,8 @@ export default function Home() {
       {/* Experience Log */}
       <section id="xp" className="py-20 max-w-6xl mx-auto px-4 relative">
         {/* Decorative glowing ambient backdrops */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute top-0 left-1/4 w-80 h-80 bg-neon-cyan/5 rounded-full blur-3xl pointer-events-none -z-10 hidden md:block" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl pointer-events-none -z-10 hidden md:block" />
 
         <div className="flex items-center mb-12 justify-end">
           <div className="flex items-center space-x-2 text-[10px] font-mono text-gray-500 mr-4 hidden sm:flex">
