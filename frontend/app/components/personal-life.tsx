@@ -243,13 +243,14 @@ export default function PersonalLife() {
             </div>
 
             {/* Premium Photo Viewport with Blurred Backdrop reflection */}
-            <div className="relative flex-1 bg-[#0a0a0c] flex items-center justify-center min-h-[320px] md:h-full overflow-hidden select-none">
+            <div className="relative flex-1 bg-[#0a0a0c] flex items-center justify-center min-h-[220px] md:min-h-[320px] md:h-full overflow-hidden select-none">
               {/* Blurred background image reflection to prevent solid black bars */}
               <Image
                 src={selectedImage.src}
                 alt=""
                 fill
                 quality={15}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
                 className="object-cover filter blur-3xl opacity-25 pointer-events-none"
               />
@@ -267,8 +268,8 @@ export default function PersonalLife() {
               </button>
 
               {/* Crisp foreground image */}
-              <div className="relative w-full h-full p-4 md:p-8 flex items-center justify-center z-10">
-                <div className="relative w-full h-full aspect-[3/4]">
+              <div className="relative w-full h-full p-3 md:p-8 flex items-center justify-center z-10">
+                <div className="relative w-full h-auto aspect-square md:h-full md:aspect-[3/4]">
                   <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
@@ -299,7 +300,7 @@ export default function PersonalLife() {
             </div>
 
             {/* Technical description sidebar */}
-            <div className="w-full md:w-[380px] md:h-full bg-cyber-dark/95 border-t md:border-t-0 md:border-l border-white/10 p-6 flex flex-col justify-between font-mono text-left select-none overflow-y-auto max-h-[45vh] md:max-h-full">
+            <div className="w-full md:w-[380px] md:h-full bg-cyber-dark/95 border-t md:border-t-0 md:border-l border-white/10 p-4 md:p-6 flex flex-col justify-between font-mono text-left select-none overflow-y-auto max-h-[50vh] md:max-h-full">
               
               {/* Close Button for desktop */}
               <div className="hidden md:flex justify-end mb-4">
@@ -314,7 +315,7 @@ export default function PersonalLife() {
 
               {/* Header Info */}
               <div className="flex-1 flex flex-col">
-                <div className="flex items-center space-x-2 text-[10px] text-neon-cyan mb-2">
+                <div className="flex items-center space-x-2 text-[10px] text-neon-cyan mb-1.5 md:mb-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-neon-purple animate-pulse" />
                   <span>IMAGE_INSPECT_SYSTEM v1.0.4</span>
                 </div>
@@ -326,16 +327,16 @@ export default function PersonalLife() {
                   CATEGORY: {selectedImage.category}
                 </span>
 
-                <div className="border-t border-dashed border-white/10 my-4" />
+                <div className="border-t border-dashed border-white/10 my-2.5 md:my-4" />
 
                 {/* Emotional/Human Copywriting adapted to image analysis */}
-                <p className="text-xs md:text-sm text-gray-300 leading-relaxed font-mono mb-6">
+                <p className="text-xs md:text-sm text-gray-300 leading-relaxed font-mono mb-3 md:mb-6">
                   {selectedImage.description}
                 </p>
               </div>
 
               {/* Retro Metadata dashboard */}
-              <div className="bg-cyber-black/50 p-4 rounded-xl border border-white/5 space-y-2 mt-4">
+              <div className="bg-cyber-black/50 p-3 md:p-4 rounded-xl border border-white/5 space-y-1.5 md:space-y-2 mt-3 md:mt-4">
                 <div className="text-[10px] text-neon-purple font-bold">// SYSTEM_METADATA</div>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[10px] text-gray-400">
                   <div>STATUS: <span className="text-neon-cyan">{selectedImage.meta.status}</span></div>
