@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown";
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [messages, setMessages] = useState<{ sender: string; text: string }[]>(
     []
   );
@@ -19,6 +20,16 @@ const Chat = () => {
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      const hasModalClass = document.body.classList.contains("overflow-hidden");
+      setIsModalOpen(hasModalClass && !isOpen);
+    });
+
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -98,7 +109,7 @@ const Chat = () => {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+      <div className={`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 ${isModalOpen ? "hidden md:flex" : "flex"}`}>
         {!isOpen && (
           <div className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg border border-slate-200">
             Fale com o Mibee

@@ -224,7 +224,7 @@ export default function PersonalLife() {
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative max-w-5xl w-full glass-panel rounded-3xl border border-neon-cyan/30 overflow-hidden flex flex-col md:flex-row h-auto md:h-[550px] max-h-[95vh] shadow-2xl animate-in zoom-in-95 duration-300"
+            className="relative max-w-5xl w-full glass-panel rounded-3xl border border-neon-cyan/30 overflow-hidden flex flex-col md:flex-row h-auto md:h-[550px] max-h-[95dvh] md:max-h-[95vh] shadow-2xl animate-in zoom-in-95 duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Cyber Bar for Mobile */}
@@ -243,7 +243,7 @@ export default function PersonalLife() {
             </div>
 
             {/* Premium Photo Viewport with Blurred Backdrop reflection */}
-            <div className="relative flex-1 bg-[#0a0a0c] flex items-center justify-center min-h-[220px] md:min-h-[320px] md:h-full overflow-hidden select-none">
+            <div className="relative flex-none h-[260px] sm:h-[300px] md:flex-1 bg-[#0a0a0c] flex items-center justify-center md:h-full overflow-hidden select-none">
               {/* Blurred background image reflection to prevent solid black bars */}
               <Image
                 src={selectedImage.src}
@@ -269,7 +269,7 @@ export default function PersonalLife() {
 
               {/* Crisp foreground image */}
               <div className="relative w-full h-full p-3 md:p-8 flex items-center justify-center z-10">
-                <div className="relative w-full h-auto aspect-square md:h-full md:aspect-[3/4]">
+                <div className="relative h-full aspect-square md:w-full md:h-full md:aspect-[3/4]">
                   <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
@@ -300,7 +300,7 @@ export default function PersonalLife() {
             </div>
 
             {/* Technical description sidebar */}
-            <div className="w-full md:w-[380px] md:h-full bg-cyber-dark/95 border-t md:border-t-0 md:border-l border-white/10 p-4 md:p-6 flex flex-col justify-between font-mono text-left select-none overflow-y-auto max-h-[50vh] md:max-h-full">
+            <div className="w-full md:w-[380px] md:h-full bg-cyber-dark/95 border-t md:border-t-0 md:border-l border-white/10 p-4 md:p-6 flex flex-col justify-between font-mono text-left select-none overflow-y-auto flex-1 md:flex-initial max-h-none md:max-h-full">
               
               {/* Close Button for desktop */}
               <div className="hidden md:flex justify-end mb-4">
@@ -333,6 +333,22 @@ export default function PersonalLife() {
                 <p className="text-xs md:text-sm text-gray-300 leading-relaxed font-mono mb-3 md:mb-6">
                   {selectedImage.description}
                 </p>
+
+                {/* Mobile CTA Button (Naturally in flow, hidden on Desktop) */}
+                <div className="md:hidden mb-4">
+                  <button
+                    onClick={() => {
+                      const chatBtn = document.querySelector('button[aria-label="Abrir chat"]') as HTMLButtonElement;
+                      if (chatBtn) {
+                        chatBtn.click();
+                      }
+                      setSelectedImage(null);
+                    }}
+                    className="w-full py-2.5 px-4 rounded-full bg-white/95 text-sm font-medium text-slate-800 shadow-md border border-slate-200 hover:bg-white active:scale-[0.98] transition-all duration-200 cursor-pointer text-center"
+                  >
+                    Fale com o Mibee
+                  </button>
+                </div>
               </div>
 
               {/* Retro Metadata dashboard */}
