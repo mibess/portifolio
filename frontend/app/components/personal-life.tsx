@@ -333,22 +333,6 @@ export default function PersonalLife() {
                 <p className="text-xs md:text-sm text-gray-300 leading-relaxed font-mono mb-3 md:mb-6">
                   {selectedImage.description}
                 </p>
-
-                {/* Mobile CTA Button (Naturally in flow, hidden on Desktop) */}
-                <div className="md:hidden mb-4">
-                  <button
-                    onClick={() => {
-                      const chatBtn = document.querySelector('button[aria-label="Abrir chat"]') as HTMLButtonElement;
-                      if (chatBtn) {
-                        chatBtn.click();
-                      }
-                      setSelectedImage(null);
-                    }}
-                    className="w-full py-2.5 px-4 rounded-full bg-white/95 text-sm font-medium text-slate-800 shadow-md border border-slate-200 hover:bg-white active:scale-[0.98] transition-all duration-200 cursor-pointer text-center"
-                  >
-                    Fale com o Mibee
-                  </button>
-                </div>
               </div>
 
               {/* Retro Metadata dashboard */}
