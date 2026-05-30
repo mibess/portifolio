@@ -81,7 +81,7 @@ const Chat = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify({ question, history: messages }),
       });
 
       if (!res.ok) {
