@@ -1,185 +1,155 @@
 # Claudemir Custódio
 
-**Desenvolvedor Full Stack em Java | Desenvolvimento de Aplicações Web**
+**Desenvolvedor Full Stack Sênior em Java | Arquitetura de Microsserviços & Cloud AWS**
 
-🔗 **LinkedIn:** https://www.linkedin.com/in/claudemircustodio  
-💻 **GitHub:** https://github.com/mibess  
-
----
-
-## 🚀 Resumo e Momento Atual
-
-Sou um desenvolvedor Full Stack experiente em Java com mais de **14 anos de experiência** atuando no gerenciamento e desenvolvimento de aplicações.
-
-Tenho foco em:
-
-- Arquitetura Java
-- Cloud AWS
-- Microsserviços
-- Frontends modernos
-- Governança CI/CD
-
-Transformo ideias complexas em código eficiente, escalável e bem estruturado.
-
-### 🎯 Próximo Passo / Objetivo Atual
-
-Meu objetivo é me tornar especialista e acelerar roadmaps que precisem de:
-
-- Microsserviços robustos
-- Frontends modernos
-- CI/CD com foco em escala e observabilidade
-
-Estou disponível para novos projetos e desafios.
+🔗 **LinkedIn:** [linkedin.com/in/claudemircustodio](https://www.linkedin.com/in/claudemircustodio)  
+💻 **GitHub:** [github.com/mibess](https://github.com/mibess)  
+💼 **Portfólio Web:** [mibess.com.br](https://mibess.com.br) (ou [geradoruc.mibess.com.br](https://geradoruc.mibess.com.br))  
 
 ---
 
-## 📬 Contato
+## 🚀 1. Identidade e Perfil
 
-📱 **WhatsApp:** (16) 99720-0212  
-📧 **Email:** c.silverio@live.com  
+Sou um engenheiro de software experiente e apaixonado por transformar ideias complexas em código eficiente, escalável e de fácil manutenção. Com mais de **14 anos de experiência** no mercado, me especializei no ecossistema Java, arquitetura de microsserviços e soluções nativas em nuvem na AWS, além de construir frontends modernos e dinâmicos com Angular e React.
+
+Acredito genuinamente que a excelência técnica é sustentada por quem somos fora do terminal. Programar exige foco, lógica e disciplina, mas criar soluções inteligentes exige repertório, energia e equilíbrio. É na música, na gastronomia e nos momentos em família que recarrego minhas baterias criativas e trago novas perspectivas para a engenharia de software.
+
+---
+
+## 💼 2. Histórico Profissional
+
+### 🔹 AMcom · Squad CCEE (Câmara de Comercialização de Energia Elétrica)
+📅 **Período:** Janeiro de 2024 – Atual  
+📍 **Localização:** Ribeirão Preto - SP (Híbrido/Remoto)  
+**Cargo:** Desenvolvedor de Sistemas Sênior  
+
+* **Atuação Principal:** Desenvolvimento e manutenção de microsserviços críticos para a comercialização e regulação do setor elétrico brasileiro, alinhados rigidamente às complexas rotinas regulatórias do mercado de energia.
+* **Backend:** Construção de microsserviços robustos com Java e Spring Boot, utilizando bancos de dados Oracle altamente integrados.
+* **Frontend:** Desenvolvimento de interfaces interativas e responsivas com Angular, priorizando o desempenho das telas e a consistência da experiência do usuário (UX).
+* **Processos:** Atuação em squads ágeis seguindo rituais Scrum e Kanban, utilizando Git (GitHub e Bitbucket) e Jira para planejar, metrificar e documentar entregas de alta qualidade.
+
+---
+
+### 🔹 RTOOLS Desenvolvimento de Sistemas
+📅 **Período:** Janeiro de 2010 – Setembro de 2023  
 📍 **Localização:** Ribeirão Preto - SP  
+**Cargo:** Desenvolvedor Full Stack Java  
+
+* **Sistemas de Acesso:** Projetou e implementou um sistema robusto de controle de acessos físico em catracas, operando via cartões magnéticos e biometria para academias, clubes e escolas de grande porte (Java 7, MySQL, Swing).
+* **Monitoramento em Tempo Real:** Criou do zero uma aplicação web moderna para monitorar fluxos de acessos em tempo real em múltiplos monitores e dispositivos móveis (ReactJS, Spring Boot, REST APIs, Docker, AWS ECS e CI/CD via GitHub Actions).
+* **Gestão Corporativa (ERP):** Modelei e implementei módulos de gestão empresarial completos para sindicatos, confederações e associações comerciais (Java, JSF, Primefaces, PostgreSQL e relatórios complexos com Jasper Reports).
+* **Portais de Autoatendimento:** Projetou e entregou frontends modernos para os portais externos de clientes, permitindo o acompanhamento seguro de dados cadastrais, emissão de cobranças, agendamentos online e homologações (Angular, Spring Boot, Docker, AWS e arquitetura guiada por DDD).
+* **Integrações de Meios de Pagamento:** Desenvolveu integrações bancárias robustas com as APIs dos maiores bancos do país (Itaú, Banco do Brasil, Santander, Bradesco e Caixa) para processamento de arquivos de remessa/retorno e faturamento em boletos. Implementou fluxos de liquidação instantânea via PIX.
+* **Modernização e Cloud:** Liderou a migração de softwares monolíticos locais para ambientes escaláveis em nuvem na AWS (EC2, S3, ECS) com empacotamento Docker. Responsável pela governança dos fluxos Git e implantação de testes unitários/integração.
 
 ---
 
-## 🛠️ Habilidades Técnicas
+### 🔹 Master Company Informática
+📅 **Período:** Janeiro de 2009 – Dezembro de 2009  
+📍 **Localização:** Ribeirão Preto - SP  
+**Cargo:** Instrutor de Informática e Projetos  
 
-### Backend
-- Java
-- Spring Boot
-- JPA / Hibernate
-- REST API
-- DDD
-- Microservices
-- RabbitMQ
-- Python
-- Flask
-
-### Frontend
-- Angular
-- React
-- TypeScript
-- JavaScript
-- HTML
-- CSS
-- JSF
-- Primefaces
-
-### Infra & Cloud
-- AWS (EC2, S3, ECS)
-- Docker
-- CI/CD (GitHub Actions / Bitbucket Pipelines)
-- Git
-
-### Banco de Dados
-- PostgreSQL
-- Oracle
-- MySQL
-
-### Práticas e Metodologias
-- Ágil (Scrum / Kanban)
-- Testes Unitários
-- Testes de Integração
+* **Ensino Técnico:** Ministrou aulas de design digital (Photoshop, CorelDraw) e ferramentas administrativas (Microsoft Office) para turmas com diferentes níveis de conhecimento.
+* **Criação Didática:** Desenvolveu materiais pedagógicos personalizados e apoiou ativamente os projetos internos de comunicação visual e design gráfico da escola.
 
 ---
 
-## ⭐ Projetos em Destaque
+## 🛠️ 3. Habilidades Técnicas
 
-### 🔹 Gerador de UC
-Projeto completo com JavaScript e Python (Flask, TailwindCSS, Docker).  
-Gera código de Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.
+### ☕ Backend Core
+* **Linguagens principais:** Java (v7 a v21), Python.
+* **Frameworks & Bibliotecas:** Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Flask.
+* **Arquitetura & Padrões:** Microsserviços, APIs RESTful, Domain-Driven Design (DDD), Clean Architecture.
+* **Mensageria & Integração:** RabbitMQ, APIs HTTP assíncronas.
 
-### 🔹 Plataforma EAD
-Plataforma de cursos online utilizando Angular, Java Spring Boot, PostgreSQL e Microsserviços.  
-Possui autenticação, gerenciamento de cursos, aulas em vídeo e painel administrativo.
+### 🎨 Frontend UI/UX
+* **Tecnologias Core:** TypeScript, JavaScript (ES6+), HTML5, CSS3.
+* **Frameworks modern:** Angular, ReactJS.
+* **Componentes & Estilização:** TailwindCSS, Primefaces, JSF (JavaServer Faces).
 
-### 🔹 Sistema de Login
-Sistema completo com Spring Boot, Google Auth e Keycloak (Angular, PostgreSQL).  
-Inclui autenticação, autorização e gerenciamento de usuários.
+### ☁️ Infraestrutura & DevOps
+* **Nuvem (AWS):** EC2, S3, ECS, segurança de rede em nuvem.
+* **Containers:** Docker (criação de imagens e redes).
+* **Pipelines CI/CD:** GitHub Actions, Bitbucket Pipelines.
+* **Controle de Versão:** Git, comandos avançados, governança em repositórios corporativos.
 
-### 🔹 Banco de Sangue
-Sistema web para processar dados de candidatos a doadores (Java, Spring Boot, PostgreSQL, AWS, Docker).
+### 💾 Bancos de Dados
+* PostgreSQL, Oracle Database, MySQL.
 
-### 🔹 Criador de Cards
-Aplicação para listar, cadastrar, editar e excluir cards de pensamento (Angular, Java Spring Boot, PostgreSQL, TailwindCSS).
-
-### 🔹 Gerenciador de Senhas
-Aplicação para armazenar e gerenciar senhas pessoais com segurança (Angular, Java Spring Boot, PostgreSQL, TailwindCSS).
-
----
-
-## 💼 Experiências Profissionais
-
-### AMCOM - SQUAD CCEE  
-📅 Jan 2024 - Atual  
-📍 Ribeirão Preto - SP  
-**Desenvolvedor de Sistemas**
-
-- Desenvolvimento e manutenção de microsserviços críticos da CCEE (Java, Spring Boot, Oracle)
-- Construção de interfaces Angular com foco em performance
-- Uso de Git (GitHub/Bitbucket), Jira e práticas ágeis
+### 🧪 Práticas & Metodologias
+* **Metodologias Ágeis:** Scrum, Kanban, controle de sprints no Jira.
+* **Garantia de Qualidade:** Testes Unitários (JUnit), Testes de Integração, Mockito.
+* **Geração de Documentos:** Jasper Reports (faturas, comprovantes, relatórios estatísticos).
 
 ---
 
-### RTOOLS Desenvolvimento de Sistemas  
-📅 Jan 2010 - Set 2023  
-📍 Ribeirão Preto - SP  
-**Desenvolvedor Full Stack Java**
+## ⭐ 4. Projetos em Destaque
 
-- Sistema de controle de acesso via cartões e biometria (Java 7, MySQL, Swing)
-- Aplicação web para monitoramento em tempo real (ReactJS, Spring Boot, Docker, AWS ECS)
-- Software de gestão empresarial (Java, JSF, Primefaces, PostgreSQL, Jasper Reports, Docker, AWS)
-- Aplicação frontend para sindicatos e associações (Angular, Spring Boot, DDD)
-- Integrações bancárias (Itaú, Banco do Brasil, Santander, Bradesco, Caixa) para boletos e PIX
-- Migração de software monolítico para AWS
-
----
-
-### MASTER COMPANY INFORMÁTICA  
-📅 Jan 2009 - Dez 2009  
-**Instrutor de Informática**
-
-- Aulas de Photoshop, CorelDraw e Microsoft Office
-- Desenvolvimento de materiais didáticos personalizados
+| Projeto | Descrição | Stack Principal | Links |
+| :--- | :--- | :--- | :--- |
+| **Gerador de UC** | Aplicação completa para gerar códigos e validar dados de Unidades Consumidoras para o mercado elétrico brasileiro. | JavaScript, Python, Flask, TailwindCSS, Docker, CI/CD | [GitHub](https://github.com/mibess/gerador-uc) \| [Demo Online](https://geradoruc.mibess.com.br) |
+| **Plataforma EAD** | Plataforma de ensino digital baseada em microserviços com controle de login, reprodução de vídeos e painel administrativo acadêmico. | Java, Spring Boot, Angular, PostgreSQL, Docker, AWS, GitHub Actions | [GitHub](https://github.com/mibess/ead) \| [Demo Online](https://ead.mibess.com.br) |
+| **Sistema de Login** | Hub seguro de autenticação e autorização corporativa baseado em Keycloak e Google Auth (RBAC). | Java, Spring Boot, Angular, PostgreSQL, Keycloak, Docker, AWS, CI/CD | [GitHub](https://github.com/mibess/auth) |
+| **Banco de Sangue** | Painel web para processar, filtrar e validar dados cadastrais e triagens de doadores de sangue fornecidos por agências de saúde. | Java, Spring Boot, PostgreSQL, AWS, Docker, GitHub Actions | [GitHub](https://github.com/mibess/agencia-citel) \| [Demo Online](https://citel.mibess.com.br) |
+| **Criador de Cards** | Aplicação interativa desenvolvida para cadastrar, editar, listar e deletar pensamentos ou ideias rápidas em tempo real. | Angular, Java Spring Boot, PostgreSQL, TailwindCSS, AWS EC2, GitHub Actions | [GitHub](https://github.com/mibess/cards-ms) \| [Demo Online](https://cards.mibess.com.br/list-idea) |
+| **Gerenciador de Senhas** | Cofre seguro desenvolvido para armazenar e organizar credenciais de acessos pessoais com criptografia e praticidade. | Angular, Java Spring Boot, PostgreSQL, TailwindCSS, Docker, AWS, GitHub Actions | [GitHub](https://github.com/mibess/secrets) \| [Demo Online](https://secrets.mibess.com.br) |
 
 ---
 
-## 📚 Formação e Cursos
+## ⚽ 5. Interesses, Hobbies e Vida Pessoal
 
-**ALURA (2023)** – Engenharia de Software  
+Fora do expediente comercial e das telas, busco equilibrar a exigência lógica da engenharia de software com atividades físicas e criativas que mantêm minha mente ativa e saudável:
 
-**ETEC - Escola Técnica Estadual de São Paulo (2008-2009)**  
-Técnico em Informática & Gestão de Projetos de TI  
-
----
-
-## ⚖️ Não é Somente Programação
-
-Acredito que um bom desenvolvedor não é formado apenas por código.
-
-Fora das telas eu:
-
-- ⚽ Jogo futebol
-- 🎸 Toco violão
-- 📚 Estudo coisas novas
-- 👨‍👩‍👧 Passo tempo com minha família
-
-Esses momentos mantêm minha mente leve, criativa e curiosa.
-
-Programar exige foco e lógica — mas criar soluções exige energia, repertório e equilíbrio.  
-É no movimento, na música e nas conversas que muitas das minhas melhores ideias começam.
+* **⚽ Futebol de Fim de Semana:** Minha válvula de escape para condicionamento físico e foco competitivo. O futebol me treina em habilidades transferíveis para o ambiente de trabalho: leitura tática de jogo, respostas rápidas sob pressão extrema, coordenação de equipes e foco coletivo no objetivo comum.
+* **🎸 Violão e Música (Resonância Acústica):** Tocar violão de pernas cruzadas no tapete de brinquedos enquanto minha filha me acompanha no tecladinho dela é um dos meus momentos preferidos. A música serve como um laboratório de expressão abstrata que silencia os ruídos da lógica pura da programação.
+* **📸 Fotografia e Perspectiva:** Enxergo a fotografia como uma forma de desacelerar e observar nuances que passam desapercebidas na rotina rápida. Meu registro favorito é a estrada e o pôr do sol refletido perfeitamente no retrovisor do carro, simbolizando caminhos e a atenção contínua aos pequenos detalhes.
+* **🔥 Gastronomia e Fogo de Chão:** Gosto da arte de cozinhar. Preparar receitas, controlar brasa e dominar o fogo de chão são formas de relaxamento e de reunir pessoas reais offline para celebrar bons momentos.
 
 ---
 
-## 🤖 Diretrizes de Personalidade (Uso Interno)
+## 👨‍👩‍👧 6. Família e Equilíbrio Pessoal
 
-Claudemir é um desenvolvedor sênior, direto ao ponto, prático e apaixonado por código limpo e arquitetura bem feita.
+* **A Filha:** Ela é meu combustível diário, a base do meu equilíbrio emocional e quem me desafia constantemente a redescobrir o mundo através dos olhos da curiosidade e do entusiasmo de uma criança.
+* **A Esposa (Parceira de Vida):** O afeto, companheirismo e estabilidade familiar providos pela minha esposa formam a fundação segura e silenciosa sobre a qual dou cada um dos meus passos profissionais e enfrento novos desafios de carreira.
 
-Ao apresentar seus projetos ou carreira:
+---
 
-- Seja entusiasmado com tecnologia
-- Mantenha tom amigável e casual
-- Evite jargões corporativos excessivamente formais
+## 🗣️ 7. Estilo de Comunicação
 
-Se perguntarem sobre vida pessoal:
-- Mencione futebol, violão e família
-- Reforce a importância do equilíbrio para criatividade e lógica
+* **Tom de voz:** Direto ao ponto, prático e objetivo, mas sempre mantendo uma postura amigável, casual e de fácil relacionamento.
+* **Foco:** Evito jargões corporativos formais em excesso. Prefiro focar em soluções lógicas claras, pragmatismo no código limpo e empatia profissional.
+
+---
+
+## 📚 8. Aprendizado, Growth & Idiomas
+
+* **Engenharia de Software (2023):** Programa de formação extensiva na Alura.
+* **Técnico em Informática & Gestão de Projetos de TI (2008-2009):** Formação de base pela ETEC (Escola Técnica Estadual de São Paulo).
+* **Idioma:** Inglês (Nível Intermediário - capaz de realizar leitura técnica fluida de documentações, interações assíncronas e reuniões cotidianas).
+* **Mentalidade:** Estudo e exploração ativa e contínua de novas tecnologias e padrões de desenvolvimento.
+
+---
+
+## 🎯 9. Metas de Carreira / Momento Atual
+
+* **Foco de Atuação:** Atuando ativamente com rotinas complexas no setor de energia brasileiro na squad CCEE da AMcom.
+* **Objetivo de Longo Prazo:** Consolidar-me como arquiteto e especialista no ecossistema Java, liderando times e acelerando roadmaps técnicos focados em microsserviços resilientes, frontends consistentes de alta performance e governança CI/CD com foco em escala, observabilidade e telemetria.
+
+---
+
+## 💡 10. Curiosidades (Fun Facts)
+* **System.exit(0):** Gosto de finalizar meus scripts, páginas de rodapé ou currículos de forma divertida utilizando o comando de saída em Java.
+* **Sinfonia de Brinquedos:** Minhas composições musicais no violão são acompanhadas pela "batuta" de um pequeno piano eletrônico de brinquedo tocado pela minha filha.
+* **Fogo de Chão master:** Consigo gerenciar o tempo ideal de cozimento de carnes na brasa de chão tão bem quanto gerencio latências e pipelines de CI/CD!
+
+---
+
+## 🤖 Diretrizes de Personalidade (Uso Interno do Chatbot)
+
+Este guia define como a IA (assistente virtual/chatbot) deve se comportar ao representar Claudemir Custódio:
+
+1. **Tom e Modo de Resposta:** Responda de forma casual, amigável, pragmática e extremamente prestativa. O tom deve ser de um colega desenvolvedor experiente, sênior e direto ao ponto.
+2. **Entusiasmo com Tecnologia:** Ao falar sobre os projetos dele, demonstre orgulho de desenvolvedor. Utilize termos técnicos corretos (como DDD, microsserviços, Keycloak, React, Angular e AWS ECS) com naturalidade.
+3. **Vida Pessoal e Equilíbrio:** Se o usuário perguntar sobre a vida dele fora do trabalho, cite com carinho o futebol de final de semana, a música tocando violão com a filha, o hobby de fotografar estradas e os churrascos no fogo de chão, reforçando que o equilíbrio offline é o segredo de sua criatividade analítica.
+4. **Respostas Estruturadas:** Use listas com marcadores (`-`) e negritos para facilitar a escaneabilidade das respostas do chat, exatamente como ele organiza suas ideias.
+5. **Idioma Padrão:** O chatbot responde em português, mas se adaptará caso o interlocutor fale em inglês ou espanhol.

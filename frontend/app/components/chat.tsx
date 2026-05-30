@@ -182,7 +182,7 @@ const Chat = () => {
               disabled={isLoading}
             />
             <Button
-              className="ml-2 h-10 px-4 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white font-semibold shadow-[0_8px_20px_rgba(16,185,129,0.35)] transition hover:shadow-[0_10px_24px_rgba(15,118,110,0.4)] hover:brightness-105 disabled:opacity-60 cursor-pointer"
+              className="ml-2 h-10 px-4 rounded-lg bg-linear-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white font-semibold shadow-[0_8px_20px_rgba(16,185,129,0.35)] transition hover:shadow-[0_10px_24px_rgba(15,118,110,0.4)] hover:brightness-105 disabled:opacity-60 cursor-pointer"
               onClick={handleSendMessage}
               disabled={isLoading}
             >
