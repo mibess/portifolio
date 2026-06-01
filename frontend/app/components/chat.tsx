@@ -9,7 +9,7 @@ const SUGGESTIONS = [
   { label: "Experiência", text: "Qual é a experiência profissional do Claudemir?", tag: "XP" },
   { label: "Projetos", text: "Quais projetos o Claudemir desenvolveu?", tag: "PROJ" },
   { label: "Tech Stack", text: "Quais são as tecnologias favoritas do Claudemir?", tag: "SYS" },
-  { label: "LigaPES", text: "Me fale sobre o LigaPES e o papel do Claudemir nele.", tag: "LIVE" },
+  { label: "Meus Planos", text: "Me fale sobre o Agora e o Depois do Claudemir", tag: "LIVE" },
   { label: "Hobbies", text: "Quais são os hobbies e interesses do Claudemir?", tag: "LIFE" },
   { label: "Formação", text: "Qual é a formação profissional do Claudemir?", tag: "EDU" },
 ];
