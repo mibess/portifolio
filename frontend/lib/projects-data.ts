@@ -71,7 +71,7 @@ export const projectsData: ProjectInfo[] = [
     description:
       "Sistema de Processamento de Dados - Este é um sistema web desenvolvido para processar dados de candidatos a doadores fornecidos por uma agência de banco de sangue.",
     imageUrl: "/logo-banco-de-sangue.png",
-    videoUrl: "",
+    videoUrl: "video-citel.mov",
     tags: [
       "Java",
       "Spring Boot",
@@ -79,7 +79,6 @@ export const projectsData: ProjectInfo[] = [
       "AWS",
       "Docker",
       "CI/CD",
-      "GitHub Actions",
     ],
     githubUrl: "https://github.com/mibess/agencia-citel",
     demoUrl: "https://citel.mibess.com.br",
