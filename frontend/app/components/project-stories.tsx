@@ -18,7 +18,7 @@ function getPrimaryLink(project: (typeof projectsData)[number]) {
   }
 
   return {
-    href: project.githubUrl,
+    href: project.githubUrl ?? "#",
     label: "Ver código no GitHub",
     icon: <Github className="w-4 h-4" aria-hidden="true" />,
   };

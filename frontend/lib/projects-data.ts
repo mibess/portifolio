@@ -4,12 +4,22 @@ export interface ProjectInfo {
   imageUrl: string;
   videoUrl?: string;
   tags: string[];
-  githubUrl: string;
+  githubUrl: string | null;
   demoUrl: string | null;
 }
 
 export const projectsData: ProjectInfo[] = [
-    {
+  {
+    title: "Bem vindo à Brodowski",
+    description:
+      "Experiência digital que apresenta Brodowski, cidade natal de Cândido Portinari, reunindo arte, memória ferroviária, atrações e um roteiro para planejar a visita.",
+    imageUrl: "/brodowski-cover.jpg",
+    videoUrl: "/video-brodowski.mp4",
+    tags: ["Next.js", "React", "TailwindCSS", "Design responsivo"],
+    githubUrl: "https://github.com/mibess/brodowski",
+    demoUrl: "https://brodowski.vercel.app/",
+  },
+  {
     title: "Gerador de UC",
     description:
       "Projeto completo com Javascript e Python. Esse projeto gera código de Unidades Consumidoras (UC) para o setor elétrico brasileiro a partir de dados fornecidos pelo usuário.",
@@ -124,4 +134,3 @@ export const projectsData: ProjectInfo[] = [
     demoUrl: "https://secrets.mibess.com.br",
   },
 ];
-

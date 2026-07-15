@@ -85,17 +85,19 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-wrap gap-3 text-sm font-mono">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/link inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white/30 px-4 py-2 text-gray-800 font-mono transition-all duration-200 ease-out hover:border-purple-400 hover:text-purple-600 hover:bg-purple-50/40"
-                        aria-label={`Código no GitHub de ${project.title}`}
-                      >
-                        <SiGithub className="w-4 h-4" />
-                        <span>Ver código</span>
-                        <ArrowUpRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover/link:translate-x-1 group-hover/link:-translate-y-[2px]" />
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white/30 px-4 py-2 text-gray-800 font-mono transition-all duration-200 ease-out hover:border-purple-400 hover:text-purple-600 hover:bg-purple-50/40"
+                          aria-label={`Código no GitHub de ${project.title}`}
+                        >
+                          <SiGithub className="w-4 h-4" />
+                          <span>Ver código</span>
+                          <ArrowUpRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover/link:translate-x-1 group-hover/link:-translate-y-[2px]" />
+                        </a>
+                      )}
 
                       {project.demoUrl && project.demoUrl !== "#" && (
                         <a

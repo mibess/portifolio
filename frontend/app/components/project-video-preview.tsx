@@ -20,6 +20,8 @@ export const ProjectVideoPreview = ({ videoUrl, title }: { videoUrl?: string; ti
           loop
           muted
           playsInline
+          preload="metadata"
+          aria-label={`Pré-visualização em vídeo do projeto ${title}`}
           className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03] rounded-2xl"
           onError={() => setVideoError(true)}
           style={{ pointerEvents: "none" }}
