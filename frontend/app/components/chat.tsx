@@ -2,12 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import ReactMarkdown, { type Components } from "react-markdown";
+import dynamic from "next/dynamic";
+import type { Components } from "react-markdown";
 import { ArrowDown, Check, Copy, Loader2, MessageSquareText, RotateCcw, Send, X } from "lucide-react";
 import { useTravaDeRolagem } from "@/lib/scroll-lock";
 import { contato } from "@/lib/content";
 
 type Mensagem = { sender: "user" | "bot"; text: string };
+
+// O renderizador de Markdown só é baixado quando o assistente vai ser usado, e não no carregamento da página.
+const carregarMarkdown = () => import("react-markdown");
+const ReactMarkdown = dynamic(carregarMarkdown, { ssr: false });
 
 const SUGESTOES = [
   { label: "Consultoria", text: "Como funciona uma consultoria com o Claudemir?" },
@@ -94,6 +99,7 @@ export default function Chat() {
   }, [aberto, movel]);
 
   const alternar = () => {
+    void carregarMarkdown();
     setAberto((v) => !v);
     if (mensagens.length === 0) setMensagens([BOAS_VINDAS]);
   };
@@ -126,8 +132,18 @@ export default function Chat() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: pergunta, history: historico }),
+        body: JSON.stringify({ question: pergunta, history: historico.slice(-12) }),
       });
+      if (res.status === 429) {
+        setMensagens((m) => [
+          ...m,
+          {
+            sender: "bot",
+            text: `Recebi muitas perguntas em pouco tempo. Tente de novo em alguns minutos ou fale direto pelo WhatsApp ${contato.whatsappNumero} ou pelo e-mail ${contato.email}.`,
+          },
+        ]);
+        return;
+      }
       if (!res.ok) throw new Error(`Falha na resposta do assistente (${res.status})`);
       const { answer } = (await res.json()) as { answer: string };
       setMensagens((m) => [...m, { sender: "bot", text: answer }]);
@@ -155,6 +171,8 @@ export default function Chat() {
       <button
         type="button"
         onClick={alternar}
+        onPointerEnter={() => void carregarMarkdown()}
+        onFocus={() => void carregarMarkdown()}
         aria-expanded={aberto}
         aria-controls="mibee-chat"
         aria-label={aberto ? "Fechar o assistente Mibee" : "Abrir o assistente Mibee"}
@@ -269,44 +287,52 @@ export default function Chat() {
                 <button
                   type="button"
                   onClick={() => fimRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })}
-                  className="absolute bottom-24 right-5 grid h-10 w-10 place-items-center rounded-full border border-linha bg-branco shadow-md"
+                  className="absolute bottom-32 right-5 grid h-10 w-10 place-items-center rounded-full border border-linha bg-branco shadow-md"
                   aria-label="Ir para a última mensagem"
                 >
                   <ArrowDown className="h-4 w-4" aria-hidden="true" />
                 </button>
               ) : null}
 
-              <form
-                className="flex items-center gap-2 border-t border-linha bg-branco p-3"
-                style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  enviar();
-                }}
-              >
-                <label htmlFor="mibee-pergunta" className="sr-only">
-                  Sua pergunta
-                </label>
-                <input
-                  ref={campoRef}
-                  id="mibee-pergunta"
-                  type="text"
-                  value={entrada}
-                  onChange={(e) => setEntrada(e.target.value)}
-                  placeholder="Pergunte sobre consultoria, projetos ou experiência"
-                  disabled={carregando}
-                  autoComplete="off"
-                  className="min-h-11 flex-1 rounded border border-linha bg-papel px-3 text-[15px] outline-none placeholder:text-ardosia/80 focus-visible:border-tinta"
-                />
-                <button
-                  type="submit"
-                  disabled={carregando || entrada.trim() === ""}
-                  className="grid h-11 w-11 flex-none place-items-center rounded bg-mel text-tinta transition-opacity disabled:cursor-not-allowed disabled:opacity-40"
-                  aria-label="Enviar pergunta"
+              <div className="border-t border-linha bg-branco" style={{ paddingBottom: "max(0.625rem, env(safe-area-inset-bottom))" }}>
+                <form
+                  className="flex items-center gap-2 p-3 pb-2"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    enviar();
+                  }}
                 >
-                  <Send className="h-4 w-4" aria-hidden="true" />
-                </button>
-              </form>
+                  <label htmlFor="mibee-pergunta" className="sr-only">
+                    Sua pergunta
+                  </label>
+                  <input
+                    ref={campoRef}
+                    id="mibee-pergunta"
+                    type="text"
+                    value={entrada}
+                    onChange={(e) => setEntrada(e.target.value)}
+                    placeholder="Pergunte sobre consultoria, projetos ou experiência"
+                    disabled={carregando}
+                    maxLength={800}
+                    autoComplete="off"
+                    className="min-h-11 flex-1 rounded border border-linha bg-papel px-3 text-[15px] outline-none placeholder:text-ardosia/80 focus-visible:border-tinta"
+                  />
+                  <button
+                    type="submit"
+                    disabled={carregando || entrada.trim() === ""}
+                    className="grid h-11 w-11 flex-none place-items-center rounded bg-mel text-tinta transition-opacity disabled:cursor-not-allowed disabled:opacity-40"
+                    aria-label="Enviar pergunta"
+                  >
+                    <Send className="h-4 w-4" aria-hidden="true" />
+                  </button>
+                </form>
+                <p className="px-3 font-mono text-[12px] leading-snug text-ardosia">
+                  Respostas geradas por IA (Google Gemini) podem conter erros. Não envie dados confidenciais.{" "}
+                  <a href="/privacidade" className="underline underline-offset-2 hover:text-tinta">
+                    Privacidade
+                  </a>
+                </p>
+              </div>
             </motion.section>
           </>
         ) : null}

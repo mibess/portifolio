@@ -1,16 +1,16 @@
 # Claudemir Custódio
 
-**Desenvolvedor Full Stack Sênior em Java | Arquitetura de Microsserviços & Cloud AWS**
+**Consultoria em Arquitetura Java & Cloud · Mentoria Técnica | Engenheiro de Software Full Stack (Java, Microsserviços, AWS)**
 
 🔗 **LinkedIn:** [linkedin.com/in/claudemircustodio](https://www.linkedin.com/in/claudemircustodio)  
 💻 **GitHub:** [github.com/mibess](https://github.com/mibess)  
-💼 **Portfólio Web:** [mibess.com.br](https://mibess.com.br) (ou [geradoruc.mibess.com.br](https://geradoruc.mibess.com.br))  
+💼 **Portfólio Web:** [mibess.com.br](https://www.mibess.com.br)  
 
 ---
 
 ## 🚀 1. Identidade e Perfil
 
-Sou um engenheiro de software experiente e apaixonado por transformar ideias complexas em código eficiente, escalável e de fácil manutenção. Com mais de **14 anos de experiência** no mercado, me especializei no ecossistema Java, arquitetura de microsserviços e soluções nativas em nuvem na AWS, além de construir frontends modernos e dinâmicos com Angular e React.
+Sou um engenheiro de software experiente e apaixonado por transformar ideias complexas em código eficiente, escalável e de fácil manutenção. Atuando no mercado desde **2010**, me especializei no ecossistema Java, arquitetura de microsserviços e soluções nativas em nuvem na AWS, além de construir frontends modernos e dinâmicos com Angular e React.
 
 Acredito genuinamente que a excelência técnica é sustentada por quem somos fora do terminal. Programar exige foco, lógica e disciplina, mas criar soluções inteligentes exige repertório, energia e equilíbrio. É na música, na gastronomia e nos momentos em família que recarrego minhas baterias criativas e trago novas perspectivas para a engenharia de software.
 
@@ -21,7 +21,7 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 ### 🔹 AMcom · Squad CCEE (Câmara de Comercialização de Energia Elétrica)
 📅 **Período:** Janeiro de 2024 – Atual  
 📍 **Localização:** Ribeirão Preto - SP (Híbrido/Remoto)  
-**Cargo:** Desenvolvedor de Sistemas Sênior  
+**Cargo:** Desenvolvedor de Sistemas  
 
 * **Atuação Principal:** Desenvolvimento e manutenção de microsserviços críticos para a comercialização e regulação do setor elétrico brasileiro, alinhados rigidamente às complexas rotinas regulatórias do mercado de energia.
 * **Backend:** Construção de microsserviços robustos com Java e Spring Boot, utilizando bancos de dados Oracle altamente integrados.
@@ -37,7 +37,7 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 
 * **Sistemas de Acesso:** Projetou e implementou um sistema robusto de controle de acessos físico em catracas, operando via cartões magnéticos e biometria para academias, clubes e escolas de grande porte (Java 7, MySQL, Swing).
 * **Monitoramento em Tempo Real:** Criou do zero uma aplicação web moderna para monitorar fluxos de acessos em tempo real em múltiplos monitores e dispositivos móveis (ReactJS, Spring Boot, REST APIs, Docker, AWS ECS e CI/CD via GitHub Actions).
-* **Gestão Corporativa (ERP):** Modelei e implementei módulos de gestão empresarial completos para sindicatos, confederações e associações comerciais (Java, JSF, Primefaces, PostgreSQL e relatórios complexos com Jasper Reports).
+* **Gestão Corporativa (ERP):** Modelei e implementei módulos de gestão empresarial completos para sindicatos, confederações e associações comerciais (Java, JSF, PrimeFaces, PostgreSQL e relatórios complexos com JasperReports).
 * **Portais de Autoatendimento:** Projetou e entregou frontends modernos para os portais externos de clientes, permitindo o acompanhamento seguro de dados cadastrais, emissão de cobranças, agendamentos online e homologações (Angular, Spring Boot, Docker, AWS e arquitetura guiada por DDD).
 * **Integrações de Meios de Pagamento:** Desenvolveu integrações bancárias robustas com as APIs dos maiores bancos do país (Itaú, Banco do Brasil, Santander, Bradesco e Caixa) para processamento de arquivos de remessa/retorno e faturamento em boletos. Implementou fluxos de liquidação instantânea via PIX.
 * **Modernização e Cloud:** Liderou a migração de softwares monolíticos locais para ambientes escaláveis em nuvem na AWS (EC2, S3, ECS) com empacotamento Docker. Responsável pela governança dos fluxos Git e implantação de testes unitários/integração.
@@ -47,9 +47,9 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 ### 🔹 Master Company Informática
 📅 **Período:** Janeiro de 2009 – Dezembro de 2009  
 📍 **Localização:** Ribeirão Preto - SP  
-**Cargo:** Instrutor de Informática e Projetos  
+**Cargo:** Instrutor de Informática  
 
-* **Ensino Técnico:** Ministrou aulas de design digital (Photoshop, CorelDraw) e ferramentas administrativas (Microsoft Office) para turmas com diferentes níveis de conhecimento.
+* **Ensino Técnico:** Ministrou aulas de design digital (Photoshop, CorelDRAW) e ferramentas administrativas (Microsoft Office) para turmas com diferentes níveis de conhecimento.
 * **Criação Didática:** Desenvolveu materiais pedagógicos personalizados e apoiou ativamente os projetos internos de comunicação visual e design gráfico da escola.
 
 ---
@@ -65,7 +65,7 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 ### 🎨 Frontend UI/UX
 * **Tecnologias Core:** TypeScript, JavaScript (ES6+), HTML5, CSS3.
 * **Frameworks modern:** Angular, ReactJS.
-* **Componentes & Estilização:** TailwindCSS, Primefaces, JSF (JavaServer Faces).
+* **Componentes & Estilização:** TailwindCSS, PrimeFaces, JSF (JavaServer Faces).
 
 ### ☁️ Infraestrutura & DevOps
 * **Nuvem (AWS):** EC2, S3, ECS, segurança de rede em nuvem.
@@ -79,7 +79,7 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 ### 🧪 Práticas & Metodologias
 * **Metodologias Ágeis:** Scrum, Kanban, controle de sprints no Jira.
 * **Garantia de Qualidade:** Testes Unitários (JUnit), Testes de Integração, Mockito.
-* **Geração de Documentos:** Jasper Reports (faturas, comprovantes, relatórios estatísticos).
+* **Geração de Documentos:** JasperReports (faturas, comprovantes, relatórios estatísticos).
 
 ---
 
@@ -90,9 +90,9 @@ Acredito genuinamente que a excelência técnica é sustentada por quem somos fo
 | **Gerador de UC** | Aplicação completa para gerar códigos e validar dados de Unidades Consumidoras para o mercado elétrico brasileiro. | JavaScript, Python, Flask, TailwindCSS, Docker, CI/CD | [GitHub](https://github.com/mibess/gerador-uc) \| [Demo Online](https://geradoruc.mibess.com.br) |
 | **Plataforma EAD** | Plataforma de ensino digital baseada em microserviços com controle de login, reprodução de vídeos e painel administrativo acadêmico. | Java, Spring Boot, Angular, PostgreSQL, Docker, AWS, GitHub Actions | [GitHub](https://github.com/mibess/ead) \| [Demo Online](https://ead.mibess.com.br) |
 | **Sistema de Login** | Hub seguro de autenticação e autorização corporativa baseado em Keycloak e Google Auth (RBAC). | Java, Spring Boot, Angular, PostgreSQL, Keycloak, Docker, AWS, CI/CD | [GitHub](https://github.com/mibess/auth) |
-| **Banco de Sangue** | Painel web para processar, filtrar e validar dados cadastrais e triagens de doadores de sangue fornecidos por agências de saúde. | Java, Spring Boot, PostgreSQL, AWS, Docker, GitHub Actions | [GitHub](https://github.com/mibess/agencia-citel) \| [Demo Online](https://citel.mibess.com.br) |
+| **Banco de Sangue** | Painel web para processar, filtrar e validar dados cadastrais e triagens de candidatos à doação de sangue, desenvolvido como desafio técnico. | Java, Spring Boot, PostgreSQL, AWS, Docker, GitHub Actions | [GitHub](https://github.com/mibess/agencia-citel) \| [Demo Online](https://citel.mibess.com.br) |
 | **Criador de Cards** | Aplicação interativa desenvolvida para cadastrar, editar, listar e deletar pensamentos ou ideias rápidas em tempo real. | Angular, Java Spring Boot, PostgreSQL, TailwindCSS, AWS EC2, GitHub Actions | [GitHub](https://github.com/mibess/cards-ms) \| [Demo Online](https://cards.mibess.com.br/list-idea) |
-| **Gerenciador de Senhas** | Cofre seguro desenvolvido para armazenar e organizar credenciais de acessos pessoais com criptografia e praticidade. | Angular, Java Spring Boot, PostgreSQL, TailwindCSS, Docker, AWS, GitHub Actions | [GitHub](https://github.com/mibess/secrets) \| [Demo Online](https://secrets.mibess.com.br) |
+| **Gerenciador de Senhas** | Cofre seguro desenvolvido para armazenar e organizar credenciais de acessos pessoais com criptografia e praticidade. | Angular, Java Spring Boot, PostgreSQL, TailwindCSS, Docker, AWS, GitHub Actions | [Demo Online](https://secrets.mibess.com.br) |
 
 ---
 
@@ -130,10 +130,10 @@ Fora do expediente comercial e das telas, busco equilibrar a exigência lógica 
 
 ---
 
-## 🎯 9. Metas de Carreira / Momento Atual
+## 🎯 9. Momento Atual e Objetivos
 
-* **Foco de Atuação:** Atuando ativamente com rotinas complexas no setor de energia brasileiro na squad CCEE da AMcom.
-* **Objetivo de Longo Prazo:** Consolidar-me como arquiteto e especialista no ecossistema Java, liderando times e acelerando roadmaps técnicos focados em microsserviços resilientes, frontends consistentes de alta performance e governança CI/CD com foco em escala, observabilidade e telemetria.
+* **Agora:** Atuando com rotinas complexas do setor de energia brasileiro na squad CCEE da AMcom e estruturando a atuação em consultoria de arquitetura Java & Cloud e mentoria técnica.
+* **Objetivo:** Consolidar a consultoria e a mentoria, ajudando empresas e times a acelerar roadmaps técnicos com microsserviços resilientes, frontends consistentes de alta performance e governança CI/CD com foco em escala, observabilidade e telemetria.
 
 ---
 

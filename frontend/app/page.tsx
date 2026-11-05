@@ -9,6 +9,7 @@ import Journey from "./components/sections/journey";
 import Expertise from "./components/sections/expertise";
 import Projects from "./components/sections/projects";
 import BeyondCode from "./components/sections/beyond-code";
+import Faq from "./components/sections/faq";
 import Contact from "./components/sections/contact";
 import { anosDeExperiencia } from "@/lib/content";
 
@@ -31,6 +32,7 @@ export default function Home() {
         <Expertise />
         <Projects />
         <BeyondCode />
+        <Faq />
         <Contact />
       </main>
       <Footer />

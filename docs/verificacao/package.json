@@ -1,0 +1,14 @@
+{
+  "name": "verificacao-mibess",
+  "private": true,
+  "description": "Verificações do site mibess.com.br: interações, acessibilidade e desempenho.",
+  "scripts": {
+    "verificar": "node verificar.js",
+    "axe": "node axe.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.3",
+    "lighthouse": "^12.6.1",
+    "playwright": "^1.63.0"
+  }
+}

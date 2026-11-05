@@ -12,7 +12,7 @@
 
 ## Professional Summary
 
-Senior Full Stack Java Engineer with **14+ years of experience** designing, developing, and maintaining high-performance, scalable enterprise web applications.
+Senior Full Stack Java Engineer with experience since **2010** designing, developing, and maintaining high-performance, scalable enterprise web applications.
 
 Specialized in:
 * **Microservices & Backend Systems:** Java, Spring Boot, Spring Data JPA, Hibernate, RESTful APIs, RabbitMQ, and Python (Flask).
@@ -20,7 +20,7 @@ Specialized in:
 * **Cloud & DevOps Architecture:** Cloud-native AWS infrastructure (EC2, S3, ECS), Docker containerization, and automated CI/CD pipelines (GitHub Actions, Bitbucket Pipelines).
 * **Engineering Best Practices:** Clean Architecture, Domain-Driven Design (DDD), robust unit/integration testing, and banking integrations (Itaú, Banco do Brasil, Santander, Bradesco, Caixa, and PIX payment systems).
 
-I focus on writing clean, maintainable, and highly efficient code that transforms complex business rules into reliable software solutions. Currently seeking opportunities to contribute to high-impact systems, lead backend roadmaps, and build modern, telemetrically monitored frontend architectures.
+I focus on writing clean, maintainable, and highly efficient code that transforms complex business rules into reliable software solutions. Currently offering Java & Cloud architecture consulting and technical mentoring to teams that need to accelerate high-impact roadmaps.
 
 ---
 
@@ -54,7 +54,7 @@ I focus on writing clean, maintainable, and highly efficient code that transform
 * **Links:** [GitHub Code](https://github.com/mibess/auth)
 
 ### 🔹 Blood Bank Data Processor
-* **Description:** A specialized web application built to process, filter, and validate blood donor candidate triages and profiles provided by healthcare agencies.
+* **Description:** A web application that processes, filters, and validates blood donor candidate triages and profiles sent by an agency, built as a technical challenge.
 * **Stack:** Java, Spring Boot, PostgreSQL, AWS, Docker, GitHub Actions.
 * **Links:** [GitHub Code](https://github.com/mibess/agencia-citel) \| [Live Demo](https://citel.mibess.com.br)
 
@@ -66,14 +66,14 @@ I focus on writing clean, maintainable, and highly efficient code that transform
 ### 🔹 Personal Credentials & Password Manager
 * **Description:** A highly secure personal credentials vault built to store, retrieve, and manage credentials with cryptographic protection and a smooth user interface.
 * **Stack:** Angular, Java, Spring Boot, PostgreSQL, TailwindCSS, Docker, AWS, GitHub Actions.
-* **Links:** [GitHub Code](https://github.com/mibess/secrets) \| [Live Demo](https://secrets.mibess.com.br)
+* **Links:** [Live Demo](https://secrets.mibess.com.br)
 
 ---
 
 ## Professional Experience
 
 ### 🔹 AMcom – CCEE Squad (Brazilian Energy Market)
-**Senior Systems Developer**  
+**Systems Developer**  
 📅 Jan 2024 – Present | Ribeirão Preto, SP (Hybrid/Remote)  
 
 * **Core Focus:** Develop and maintain mission-critical microservices complying with the strict rules governing the Brazilian commercial energy market.
@@ -96,7 +96,7 @@ I focus on writing clean, maintainable, and highly efficient code that transform
 ---
 
 ### 🔹 MASTER COMPANY
-**IT Instructor & Graphic Designer**  
+**IT Instructor**  
 📅 Jan 2009 – Dec 2009 | Ribeirão Preto, SP  
 
 * **Education:** Instructed design methodologies (Photoshop, CorelDraw) and office tools to students across all learning levels.
@@ -116,9 +116,9 @@ I focus on writing clean, maintainable, and highly efficient code that transform
 I believe that technical excellence is sustained by who we are outside of the editor. Having a balanced, active offline life fuels analytical problem-solving and brings fresh perspective to software engineering:
 
 * **⚽ Weekend Football:** Playing football is my physical outlet and a tactical exercise. It keeps me sharp, teaching me about quick game-reading, collaboration under pressure, and finding collective paths to success.
-* **🎸 Acoustic Guitar:** Dedihing chords on my guitar while my young daughter plays along on her toy piano is one of my favorite moments. It provides an abstract, creative outlet that silences the logical demands of coding.
+* **🎸 Acoustic Guitar:** Strumming chords on my guitar while my young daughter plays along on her toy piano is one of my favorite moments. It provides an abstract, creative outlet that silences the logical demands of coding.
 * **📸 Photography:** Photography forces me to slow down and notice subtle details. My favorite capture is a road sunset perfectly framed in a car mirror, symbolizing horizons, journeys, and continuous observation.
-* **🔥 Culinary Arts & Fogo de Chão:** I love the craft of cooking, especially comand-style outdoor grilling on open fire pits ("fogo de chão"). It is my favorite offline sandbox, letting me disconnect from screens and gather family and friends over great food.
+* **🔥 Culinary Arts & Fogo de Chão:** I love the craft of cooking, especially traditional outdoor grilling on open fire pits ("fogo de chão"). It is my favorite offline sandbox, letting me disconnect from screens and gather family and friends over great food.
 * **🏠 Family Grounding:** My wife and daughter are my daily motivation. Their companionship and the stable, warm home life we share form the solid foundation on which I build my professional accomplishments.
 
 ---

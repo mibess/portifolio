@@ -22,7 +22,7 @@ export default function Contact() {
       />
       <div className="container-site grid gap-14 lg:grid-cols-12">
         <div className="lg:col-span-6">
-          <SectionHeader numero="08" rotulo="Contato" tituloId="contato-titulo" titulo={contatoSecao.titulo} lede={contatoSecao.texto} tom="escuro" />
+          <SectionHeader numero="09" rotulo="Contato" tituloId="contato-titulo" titulo={contatoSecao.titulo} lede={contatoSecao.texto} tom="escuro" />
           <Reveal delay={0.1} className="mt-8">
             <p className="flex items-center gap-2 font-mono text-sm text-mel">
               <span className="h-1.5 w-1.5 animate-[pulso_2.4s_ease-in-out_infinite] rounded-full bg-mel" aria-hidden="true" />
@@ -42,6 +42,12 @@ export default function Contact() {
                 <Download aria-hidden="true" />
               </a>
             </div>
+            <p className="mt-5 font-mono text-[13px] text-claro-suave">
+              Também em inglês:{" "}
+              <a href={contato.curriculoEn} download hrefLang="en" lang="en" className="link-sublinhado text-claro hover:text-mel">
+                English CV (PDF)
+              </a>
+            </p>
           </Reveal>
         </div>
 

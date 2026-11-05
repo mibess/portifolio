@@ -14,17 +14,23 @@ export function anosDeExperiencia(agora: Date = new Date()): number {
 export const RETRATO: string | null = "/images/retrato-hero.webp";
 
 const WHATSAPP = "5516993754887";
+const EMAIL = "contato@mibess.com.br";
 const MENSAGEM_AGENDAR = "Olá, Claudemir! Vi seu site e gostaria de agendar uma conversa sobre consultoria/mentoria.";
+const ASSUNTO_EMAIL = "Conversa sobre consultoria ou mentoria";
 
 export const contato = {
-  email: "contato@mibess.com.br",
+  email: EMAIL,
+  /** E-mail com assunto pronto: alternativa ao WhatsApp para quem prefere o canal corporativo. */
+  emailAgendar: `mailto:${EMAIL}?subject=${encodeURIComponent(ASSUNTO_EMAIL)}`,
   whatsappNumero: "(16) 99375-4887",
+  telefoneInternacional: "+55 16 99375-4887",
   whatsappUrl: `https://wa.me/${WHATSAPP}`,
   /** Agendamento é feito pelo WhatsApp, com mensagem pronta. */
   whatsappAgendar: `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAGEM_AGENDAR)}`,
   linkedin: "https://www.linkedin.com/in/claudemircustodio",
   github: "https://github.com/mibess",
   curriculo: "/Claudemir_Custodio_CV.pdf",
+  curriculoEn: "/Claudemir_Custodio_CV_EN.pdf",
   local: "Ribeirão Preto · SP",
 } as const;
 
@@ -103,6 +109,8 @@ export const cases: {
   periodo: string;
   titulo: string;
   texto: string;
+  /** O que foi responsabilidade direta do Claudemir no case (fonte: ABOUTME.md e currículo). */
+  papel: string;
   stack: string[];
 }[] = [
   {
@@ -112,6 +120,7 @@ export const cases: {
     titulo: "Integrações bancárias e PIX",
     texto:
       "Integrações com as APIs dos maiores bancos do país (Itaú, Banco do Brasil, Santander, Bradesco e Caixa) para processamento de arquivos de remessa e retorno e faturamento em boletos, além de fluxos de liquidação instantânea via PIX.",
+    papel: "Desenvolvi as integrações com os cinco bancos e implementei o pagamento via PIX.",
     stack: ["Boletos", "Remessa e retorno", "PIX", "5 bancos"],
   },
   {
@@ -120,7 +129,8 @@ export const cases: {
     periodo: "2010 — 2023",
     titulo: "Do monolito local à nuvem AWS",
     texto:
-      "Migração de softwares monolíticos locais para ambientes escaláveis na AWS com empacotamento Docker, governança dos fluxos Git e testes unitários e de integração, mantendo a cadência com Scrum e Kanban.",
+      "Migração de softwares monolíticos locais para ambientes escaláveis na AWS, com empacotamento Docker, governança dos fluxos Git e testes unitários e de integração, mantendo a cadência com Scrum e Kanban. Resultado: menos bugs, manutenção mais simples e mais disponibilidade.",
+    papel: "Liderei a migração e respondi pela governança dos fluxos Git e pela implantação dos testes.",
     stack: ["AWS EC2 · S3 · ECS", "Docker", "Testes", "Git"],
   },
   {
@@ -130,6 +140,7 @@ export const cases: {
     titulo: "Acessos monitorados em tempo real",
     texto:
       "Controle de acesso em catracas com cartões e biometria para academias, clubes e escolas, e uma aplicação web para monitorar os acessos em tempo real em monitores e dispositivos móveis.",
+    papel: "Projetei e implementei o controle de acesso e criei do zero a aplicação de monitoramento.",
     stack: ["ReactJS", "Spring Boot", "REST", "Docker", "AWS ECS", "GitHub Actions"],
   },
   {
@@ -139,6 +150,7 @@ export const cases: {
     titulo: "Microsserviços críticos no setor elétrico",
     texto:
       "Novas funcionalidades e manutenção de microsserviços críticos para a comercialização e a regulação do setor elétrico brasileiro, com interfaces Angular focadas em desempenho e consistência da experiência do usuário.",
+    papel: "Desenvolvo novas funcionalidades e mantenho microsserviços e interfaces Angular na squad CCEE.",
     stack: ["Java", "Spring Boot", "Oracle", "Angular", "Jira"],
   },
 ];
@@ -171,7 +183,7 @@ export const trajetoria = [
     details: [
       "Desenvolvi uma aplicação de controle de acesso em catracas com cartões e biometria para academias, clubes e escolas (Java 7, MySQL, Swing).",
       "Criei uma aplicação web para monitorar acessos em tempo real em monitores e dispositivos móveis (ReactJS, Spring Boot, REST, Docker, AWS ECS, GitHub Actions).",
-      "Modelei e implementei módulos de gestão para sindicatos e associações (Java, JSF, Primefaces, PostgreSQL, Jasper Reports).",
+      "Modelei e implementei módulos de gestão para sindicatos e associações (Java, JSF, PrimeFaces, PostgreSQL, JasperReports).",
       "Entreguei frontend para clientes acompanharem dados cadastrais, cobranças, agendamentos e homologações (Angular, Spring Boot, Docker, AWS, DDD).",
       "Implementei integrações bancárias (Itaú, BB, Santander, Bradesco, Caixa) para a geração de boletos e remessa. Implementei o pagamento via PIX para alguns clientes.",
       "Realizei testes unitários e de integração, migrei o monolito para AWS e mantive cadência com Scrum e Kanban usando GitHub/Bitbucket.",
@@ -182,7 +194,7 @@ export const trajetoria = [
     company: "Master Company Informática",
     period: "jan 2009 — dez 2009",
     details: [
-      "Ministrei aulas de Photoshop, CorelDraw e Microsoft Office para turmas com diferentes níveis de conhecimento.",
+      "Ministrei aulas de Photoshop, CorelDRAW e Microsoft Office para turmas com diferentes níveis de conhecimento.",
       "Desenvolvi materiais didáticos personalizados e apoiei projetos de design gráfico da escola.",
     ],
   },
@@ -197,12 +209,12 @@ export const formacao = [
 
 export const expertise = [
   { id: "backend", titulo: "Backend", itens: ["Java", "Spring Boot", "JPA/Hibernate", "REST API", "DDD", "Microservices", "RabbitMQ"] },
-  { id: "frontend", titulo: "Frontend", itens: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS", "JSF", "Primefaces"] },
+  { id: "frontend", titulo: "Frontend", itens: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS", "JSF", "PrimeFaces"] },
   { id: "infra", titulo: "Infra & Cloud", itens: ["AWS EC2/S3/ECS", "Docker", "CI/CD", "PostgreSQL", "Oracle", "MySQL", "Git", "Bitbucket"] },
   {
     id: "praticas",
     titulo: "Práticas",
-    itens: ["Testes Unitários", "Testes de Integração", "Scrum/Kanban", "CI/CD (GitHub Actions/Bitbucket)", "Versionamento Git", "Jasper Reports"],
+    itens: ["Testes Unitários", "Testes de Integração", "Scrum/Kanban", "CI/CD (GitHub Actions/Bitbucket)", "Versionamento Git", "JasperReports"],
   },
 ] as const;
 
@@ -217,7 +229,7 @@ export const alemDoCodigo = {
 
 export const contatoSecao = {
   titulo: "Vamos construir algo impactante",
-  texto: "Aberto a novas oportunidades e parcerias de longo prazo. Escolha o canal que preferir e vamos conversar.",
+  texto: "Aberto a novos projetos e parcerias de longo prazo. Escolha o canal que preferir e vamos conversar.",
   resposta: "Respondo pessoalmente e costumo agendar uma call rápida para entender contexto, expectativas e próximos passos.",
   canais: [
     { id: "whatsapp", label: "WhatsApp", valor: contato.whatsappNumero, href: contato.whatsappAgendar, descricao: "Agendamento de conversas e contato rápido." },
@@ -226,3 +238,50 @@ export const contatoSecao = {
     { id: "github", label: "GitHub", valor: "github.com/mibess", href: contato.github, descricao: "Analise meu código, abra uma issue ou proponha colaboração." },
   ],
 } as const;
+
+/**
+ * Perguntas frequentes: respondem às objeções de quem avalia uma consultoria.
+ * Só entram aqui fatos já presentes no site, no currículo ou no ABOUTME.md.
+ */
+export const perguntasFrequentes: {
+  titulo: string;
+  lede: string;
+  itens: { pergunta: string; resposta: string; link?: { href: string; label: string } }[];
+} = {
+  titulo: "Antes da primeira conversa",
+  lede: "Respostas diretas às dúvidas de quem avalia uma consultoria, para você decidir se faz sentido conversarmos.",
+  itens: [
+    {
+      pergunta: "Como começa um trabalho?",
+      resposta:
+        "Com uma conversa para entender o contexto e os objetivos. Depois envio uma proposta com caminhos técnicos e estimativa inicial. Aprovada a proposta, fazemos o kick-off com um plano de ação alinhado com os stakeholders.",
+    },
+    {
+      pergunta: "Quanto custa?",
+      resposta: "Depende do escopo. A estimativa vem na proposta, logo depois da conversa inicial em que entendo o contexto.",
+    },
+    {
+      pergunta: "Em que contextos você já atuou na prática?",
+      resposta:
+        "Integrações com cinco grandes bancos e PIX, controle de acesso com monitoramento em tempo real, migração de um monolito local para a AWS e microsserviços críticos do setor elétrico (CCEE).",
+      link: { href: "#cases", label: "Ver os cases" },
+    },
+    {
+      pergunta: "Atende empresas de outras cidades ou de fora do Brasil?",
+      resposta:
+        "Sim. Trabalho de forma híbrida e remota a partir de Ribeirão Preto · SP (UTC-3). Leio documentação técnica em inglês com fluência e participo de reuniões do dia a dia em inglês, em nível intermediário.",
+      link: { href: contato.curriculoEn, label: "Currículo em inglês (PDF)" },
+    },
+    {
+      pergunta: "Em quanto tempo você responde?",
+      resposta:
+        "Respondo pessoalmente: pelo e-mail, em até 24h, com agenda e próximos passos; pelo WhatsApp, você já pode pedir o agendamento da conversa.",
+    },
+    {
+      pergunta: "O que acontece com as perguntas feitas ao assistente Mibee?",
+      resposta:
+        "Elas são enviadas ao Google Gemini só para gerar a resposta e não ficam gravadas neste site. Evite incluir dados confidenciais no chat; para assuntos sensíveis, prefira o e-mail.",
+      link: { href: "/privacidade", label: "Política de privacidade" },
+    },
+  ],
+};

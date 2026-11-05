@@ -3,7 +3,8 @@ import { Archivo, JetBrains_Mono } from "next/font/google";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import { siteMetadata } from "@/lib/site-metadata";
-import { contato, perfil } from "@/lib/content";
+import { scriptRevelacao } from "@/lib/revelacao";
+import { RETRATO, contato, perfil } from "@/lib/content";
 import Providers from "./components/providers";
 import Chat from "./components/chat";
 
@@ -20,18 +21,39 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const pessoaId = `${siteMetadata.siteUrl}/#claudemir`;
+
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: perfil.nome,
-  jobTitle: "Consultor em Arquitetura de Software e Mentor Técnico",
-  url: siteMetadata.siteUrl,
-  email: `mailto:${contato.email}`,
-  image: `${siteMetadata.siteUrl}/opengraph-image`,
-  address: { "@type": "PostalAddress", addressLocality: "Ribeirão Preto", addressRegion: "SP", addressCountry: "BR" },
-  knowsAbout: ["Arquitetura de software", "Java", "Spring Boot", "Microsserviços", "AWS", "Angular", "Mentoria técnica"],
-  sameAs: [contato.linkedin, contato.github, contato.whatsappUrl],
-  description: siteMetadata.description,
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": pessoaId,
+      name: perfil.nome,
+      jobTitle: "Consultor em Arquitetura de Software e Mentor Técnico",
+      url: siteMetadata.siteUrl,
+      email: contato.email,
+      telephone: contato.telefoneInternacional,
+      image: `${siteMetadata.siteUrl}${RETRATO ?? "/opengraph-image"}`,
+      address: { "@type": "PostalAddress", addressLocality: "Ribeirão Preto", addressRegion: "SP", addressCountry: "BR" },
+      knowsAbout: ["Arquitetura de software", "Java", "Spring Boot", "Microsserviços", "AWS", "Angular", "Mentoria técnica"],
+      knowsLanguage: ["pt-BR", "en"],
+      sameAs: [contato.linkedin, contato.github],
+      makesOffer: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Consultoria em arquitetura Java & Cloud", areaServed: "BR" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mentoria técnica", areaServed: "BR" } },
+      ],
+      description: siteMetadata.description,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteMetadata.siteUrl}/#site`,
+      url: siteMetadata.siteUrl,
+      name: "mibess",
+      inLanguage: "pt-BR",
+      publisher: { "@id": pessoaId },
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -81,11 +103,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${archivo.variable} ${jetbrainsMono.variable}`}>
+    <html lang="pt-BR" className={`${archivo.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
-        <noscript>
-          <style>{`[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}`}</style>
-        </noscript>
+        {/* Revelações ao rolar: script inline, independente da hidratação do React (ver lib/revelacao.ts). */}
+        <script dangerouslySetInnerHTML={{ __html: scriptRevelacao }} />
       </head>
       <body>
         <script

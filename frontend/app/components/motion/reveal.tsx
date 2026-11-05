@@ -1,79 +1,46 @@
-"use client";
+import type { CSSProperties, ReactNode } from "react";
 
-import { motion, type Variants } from "motion/react";
+/**
+ * Revelação ao rolar, feita com CSS e um único IntersectionObserver em script inline (ver `revelacao.ts`).
+ * Os componentes são HTML puro: não entram na hidratação do React e funcionam mesmo se o JavaScript
+ * do Next demorar ou falhar. Sem JavaScript, o conteúdo aparece direto (o CSS só esconde com a classe `js`).
+ */
 
-const EASE = [0.22, 1, 0.36, 1] as const;
-
-const tags = {
-  div: motion.div,
-  li: motion.li,
-  article: motion.article,
-  ul: motion.ul,
-  ol: motion.ol,
-  header: motion.header,
-  p: motion.p,
-} as const;
-
-type Tag = keyof typeof tags;
+type Tag = "div" | "li" | "article" | "ul" | "ol" | "header" | "p";
 
 interface RevealProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
+  /** Atraso em segundos. */
   delay?: number;
+  /** Deslocamento inicial em px. */
   y?: number;
   as?: Tag;
   id?: string;
 }
 
-/** Revela o conteúdo ao entrar na tela: sobe 24 px e ganha foco. Respeita movimento reduzido via MotionConfig. */
-export function Reveal({ children, className, delay = 0, y = 24, as = "div", id }: RevealProps) {
-  const Comp = tags[as];
+/** Revela o bloco ao entrar na tela: sobe 24 px e ganha foco. */
+export function Reveal({ children, className, delay = 0, y = 24, as: Comp = "div", id }: RevealProps) {
+  const estilo = { "--revelar-atraso": `${Math.round(delay * 1000)}ms`, "--revelar-y": `${y}px` } as CSSProperties;
   return (
-    <Comp
-      id={id}
-      data-reveal=""
-      className={className}
-      initial={{ opacity: 0, y, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7, ease: EASE, delay }}
-    >
+    <Comp id={id} data-reveal="" data-reveal-foco="" className={className} style={estilo}>
       {children}
     </Comp>
   );
 }
 
-const grupo: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.07 } },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-};
-
-/** Grupo que revela os filhos em sequência (70 ms entre itens). */
-export function RevealGroup({ children, className, as = "div" }: Omit<RevealProps, "delay" | "y">) {
-  const Comp = tags[as];
+/** Grupo que revela os itens em sequência (70 ms entre eles) quando entra na tela. */
+export function RevealGroup({ children, className, as: Comp = "div" }: Omit<RevealProps, "delay" | "y">) {
   return (
-    <Comp
-      data-reveal=""
-      className={className}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.15 }}
-      variants={grupo}
-    >
+    <Comp data-reveal-grupo="" className={className}>
       {children}
     </Comp>
   );
 }
 
-export function RevealItem({ children, className, as = "div" }: Omit<RevealProps, "delay" | "y">) {
-  const Comp = tags[as];
+export function RevealItem({ children, className, as: Comp = "div" }: Omit<RevealProps, "delay" | "y">) {
   return (
-    <Comp data-reveal="" className={className} variants={item}>
+    <Comp data-reveal="" className={className}>
       {children}
     </Comp>
   );

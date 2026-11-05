@@ -62,7 +62,14 @@ export default function Hero({ anos }: { anos: number }) {
             </a>
           </div>
 
-          <ul className="entrada mt-10 flex items-center gap-2" style={atraso(560)}>
+          <p className="entrada mt-5 font-mono text-[13px] text-claro-suave" style={atraso(500)}>
+            Prefere e-mail?{" "}
+            <a href={contato.emailAgendar} className="link-sublinhado text-claro hover:text-mel">
+              {contato.email}
+            </a>
+          </p>
+
+          <ul className="entrada mt-8 flex items-center gap-2" style={atraso(560)}>
             {redes.map((r) => (
               <li key={r.href}>
                 <a

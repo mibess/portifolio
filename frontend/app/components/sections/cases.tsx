@@ -1,6 +1,7 @@
 import SectionHeader from "../ui/section-header";
 import FlowDiagram, { type FlowLink, type FlowNode } from "../motion/flow-diagram";
 import { RevealGroup, RevealItem } from "../motion/reveal";
+import RegiaoRolavel from "../ui/regiao-rolavel";
 import { cases, type DiagramaId } from "@/lib/content";
 
 const bancos = ["Itaú", "Banco do Brasil", "Santander", "Bradesco", "Caixa", "PIX"];
@@ -96,6 +97,10 @@ export default function Cases() {
                     </p>
                     <h3 className="t-card mt-4 text-[1.375rem]">{c.titulo}</h3>
                     <p className="mt-3 text-ardosia">{c.texto}</p>
+                    <div className="mt-5 border-l-2 border-mel pl-4">
+                      <p className="t-eyebrow text-ardosia">Meu papel</p>
+                      <p className="mt-1.5 text-[15px] leading-relaxed">{c.papel}</p>
+                    </div>
                     <ul className="mt-5 flex flex-wrap gap-2">
                       {c.stack.map((s) => (
                         <li key={s} className="tag">
@@ -104,9 +109,12 @@ export default function Cases() {
                       ))}
                     </ul>
                   </div>
-                  <div className="grid-planta-claro mt-auto overflow-x-auto border-t border-linha bg-papel/60 px-4 py-5 md:px-6">
+                  <RegiaoRolavel
+                    rotulo={`Diagrama: ${c.titulo}`}
+                    className="grid-planta-claro mt-auto overflow-x-auto border-t border-linha bg-papel/60 px-4 py-5 md:px-6"
+                  >
                     <FlowDiagram largura={d.largura} altura={d.altura} nos={d.nos} ligacoes={d.ligacoes} rotulo={d.rotulo} />
-                  </div>
+                  </RegiaoRolavel>
                 </article>
               </RevealItem>
             );
