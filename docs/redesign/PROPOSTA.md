@@ -1,7 +1,8 @@
 # Redesign mibess.com.br: "Arquitetura em Movimento"
 
-> **Status:** proposta para aprovação. Nenhuma alteração foi feita no site.
-> As imagens e a logo (prompts em [`PROMPTS.md`](./PROMPTS.md)) devem ser geradas antes da implementação.
+> **Status (rev. 2):** conceito, paleta e tipografia aprovados. Fases 1 a 3 implementadas no branch
+> `claude/eloquent-bohr-d3k0se` (resultado medido na seção 12). Pendentes: escolha da logo (rodada 2),
+> fotos da sessão e as decisões abertas da seção 11. Prompts em [`PROMPTS.md`](./PROMPTS.md).
 > Medições feitas em 05/11/2026 sobre o build de produção local (Next.js 16), em 1440×900 (desktop) e 390×844 (mobile).
 
 ---
@@ -286,17 +287,52 @@ O conteúdo é preservado. Estes são ajustes de rótulo e posicionamento sem os
 - LCP < 2,0 s em 4G; CLS < 0,05; primeira carga < 1,5 MB.
 - Contraste WCAG AA em todos os textos; navegação completa por teclado.
 - Na primeira dobra (1440×900 e 390×844): nome, papel, proposta de valor e CTA visíveis.
-- Página ~23% mais curta no desktop sem remover conteúdo (detalhes recolhíveis).
+- Composição: oferta e prova profissional com cerca de metade da página e projetos autorais abaixo de 20%, sem remover conteúdo.
 
 ---
 
-## 11. Decisões que preciso de você
+## 11. Decisões
 
-1. Aprova o conceito "Arquitetura em Movimento", a paleta (noite/tinta, papel vegetal, azul planta, mel) e a tipografia (Archivo + JetBrains Mono)?
-2. Logo: depois de gerar as imagens, qual conceito seguimos (A "Favo", B "Ponte" ou C "Degrau")?
-3. Retrato: sessão de fotos real (recomendado) ou edição com IA a partir das suas fotos?
-4. Podemos usar `contato@mibess.com.br` (ou outro e-mail de domínio)?
-5. Quer agenda online no CTA (Cal.com ou Calendly)? Se sim, preciso do link.
-6. A versão em inglês entra agora ou na fase 5?
-7. Aprova os ajustes de microcopy da seção 8 (pode aprovar item por item)?
-8. Posso começar as fases 1 a 3 enquanto você gera as imagens?
+| # | Decisão | Situação |
+|---|---|---|
+| 1 | Conceito "Arquitetura em Movimento", paleta e tipografia | **Aprovados** |
+| 2 | Logo | Rodada 1 (símbolos de traço) descartada. **Rodada 2** com três estilos tipográficos: D Assinatura (recomendada, já aplicada no site como provisória), E Clássico e F Selo técnico. Aguardando escolha |
+| 3 | Retrato | **Sessão de fotos** (briefing em `PROMPTS.md`). Até lá, o hero usa uma ficha técnica |
+| 4 | E-mail | **contato@mibess.com.br** em todo o site |
+| 5 | Agenda online no CTA | Pendente (link do Cal.com ou Calendly) |
+| 6 | Versão em inglês | Pendente (fase 5) |
+| 7 | Microcopy | Aplicada no branch conforme a seção 8; revisar no site |
+| 8 | Fases 1 a 3 antes das imagens | **Feito** |
+
+---
+
+## 12. Implementação (fases 1 a 3) e resultado medido
+
+Medições no build de produção local, em 1440×900 (desktop) e 390×844 (celular), antes e depois.
+
+| Indicador | Antes | Depois |
+|---|---|---|
+| CLS (estabilidade visual) | 0,82 desktop · 0,83 celular | **0,000 desktop · 0,001 celular** |
+| Transferência na 1ª carga | 0,97 MB desktop · 11,06 MB celular | **0,45 MB** nas duas larguras |
+| Transferência após rolar a página inteira | 11,5 MB | **0,92 MB** |
+| Vídeos dos projetos | 51,7 MB (`.mov` até 4K) | **2,7 MB** (MP4 1280 px, sem áudio, carregados sob demanda) |
+| Arquivos em `public/` | ~70 MB | **7,5 MB** |
+| Projetos autorais na altura da página | 56% | **14%** |
+| Oferta e prova profissional na altura da página | 18% | **50%** |
+| Altura total | 10.629 px desktop · 14.663 px celular | 10.655 px desktop · 16.608 px celular |
+| Imagem de compartilhamento | quebrada | gerada em código (1200×630) |
+| Build sem `GEMINI_API_KEY` | falhava | passa; o chat responde 503 com mensagem clara |
+
+A altura total não diminuiu: o conteúdo que estava escondido (atuação, método, cases com diagramas) passou a aparecer, e os detalhes longos da trajetória ficaram recolhíveis. A meta que importa, a composição, foi atingida.
+
+**O que entrou**
+- Sistema visual: tokens de cor e tipo em `app/globals.css`, Archivo + JetBrains Mono, faixas escuras e claras, chamadas de corte numeradas, carimbo técnico no rodapé.
+- Nova ordem: Hero, Credibilidade, Atuação, Cases, Método, Trajetória, Expertise, Projetos, Além do código, Contato. Todo o texto vem dos componentes antigos e do `ABOUTME.md`, centralizado em `lib/content.ts`.
+- Movimento: entrada do hero em CSS (não espera o JavaScript), frase rotativa com largura reservada, canvas com grid de planta e pulsos, contadores, cota de experiência calculada a partir de 2010, quatro diagramas vivos, linhas do método e da trajetória ligadas ao scroll, modal de projeto e visualizador de fotos com transição compartilhada, scroll suave com Lenis, botão magnético e luz que segue o cursor. Tudo respeita `prefers-reduced-motion`.
+- Acessibilidade: diálogos com foco preso, Esc e retorno de foco; botões reais; rótulos em ícones; texto mínimo de 12 px; contraste AA; link para pular ao conteúdo.
+- Mibee: visual novo, sugestões de consultoria e mentoria, persona de consultor e os textos de atuação e método no contexto da IA.
+- Limpeza: componentes, imagens e dependências sem uso removidos (`next-themes`, `@radix-ui/react-slot`, `class-variance-authority`, `tw-animate-css`).
+
+**Verificado com testes automatizados no navegador:** modal de projeto (abre, mostra o projeto certo, trava a rolagem, foco entra e volta, Esc fecha), visualizador de fotos (setas e Esc), "ver detalhes" da trajetória, menu móvel (abre, fecha e rola até a seção), chat (abre e mostra erro claro sem a chave) e movimento reduzido (todo o conteúdo visível, scroll suave desligado).
+
+**Fica para a fase 4:** logo final em SVG após a escolha, fotos da sessão (`RETRATO` em `lib/content.ts`), screenshots reais nas capas dos projetos e, se desejado, a série de imagens de Atuação no lugar das ilustrações em linha.

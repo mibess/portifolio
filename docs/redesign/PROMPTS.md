@@ -16,91 +16,62 @@
 
 ---
 
-## 1. Logo
+## 1. Logo (rodada 2)
 
-**Diagnóstico da logo atual.** Um "m" em blocos pesados com estética pixel e o wordmark `mibess_` com cursor de terminal. Comunica "hacker/gamer", tem leitura fraca (lê-se "MIBESS") e não carrega significado sobre consultoria ou mentoria.
+A rodada 1 (símbolos de traço: "Favo", "Ponte" e "Degrau") foi descartada. A rodada 2 segue o caminho de Netflix, Google e Accenture: **o nome escrito é a marca**. As três direções são tipográficas, então eu produzo a versão final direto em SVG a partir das fontes; gerar imagens com IA é **opcional**, só para explorar variações.
 
-**O que a nova logo precisa:** simples, geométrica, atemporal; funcionar em uma cor, em 16 px (favicon) e grande em propostas; manter o "m" como símbolo (continuidade) e carregar uma ideia.
-
-### Conceito A: "Favo" (recomendado)
-
-Um "m" construído a partir de **duas células hexagonais lado a lado que dividem a mesma parede**.
-- **Hexágono:** arquitetura hexagonal (*ports & adapters*), padrão que você domina junto com DDD e Clean Architecture.
-- **Favo:** o Mibee (abelha), colaboração e a estrutura mais eficiente da natureza, máxima resistência com o mínimo de material.
-- **Parede compartilhada:** consultoria e mentoria como construção conjunta.
-- **Cortes inferiores:** as hastes externas terminam com um pequeno corte para dentro, o início da aresta inferior do hexágono. Isso faz o desenho ler como favo e evita que pareça dois telhados de casa (risco de "imobiliária" que apareceu no esboço). Os cortes também lembram as "portas" (*ports*) da arquitetura hexagonal.
-- **Pingo do "i" em mel:** um hexágono sólido âmbar no wordmark liga símbolo e nome.
-
-**A.1 Símbolo**
+### D · Assinatura (recomendada, aplicada no site como provisória)
+"mibess" em Archivo expandida, a mesma família do site. O pingo do "i" vira um quadrado cor de mel: o pixel da logo antiga, refinado, e o ponto de foco do Mibee. O "m" com o quadrado vira favicon e avatar.
 ```text
-Minimal geometric logo symbol for "mibess", a software architecture consulting and technical mentoring brand.
-A lowercase letter "m" built from two adjacent pointy-top hexagons (honeycomb cells) that share one central vertical wall: three parallel vertical stems joined at the top by shoulders rising at 30 degrees to two 120-degree peaks. The two outer stems end at the bottom with a short inward cut at 30 degrees, the beginning of each hexagon's lower edge, so the shapes read as open honeycomb cells, never as house roofs.
-Single uniform monoline stroke, crisp mitered corners, flat stroke ends, precise construction on an isometric hexagonal grid, perfectly symmetrical.
-Deep ink navy (#0C1A29) on a plain cool off-white background (#F3F5F7).
-Flat vector logo, no gradients, no shadows, no 3D, no texture, no text, centered with generous negative space.
-Swiss modernist, timeless, corporate, premium. Must remain legible at 16 px.
-Avoid: house or roof shapes, real-estate look, crypto or blockchain look, 3D cubes, bees or cartoon elements, glow, uppercase M.
+Wordmark logo for "mibess", a software architecture consulting and technical mentoring brand.
+The word "mibess" in lowercase, exact spelling m-i-b-e-s-s, set in a bold extended grotesk sans-serif (similar to Archivo Expanded Bold), tight but even letter-spacing, confident and modern like the wordmarks of global tech companies.
+Signature detail: the dot of the letter "i" is a small solid square in honey amber (#F4A93C), exactly as wide as the letter stems; every other letter is deep ink navy (#0C1A29).
+No symbol, no tagline, no outline, no gradient, no shadow, no 3D. Flat vector on a plain cool off-white background (#F3F5F7), centered, generous whitespace.
+```
+Variação em caixa alta:
+```text
+Wordmark logo: the word "MIBESS" in uppercase, exact spelling M-I-B-E-S-S, set in an extended grotesk sans-serif, semibold, with wide letter-spacing (about 14% of the type size), followed by a small solid honey-amber (#F4A93C) square used as a period. Letters in deep ink navy (#0C1A29) on a plain cool off-white background (#F3F5F7). Flat vector, no symbol, no tagline, no gradient, no shadow.
+```
+Ícone:
+```text
+App icon: a bold lowercase "m" from an extended grotesk sans-serif in off-white (#F3F5F7), centered in a square with 18% rounded corners filled with deep ink navy (#07111C), with a small solid honey-amber (#F4A93C) square at the upper right of the "m", like the dot of an "i". Flat vector, legible at 16x16 px, no gradients, no text.
 ```
 
-**A.2 Logo horizontal (símbolo + nome)**
+### E · Clássico
+O mesmo nome numa serifa de alto contraste, com o pingo redondo em mel. Tom de consultoria boutique; seria a única serifa do site.
 ```text
-Horizontal logo lockup for the brand "mibess" (software architecture consulting and technical mentoring).
-Left: the symbol, a monoline lowercase "m" built from two adjacent pointy-top hexagons sharing a central wall, with short inward 30-degree cuts at the bottom of the outer stems (open honeycomb cells).
-Right: the wordmark "mibess" in lowercase, exact spelling m-i-b-e-s-s, set in a clean grotesk sans-serif with slightly extended width and medium weight (similar to Archivo SemiExpanded Medium), natural letter-spacing.
-The dot of the letter "i" is a small solid hexagon in honey amber (#F4A93C); everything else is deep ink navy (#0C1A29).
-The symbol is as tall as the wordmark's ascender height and sits on the same baseline, with clear space between them.
-Flat vector, plain cool off-white background (#F3F5F7), no gradients, no shadows, no tagline, lots of whitespace.
-```
-Variações (acrescente ao fim do prompt):
-- Com descritor: `Add below the wordmark, left-aligned with it, a small tracked uppercase descriptor in slate gray (#556274): CONSULTORIA · MENTORIA`
-- Versão escura: `Same lockup in off-white (#F3F5F7) on deep ink navy (#07111C); the dot of the "i" stays honey amber.`
-
-**A.3 Ícone (favicon, avatar, app)**
-```text
-App icon for the brand "mibess": the monoline honeycomb lowercase "m" (two adjacent pointy-top hexagons sharing a central wall, short inward cuts at the bottom of the outer stems) in off-white (#F3F5F7), centered in a square with 18% rounded corners filled with deep ink navy (#07111C). A tiny solid honey-amber (#F4A93C) hexagon floats above the central stem. Stroke heavy enough to read at 16x16 px. Flat vector, no gradients, no text, no shadow.
+Wordmark logo for "mibess", a premium consulting and mentoring brand.
+The word "mibess" in lowercase, exact spelling m-i-b-e-s-s, set in an elegant high-contrast serif typeface (similar to Fraunces or Libre Caslon Display), refined spacing, timeless and sophisticated like a boutique advisory firm.
+Signature detail: the dot of the letter "i" is a small solid circle in honey amber (#F4A93C); all other letters in deep ink navy (#0C1A29).
+No symbol, no tagline, no ornaments, no gradient, no shadow. Flat vector on a plain cool off-white background (#F3F5F7), centered, generous whitespace.
 ```
 
-### Conceito B: "Ponte"
-
-O "m" minúsculo tem dois arcos, como os vãos de uma ponte. Consultoria e mentoria são pontes entre onde a empresa ou a pessoa está e onde quer chegar, e entre negócio e tecnologia.
-**Atenção:** nunca usar amarelo/âmbar neste conceito. Dois arcos amarelos remetem ao McDonald's.
+### F · Selo técnico
+Carimbo circular, como o de aprovação em pranchas de engenharia, com "desde 2010". Melhor como peça complementar (propostas, certificados, LinkedIn) do que como logo do topo do site.
 ```text
-Minimal logo symbol for "mibess", a consulting and technical mentoring brand.
-A lowercase "m" drawn as one continuous monoline that forms two shallow structural arches, like the spans of a modern bridge: the line starts at the bottom left as a vertical pier, rises into two equal arches with a shared central pier, and finishes on the right with a short horizontal deck line that extends beyond the letter, suggesting a bridge between two sides.
-Engineering-drawing precision, thin uniform stroke, deep ink navy (#0C1A29) on plain cool off-white (#F3F5F7).
-Flat vector, no fill, no gradients, no shadows, no text, centered, generous whitespace, legible at 16 px.
-Avoid: rounded golden arches, yellow or red colors, anything resembling fast-food branding, cursive script.
+Circular technical seal for "mibess", inspired by engineering approval stamps on architectural drawings.
+An outer thin circle and an inner hairline circle; between them, the text "MIBESS · ARQUITETURA DE SOFTWARE · MENTORIA ·" set around the ring in a clean monospaced typeface with wide letter-spacing. In the center, a bold lowercase "m" in an extended grotesk sans-serif with a small solid honey-amber (#F4A93C) square at its upper right, and below it the small text "DESDE 2010".
+Deep ink navy (#0C1A29) on a plain cool off-white background (#F3F5F7). Flat vector, precise, no texture, no distressed effect, no gradients.
 ```
 
-### Conceito C: "Degrau" (evolução da logo atual)
+### Como escolher
+- [ ] O nome é lido de primeira, inclusive pequeno no topo do site.
+- [ ] Funciona em uma cor só, no claro e no escuro.
+- [ ] O ícone continua legível a 16 px.
+- [ ] Combina com a tipografia do site (D) ou cria um contraste intencional (E).
+- [ ] Você se imagina assinando uma proposta para uma big tech com ela.
 
-Mantém a silhueta sólida do "m" atual e o detalhe da haste central que desce abaixo da linha de base, agora refinado como um **degrau**, o "próximo passo" (que já é um tema do seu site). É a opção de maior continuidade.
-```text
-Refined geometric monogram for "mibess": a bold, solid lowercase "m" with three stems and square architectural proportions; the middle stem extends slightly below the baseline, forming a small step. A precise, premium evolution of a blocky pixel-style "m".
-Clean rectangular counters, identical stem widths, subtle 45-degree chamfers on the two outer top corners only.
-Deep ink navy (#0C1A29) on plain cool off-white (#F3F5F7).
-Flat vector, no gradients, no shadows, no text, centered, generous whitespace, legible at 16 px.
-Avoid: pixel-art look, 3D, glow, underscore or cursor symbols, gaming style.
-```
-
-### Como escolher a logo
-
-- [ ] Lê como "m" a 16 px (favicon) e a 32 px.
-- [ ] Funciona em uma cor só (tinta no claro e branco no escuro).
-- [ ] Não lembra marcas conhecidas (McDonald's, Gmail, Medium, Motorola) nem estética de imobiliária ou cripto.
-- [ ] A geometria é simples o bastante para ser redesenhada em SVG com poucos pontos.
-- [ ] O símbolo sozinho funciona como avatar do LinkedIn e do WhatsApp.
-- [ ] Ignore erros de letra no wordmark: o texto final será recomposto de qualquer forma.
-
-**Produção final.** A logo do site não será o PNG gerado. Você escolhe o conceito e a variação; eu redesenho em SVG com geometria exata (grid hexagonal), componho o wordmark em Archivo convertido em curvas e entrego: logo horizontal (clara e escura), símbolo, favicon (ICO/PNG/SVG), `apple-touch-icon` e a imagem de compartilhamento (Open Graph).
+**Depois da escolha** eu entrego: logo horizontal clara e escura em SVG, variação em caixa alta, ícone, favicon (ICO, PNG e SVG), `apple-touch-icon`, a imagem de compartilhamento e, se quiser, o selo F.
 
 ---
 
 ## 2. Retrato profissional
 
-O retrato é a imagem mais importante do site: em consultoria individual, as pessoas contratam **alguém**. O retrato atual (medalhão neon com texto embutido) precisa ser substituído.
+O retrato é a imagem mais importante do site: em consultoria individual, as pessoas contratam **alguém**. O retrato antigo (medalhão neon com texto embutido) já saiu do site.
 
-**Recomendado:** sessão com fotógrafo (briefing em 2.4). **Alternativa:** edição com IA a partir de 3 a 5 fotos reais e recentes suas (de frente e de 3/4, com boa luz, sem óculos escuros). Nos prompts abaixo, a IA é instruída a **não alterar seu rosto**. Se o resultado não se parecer exatamente com você, descarte: um retrato "maquiado" por IA destrói a confiança quando a pessoa te encontra numa call.
+**Decidido: sessão de fotos.** Use o briefing em 2.4. Até as fotos chegarem, o hero mostra uma ficha técnica no lugar do retrato; para ativar a foto, preencha `RETRATO` em `frontend/lib/content.ts`. Os prompts de edição com IA abaixo ficam só como referência e não são necessários.
+
+**Alternativa descartada:** edição com IA a partir das suas fotos (2.1 a 2.3). **Alternativa:** edição com IA a partir de 3 a 5 fotos reais e recentes suas (de frente e de 3/4, com boa luz, sem óculos escuros). Nos prompts abaixo, a IA é instruída a **não alterar seu rosto**. Se o resultado não se parecer exatamente com você, descarte: um retrato "maquiado" por IA destrói a confiança quando a pessoa te encontra numa call.
 
 ### 2.1 Retrato do hero (fundo escuro)
 ```text
@@ -135,7 +106,7 @@ Horizontal 3:2 composition, subject on the right third, calm space on the left.
 No logos, no readable text, no watermark.
 ```
 
-### 2.4 Briefing para fotógrafo (alternativa recomendada)
+### 2.4 Briefing para fotógrafo (decidido)
 - **Objetivo:** retratos para site de consultoria e mentoria, LinkedIn e propostas comerciais.
 - **Figurino:** blazer azul-marinho ou grafite sem estrutura sobre camiseta lisa escura, ou camisa clara sem gravata. Levar duas opções, sem logos.
 - **Fundos:** (1) contínuo escuro azulado ou grafite; (2) contínuo cinza-claro frio; (3) escritório ou coworking com quadro branco.
@@ -226,14 +197,11 @@ A sequence of frosted-glass steps rising gently from left to right; a thin line 
 
 | Arquivo | Onde entra | Proporção · tamanho mínimo | Prioridade |
 |---|---|---|---|
-| `logo-a-simbolo.png` · `logo-a-horizontal.png` · `logo-a-icone.png` | Escolha do conceito A | 1:1 (horizontal ~3:1) · 2048 px | Alta |
-| `logo-b-simbolo.png` · `logo-c-simbolo.png` | Comparação entre conceitos | 1:1 · 2048 px | Média |
-| `retrato-hero-escuro.jpg` | Hero | 4:5 · 1600×2000 | Alta |
-| `retrato-claro.jpg` | Contato, LinkedIn | 4:5 · 1600×2000 | Alta |
-| `retrato-mentoria.jpg` | Atuação / Método | 3:2 · 2400×1600 | Média |
+| Logo | Rodada 2 é tipográfica: eu produzo a partir da sua escolha (D, E ou F) | — | Opcional gerar |
+| Fotos da sessão: `retrato-hero-escuro.jpg`, `retrato-claro.jpg`, `retrato-mentoria.jpg` | Hero, Contato, LinkedIn, Atuação | 4:5 · 1600×2000 e 3:2 · 2400×1600 | Alta |
 | `visual-chave-desktop.jpg` | CTA final, Open Graph, reserva do hero | 16:9 · 2560×1440 | Alta |
 | `visual-chave-mobile.jpg` | Idem, mobile | 9:16 · 1080×1920 | Média |
-| `atuacao-arquitetura.jpg` | Atuação 1 | 4:3 · 1600×1200 | Alta |
-| `atuacao-transformacao.jpg` | Atuação 2 | 4:3 · 1600×1200 | Alta |
-| `atuacao-mentoria.jpg` | Atuação 3 | 4:3 · 1600×1200 | Alta |
+| `atuacao-arquitetura.jpg` | Atuação 1 (hoje: ilustração em linha feita em código) | 4:3 · 1600×1200 | Média |
+| `atuacao-transformacao.jpg` | Atuação 2 (hoje: ilustração em linha feita em código) | 4:3 · 1600×1200 | Média |
+| `atuacao-mentoria.jpg` | Atuação 3 (hoje: ilustração em linha feita em código) | 4:3 · 1600×1200 | Média |
 | `visual-chave-loop.mp4` (opcional) | Fundo do hero | 16:9 · 1920×1080 · 8 s | Baixa |
