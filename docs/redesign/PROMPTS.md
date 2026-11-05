@@ -1,6 +1,9 @@
 # Prompts de imagem e logo: mibess
 
-> Gere estas imagens **antes** da implementação. A direção visual está em [`PROPOSTA.md`](./PROPOSTA.md) (conceito "Arquitetura em Movimento").
+> A direção visual está em [`PROPOSTA.md`](./PROPOSTA.md) (conceito "Arquitetura em Movimento").
+>
+> **Entregues e aplicados:** logo (D · Assinatura), retrato de estúdio, visual-chave desktop e mobile, vídeo em loop (9:16) e a série Atuação.
+> **Ainda opcionais:** retrato em fundo claro, foto de mentoria em ação e um vídeo em loop 16:9 para o desktop. Ver [`PENDENCIAS.md`](./PENDENCIAS.md).
 
 ## Como usar
 

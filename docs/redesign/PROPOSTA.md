@@ -1,8 +1,8 @@
 # Redesign mibess.com.br: "Arquitetura em Movimento"
 
-> **Status (rev. 2):** conceito, paleta e tipografia aprovados. Fases 1 a 3 implementadas no branch
-> `claude/eloquent-bohr-d3k0se` (resultado medido na seção 12). Pendentes: escolha da logo (rodada 2),
-> fotos da sessão e as decisões abertas da seção 11. Prompts em [`PROMPTS.md`](./PROMPTS.md).
+> **Status (rev. 3):** publicado. Conceito, paleta, tipografia e logo D aprovados; fases 1 a 3 implementadas,
+> com retrato de estúdio, visual-chave e série de Atuação integrados (seção 12). O que ainda falta está em
+> [`PENDENCIAS.md`](./PENDENCIAS.md). Prompts em [`PROMPTS.md`](./PROMPTS.md).
 > Medições feitas em 05/11/2026 sobre o build de produção local (Next.js 16), em 1440×900 (desktop) e 390×844 (mobile).
 
 ---
@@ -296,10 +296,10 @@ O conteúdo é preservado. Estes são ajustes de rótulo e posicionamento sem os
 | # | Decisão | Situação |
 |---|---|---|
 | 1 | Conceito "Arquitetura em Movimento", paleta e tipografia | **Aprovados** |
-| 2 | Logo | Rodada 1 (símbolos de traço) descartada. **Rodada 2** com três estilos tipográficos: D Assinatura (recomendada, já aplicada no site como provisória), E Clássico e F Selo técnico. Aguardando escolha |
-| 3 | Retrato | **Sessão de fotos** (briefing em `PROMPTS.md`). Até lá, o hero usa uma ficha técnica |
-| 4 | E-mail | **contato@mibess.com.br** em todo o site |
-| 5 | Agenda online no CTA | Pendente (link do Cal.com ou Calendly) |
+| 2 | Logo | **D · Assinatura** (rodada 2). Rodada 1 descartada. Arquivos finais em `frontend/public/brand` |
+| 3 | Retrato | **Foto de estúdio** entregue e aplicada no hero |
+| 4 | E-mail | **contato@mibess.com.br** (caixa existente) em todo o site |
+| 5 | Agenda online no CTA | Adiada. **Agendamento pelo WhatsApp (16) 99375-4887**, com mensagem pronta |
 | 6 | Versão em inglês | Pendente (fase 5) |
 | 7 | Microcopy | Aplicada no branch conforme a seção 8; revisar no site |
 | 8 | Fases 1 a 3 antes das imagens | **Feito** |
@@ -336,3 +336,12 @@ A altura total não diminuiu: o conteúdo que estava escondido (atuação, méto
 **Verificado com testes automatizados no navegador:** modal de projeto (abre, mostra o projeto certo, trava a rolagem, foco entra e volta, Esc fecha), visualizador de fotos (setas e Esc), "ver detalhes" da trajetória, menu móvel (abre, fecha e rola até a seção), chat (abre e mostra erro claro sem a chave) e movimento reduzido (todo o conteúdo visível, scroll suave desligado).
 
 **Fica para a fase 4:** logo final em SVG após a escolha, fotos da sessão (`RETRATO` em `lib/content.ts`), screenshots reais nas capas dos projetos e, se desejado, a série de imagens de Atuação no lugar das ilustrações em linha.
+
+### Rodada 3: assets e publicação
+
+- **Logo D** convertida em curvas a partir da Archivo expandida: o pingo do "i" é um quadrado em mel com a largura da haste, alinhado ao topo do "b". O site usa o SVG inline (`lib/logo-path.ts`); arquivos para download em `/brand/`.
+- **Retrato de estúdio** no hero, com máscara que funde as bordas ao fundo da cena.
+- **Visual-chave**: imagem 16:9 com deriva lenta no desktop; imagem 9:16 com o vídeo em loop no celular. O vídeo enviado foi recortado no trecho estável (o primeiro segundo montava as linhas) e ganhou um cruzamento de 1 s na emenda, para o loop não saltar (5 s, 198 KB). Fica desligado com movimento reduzido ou economia de dados.
+- **Série Atuação** nos cards, no lugar das ilustrações em linha. O texto "Oi, sou engenheiro de software…" e "Acredito que tecnologia não é só código…" passou a abrir a seção.
+- **Imagem de compartilhamento** com o visual-chave ao fundo e a logo vetorial.
+- Medições após a rodada: CLS 0,000 no desktop e no celular; primeira carga de 0,52 MB no desktop e 0,71 MB no celular (com vídeo, retrato e imagem de fundo); sem erros no console; 19 testes de interação passando.
