@@ -1,69 +1,60 @@
-# Portfolio - Claudemir Custódio
+# mibess.com.br · Claudemir Custódio
 
-Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória profissional, habilidades técnicas e projetos recentes como Desenvolvedor de Sistemas Full Stack.
+Site de consultoria em arquitetura Java & Cloud e mentoria técnica de Claudemir Custódio.
+A direção visual ("Arquitetura em Movimento") e o plano de redesign estão em [`docs/redesign`](../docs/redesign).
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias
 
-Este projeto foi construído com as seguintes tecnologias e frameworks:
+- **[Next.js 16](https://nextjs.org/)** (App Router) e **React 19**
+- **[Tailwind CSS v4](https://tailwindcss.com/)** com tokens próprios em `app/globals.css`
+- **[Motion](https://motion.dev/)** para revelações, transições compartilhadas e elementos ligados ao scroll
+- **[Lenis](https://lenis.darkroom.engineering/)** para o scroll suave (desligado com movimento reduzido)
+- **Archivo** e **JetBrains Mono** via `next/font`
+- **[Google Gemini](https://ai.google.dev/)** no assistente Mibee (`app/api/chat`)
+- **Lucide** e **Simple Icons** para ícones
 
-- **[Next.js](https://nextjs.org/)** (App Router) - Framework React para renderização do lado do servidor e geração de sites estáticos.
-- **[React 19](https://react.dev/)** - Biblioteca JavaScript para construção de interfaces de usuário.
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - Framework de CSS utilitário para estilização rápida e responsiva.
-- **[Lucide React](https://lucide.dev/)** - Biblioteca de ícones modernos adaptáveis.
-- **[Next Themes](https://github.com/pacocoursey/next-themes)** - Gerenciamento e transição de temas (Light/Dark mode).
-- **[Google Generative AI](https://ai.google.dev/)** - Integração com as APIs da inteligência artificial do Google.
-- **[React Markdown](https://github.com/remarkjs/react-markdown)** - Renderização de Markdown no React.
+## Estrutura
 
-## ⚙️ Funcionalidades
+```
+app/
+  page.tsx                 ordem das seções
+  layout.tsx               fontes, metadados e JSON-LD
+  opengraph-image.tsx      imagem de compartilhamento gerada em código
+  icon.tsx, apple-icon.tsx ícones gerados em código
+  api/chat/route.ts        assistente Mibee (Gemini)
+  components/
+    sections/              hero, credibilidade, atuação, cases, método, trajetória,
+                           expertise, projetos, além do código, contato
+    motion/                revelação, frase rotativa, contador, cota, diagramas vivos,
+                           canvas do hero, botão magnético, spotlight
+    ui/                    diálogo acessível e cabeçalho de seção
+lib/
+  content.ts               todos os textos do site
+  projects-data.ts         projetos autorais
+  personal-data.ts         fotos de "Além do código"
+assets/fonts/              fontes estáticas (OFL) usadas nas imagens geradas
+public/videos/             vídeos dos projetos (MP4, 1280 px, sem áudio)
+```
 
-- **Apresentação Profissional:** Resumo da minha carreira, foco de atuação e experiências consistentes (ex: atuação em microsserviços Java, Spring Boot, etc.).
-- **Experiência (MISSION.log):** Timeline detalhada das empresas em que trabalhei (AMcom, Rtools), enfatizando as tecnologias utilizadas.
-- **Habilidades (Skills):** Demonstração interativa e imersiva (estilo terminal) da stack tecnológica que domino (Java, Angular, React, Bancos de Dados, etc.).
-- **Projetos e Interações:** Componentes dinâmicos como os "Insta Stories" (Vida Pessoal) e exibição detalhada de projetos.
-- **Integração Sustentável:** Foco em otimização, design responsivo, e aderência às melhores práticas de UI/UX.
+Para trocar textos, edite `lib/content.ts`. Quando a foto da sessão chegar, preencha `RETRATO` no mesmo arquivo.
 
-## 🛠️ Como executar o projeto localmente
+## Como executar localmente
 
-Para rodar este projeto em sua máquina local, você precisa ter o [Node.js](https://nodejs.org/) instalado. Em seguida, siga os passos abaixo:
+Requer [Node.js](https://nodejs.org/) 20 ou superior.
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/portfolio.git
-   ```
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-2. **Acesse o diretório do projeto:**
-   ```bash
-   cd portfolio/frontend
-   ```
+Abra [http://localhost:3000](http://localhost:3000).
 
-3. **Instale as dependências:**
-   ```bash
-   npm install
-   # ou
-   yarn install
-   # ou
-   pnpm install
-   ```
+O assistente Mibee precisa da variável `GEMINI_API_KEY` (em `.env.local` ou no provedor de hospedagem). Sem ela, o site e o build funcionam normalmente e o chat responde que está indisponível.
 
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   # ou
-   yarn dev
-   # ou
-   pnpm dev
-   ```
+## Contato
 
-5. **Acesse no navegador:**
-   Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado. O portfólio atualiza automaticamente conforme você edita o código (`app/page.tsx`).
-
-## 📬 Contatos e Redes Sociais
-
-Caso queira debater ideias, oportunidades ou dar feedbacks, fique à vontade para entrar em contato:
-
-- **Email:** [c.silverio@live.com](mailto:c.silverio@live.com)
+- **E-mail:** [contato@mibess.com.br](mailto:contato@mibess.com.br)
 - **WhatsApp:** [(16) 99720-0212](https://wa.me/5516997200212)
+- **LinkedIn:** [linkedin.com/in/claudemircustodio](https://www.linkedin.com/in/claudemircustodio)
 - **Localização:** Ribeirão Preto · SP
-
----
-*Este projeto foi inicializado com o [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).*

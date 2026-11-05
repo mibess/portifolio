@@ -1,36 +1,42 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import { JetBrains_Mono, Orbitron } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Archivo, JetBrains_Mono } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./globals.css";
-import { ThemeProvider } from "./provider/theme-provider";
 import { siteMetadata } from "@/lib/site-metadata";
+import { contato, perfil } from "@/lib/content";
+import Providers from "./components/providers";
+import Chat from "./components/chat";
 
-const jetbrainsMono = JetBrains_Mono({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-mono",
+  axes: ["wdth"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
-const orbitron = Orbitron({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Claudemir Custódio",
-  jobTitle: "Full Stack Java Developer",
+  name: perfil.nome,
+  jobTitle: "Consultor em Arquitetura de Software e Mentor Técnico",
   url: siteMetadata.siteUrl,
-  email: "mailto:admin@mibess.com.br",
-  image: `${siteMetadata.siteUrl}/profile.png`,
-  sameAs: [
-    "https://www.linkedin.com/in/claudemircustodio",
-    "https://github.com/mibess",
-    "https://wa.me/5516997200212",
-  ],
+  email: `mailto:${contato.email}`,
+  image: `${siteMetadata.siteUrl}/opengraph-image`,
+  address: { "@type": "PostalAddress", addressLocality: "Ribeirão Preto", addressRegion: "SP", addressCountry: "BR" },
+  knowsAbout: ["Arquitetura de software", "Java", "Spring Boot", "Microsserviços", "AWS", "Angular", "Mentoria técnica"],
+  sameAs: [contato.linkedin, contato.github, contato.whatsappUrl],
   description: siteMetadata.description,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#07111c",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -41,7 +47,7 @@ export const metadata: Metadata = {
   },
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
-  authors: [{ name: siteMetadata.shortTitle, url: "https://www.linkedin.com/in/claudemircustodio" }],
+  authors: [{ name: siteMetadata.shortTitle, url: contato.linkedin }],
   creator: siteMetadata.shortTitle,
   alternates: {
     canonical: "/",
@@ -50,23 +56,14 @@ export const metadata: Metadata = {
     title: siteMetadata.title,
     description: siteMetadata.description,
     url: siteMetadata.siteUrl,
-    siteName: siteMetadata.shortTitle,
+    siteName: "mibess",
     locale: siteMetadata.locale,
     type: "website",
-    images: [
-      {
-        url: siteMetadata.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Claudemir Custódio - Full Stack Java Developer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteMetadata.title,
     description: siteMetadata.description,
-    images: [siteMetadata.ogImage],
   },
   robots: {
     index: true,
@@ -82,64 +79,24 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-import Chat from "@/app/components/chat";
-
-
-
-export default function RootLayout({
-
-  children,
-
-}: Readonly<{
-
-  children: React.ReactNode;
-
-}>) {
-
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-
-    <html lang="pt-BR" className={`${jetbrainsMono.variable} ${orbitron.variable} scroll-smooth`} suppressHydrationWarning>
-
-      <body className="bg-cyber-black text-slate-200 font-mono antialiased overflow-x-hidden selection:bg-neon-cyan selection:text-black">
-
-        <Script
-
-          id="claudemir-custodio-ld-json"
-
+    <html lang="pt-BR" className={`${archivo.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}`}</style>
+        </noscript>
+      </head>
+      <body>
+        <script
           type="application/ld+json"
-
-          strategy="beforeInteractive"
-
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
         />
-
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system" disableTransitionOnChange>
-
-          <div className="scanline"></div>
-
+        <Providers>
           {children}
-
           <Chat />
-
-        </ThemeProvider>
-
+        </Providers>
       </body>
-
     </html>
-
   );
-
 }
-
-// <html lang="pt-BR" suppressHydrationWarning>
-//     <body className={`flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 min-h-screen transition-all duration-300`}>
-//       <ThemeProvider attribute="class" enableSystem defaultTheme="system" disableTransitionOnChange>
-//           <Header />
-//           <main>
-//             {children}
-//           </main>
-//           <Footer />
-//       </ThemeProvider>
-//     </body>
-// </html>

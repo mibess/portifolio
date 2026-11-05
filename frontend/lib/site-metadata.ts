@@ -1,19 +1,20 @@
 export const siteMetadata = {
-  title: "Claudemir Custódio | Java Full Stack | Portfolio v2.0",
+  title: "Claudemir Custódio · Consultoria em Arquitetura Java, Cloud e Mentoria",
   shortTitle: "Claudemir Custódio",
-  description: "Full Stack Java Developer focado em arquitetura Java, Spring Boot, Angular, Cloud AWS e Microsserviços.",
+  description:
+    "Consultoria em arquitetura Java, microsserviços e Cloud AWS, e mentoria técnica para times e profissionais, com experiência em integrações bancárias, setor elétrico e migração para a nuvem.",
   siteUrl: "https://www.mibess.com.br",
   locale: "pt_BR",
-  ogImage: "/logo.png",
   keywords: [
     "Claudemir Custódio",
-    "Full Stack Java",
-    "Desenvolvedor Java",
+    "mibess",
+    "Consultoria de software",
+    "Arquitetura de software",
+    "Mentoria técnica",
+    "Consultor Java",
     "Spring Boot",
-    "Angular",
     "Microsserviços",
     "AWS",
-    "Portfólio de tecnologia",
-    "Curriculo"
-    ],
+    "Angular",
+  ],
 };
