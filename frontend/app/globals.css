@@ -263,30 +263,6 @@
     background-size: 100% 1px;
   }
 
-  /* Logo tipográfica (direção D, provisória até a escolha final) */
-  .logo-wordmark {
-    display: inline-block;
-    font-family: var(--font-display);
-    font-stretch: 125%;
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 1;
-    white-space: nowrap;
-  }
-  .logo-i {
-    position: relative;
-    display: inline-block;
-  }
-  .logo-sq {
-    position: absolute;
-    left: 50%;
-    top: 0.075em;
-    width: 0.135em;
-    height: 0.135em;
-    transform: translateX(-50%);
-    background: var(--color-mel);
-  }
-
   /* Grid de planta */
   .grid-planta {
     background-image:
@@ -428,6 +404,30 @@
   }
   50% {
     opacity: 0.35;
+  }
+}
+
+/* Retrato do hero: esmaece nas bordas para se fundir ao fundo da cena */
+.retrato-mascara {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 60%, transparent 96%), linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 60%, transparent 96%), linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+  mask-composite: intersect;
+}
+
+/* Deriva lenta do visual-chave no desktop (parada com movimento reduzido) */
+@media (min-width: 768px) {
+  .hero-deriva {
+    transform-origin: 72% 50%;
+    animation: deriva 32s ease-in-out infinite alternate;
+  }
+}
+@keyframes deriva {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.08) translate3d(-1.2%, -0.8%, 0);
   }
 }
 

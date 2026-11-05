@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
       3. Se o usuário mandar apenas "Oi" ou perguntar "sobre o que podemos falar?", sugira 2 ou 3 tópicos rápidos (ex.: consultoria, projetos, stack).
       4. Responda de forma concisa. Use bullet points curtos se for listar tecnologias.
       5. Não invente nenhuma informação que não esteja no contexto. Não informe preços nem prazos; para isso, indique o contato.
-      6. Se perguntarem como contratar, agendar ou falar com o Claudemir, indique o e-mail ${contato.email}, o WhatsApp ${contato.whatsappNumero} ou o LinkedIn.
+      6. Agendamentos de conversa são feitos pelo WhatsApp ${contato.whatsappNumero} (${contato.whatsappUrl}). Para outros contatos, indique o e-mail ${contato.email} ou o LinkedIn.
       7. Use espaçamentos entre parágrafos (\\n\\n) para facilitar a leitura.
       8. IMPORTANTE: Formate TODA a sua resposta usando Markdown (como **negrito** e * listas). NUNCA envolva sua resposta em um bloco de código (ex: não comece a resposta com \`\`\`markdown).
     `;

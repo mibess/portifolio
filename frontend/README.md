@@ -55,6 +55,6 @@ O assistente Mibee precisa da variável `GEMINI_API_KEY` (em `.env.local` ou no 
 ## Contato
 
 - **E-mail:** [contato@mibess.com.br](mailto:contato@mibess.com.br)
-- **WhatsApp:** [(16) 99720-0212](https://wa.me/5516997200212)
+- **WhatsApp (agendamentos):** [(16) 99375-4887](https://wa.me/5516993754887)
 - **LinkedIn:** [linkedin.com/in/claudemircustodio](https://www.linkedin.com/in/claudemircustodio)
 - **Localização:** Ribeirão Preto · SP

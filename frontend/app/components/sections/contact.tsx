@@ -1,5 +1,5 @@
 import { ArrowRight, ArrowUpRight, Download, Linkedin, Mail, MessageCircle } from "lucide-react";
-import { SiGithub } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import SectionHeader from "../ui/section-header";
 import Magnetic from "../motion/magnetic";
 import { Reveal, RevealGroup, RevealItem } from "../motion/reveal";
@@ -11,8 +11,6 @@ const icones: Record<string, React.ReactNode> = {
   linkedin: <Linkedin className="h-5 w-5" aria-hidden="true" />,
   github: <SiGithub className="h-5 w-5" aria-hidden="true" />,
 };
-
-const assunto = encodeURIComponent("Conversa sobre consultoria/mentoria");
 
 export default function Contact() {
   return (
@@ -33,8 +31,9 @@ export default function Contact() {
             <p className="mt-4 max-w-[52ch] text-claro-suave">{contatoSecao.resposta}</p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Magnetic>
-                <a href={`mailto:${contato.email}?subject=${assunto}`} className="btn btn-mel">
-                  Iniciar conversa
+                <a href={contato.whatsappAgendar} target="_blank" rel="noopener noreferrer" className="btn btn-mel">
+                  <SiWhatsapp aria-hidden="true" />
+                  Agendar pelo WhatsApp
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Magnetic>

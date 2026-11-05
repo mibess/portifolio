@@ -10,13 +10,18 @@ export function anosDeExperiencia(agora: Date = new Date()): number {
   return agora.getFullYear() - INICIO_CARREIRA;
 }
 
-/** Preencha com o caminho da foto da sessão (ex.: "/images/retrato-hero.jpg") quando ela chegar. */
-export const RETRATO: string | null = null;
+/** Foto da sessão de estúdio usada no hero. Use null para voltar à ficha técnica. */
+export const RETRATO: string | null = "/images/retrato-hero.webp";
+
+const WHATSAPP = "5516993754887";
+const MENSAGEM_AGENDAR = "Olá, Claudemir! Vi seu site e gostaria de agendar uma conversa sobre consultoria/mentoria.";
 
 export const contato = {
   email: "contato@mibess.com.br",
-  whatsappNumero: "(16) 99720-0212",
-  whatsappUrl: "https://wa.me/5516997200212",
+  whatsappNumero: "(16) 99375-4887",
+  whatsappUrl: `https://wa.me/${WHATSAPP}`,
+  /** Agendamento é feito pelo WhatsApp, com mensagem pronta. */
+  whatsappAgendar: `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAGEM_AGENDAR)}`,
   linkedin: "https://www.linkedin.com/in/claudemircustodio",
   github: "https://github.com/mibess",
   curriculo: "/Claudemir_Custodio_CV.pdf",
@@ -215,8 +220,8 @@ export const contatoSecao = {
   texto: "Aberto a novas oportunidades e parcerias de longo prazo. Escolha o canal que preferir e vamos conversar.",
   resposta: "Respondo pessoalmente e costumo agendar uma call rápida para entender contexto, expectativas e próximos passos.",
   canais: [
+    { id: "whatsapp", label: "WhatsApp", valor: contato.whatsappNumero, href: contato.whatsappAgendar, descricao: "Agendamento de conversas e contato rápido." },
     { id: "email", label: "E-mail", valor: contato.email, href: `mailto:${contato.email}`, descricao: "Retorno em até 24h com agenda e próximos passos." },
-    { id: "whatsapp", label: "WhatsApp", valor: contato.whatsappNumero, href: contato.whatsappUrl, descricao: "Para uma conversa rápida." },
     { id: "linkedin", label: "LinkedIn", valor: "in/claudemircustodio", href: contato.linkedin, descricao: "Vamos falar sobre carreira, desafios técnicos e liderança." },
     { id: "github", label: "GitHub", valor: "github.com/mibess", href: contato.github, descricao: "Analise meu código, abra uma issue ou proponha colaboração." },
   ],

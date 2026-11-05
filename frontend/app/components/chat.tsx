@@ -158,11 +158,11 @@ export default function Chat() {
         aria-expanded={aberto}
         aria-controls="mibee-chat"
         aria-label={aberto ? "Fechar o assistente Mibee" : "Abrir o assistente Mibee"}
-        className="chat-gatilho fixed bottom-5 right-5 z-[60] inline-flex h-12 items-center gap-2.5 rounded-full border border-traco bg-tinta pl-4 pr-5 text-[15px] font-semibold text-claro shadow-[0_12px_32px_rgb(7_17_28/0.35)] transition-transform duration-300 ease-saida hover:-translate-y-0.5"
+        className="chat-gatilho fixed bottom-5 right-5 z-[60] inline-flex h-12 w-12 items-center justify-center gap-2.5 rounded-full border border-traco bg-tinta text-[15px] sm:w-auto sm:pl-4 sm:pr-5 font-semibold text-claro shadow-[0_12px_32px_rgb(7_17_28/0.35)] transition-transform duration-300 ease-saida hover:-translate-y-0.5"
         style={{ marginBottom: "env(safe-area-inset-bottom)", marginRight: "env(safe-area-inset-right)" }}
       >
         {aberto ? <X className="h-5 w-5" aria-hidden="true" /> : <MessageSquareText className="h-5 w-5 text-mel" aria-hidden="true" />}
-        <span className={aberto ? "sr-only sm:not-sr-only" : undefined}>{aberto ? "Fechar" : "Pergunte ao Mibee"}</span>
+        <span className="sr-only sm:not-sr-only">{aberto ? "Fechar" : "Pergunte ao Mibee"}</span>
       </button>
 
       <AnimatePresence>

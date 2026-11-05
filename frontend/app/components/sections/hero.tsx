@@ -1,13 +1,12 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import { ArrowRight, Download, Linkedin, MessageCircle } from "lucide-react";
-import { SiGithub } from "@icons-pack/react-simple-icons";
-import HeroCanvas from "../motion/hero-canvas";
+import { Download, Linkedin, MessageCircle } from "lucide-react";
+import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
+import HeroBackdrop from "../motion/hero-backdrop";
 import RotatingWords from "../motion/rotating-words";
 import { RETRATO, bio, contato, perfil, INICIO_CARREIRA } from "@/lib/content";
 
 const atraso = (ms: number) => ({ "--atraso": `${ms}ms` }) as React.CSSProperties;
-
 const palavras = perfil.tituloInicio.join(" ").split(" ");
 
 export default function Hero({ anos }: { anos: number }) {
@@ -19,7 +18,7 @@ export default function Hero({ anos }: { anos: number }) {
 
   return (
     <section id="inicio" aria-labelledby="hero-titulo" className="band-noite relative isolate overflow-hidden">
-      <HeroCanvas />
+      <HeroBackdrop />
       <div className="container-site grid items-center gap-14 pb-[clamp(4rem,8vw,7rem)] pt-[calc(72px+clamp(2.5rem,6vw,5rem))] lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
           <p className="t-eyebrow entrada text-planta" style={atraso(0)}>
@@ -53,9 +52,9 @@ export default function Hero({ anos }: { anos: number }) {
           </p>
 
           <div className="entrada mt-10 flex flex-wrap items-center gap-3" style={atraso(460)}>
-            <a href="#contato" className="btn btn-mel">
-              Agendar conversa
-              <ArrowRight aria-hidden="true" />
+            <a href={contato.whatsappAgendar} target="_blank" rel="noopener noreferrer" className="btn btn-mel">
+              <SiWhatsapp aria-hidden="true" />
+              Agendar pelo WhatsApp
             </a>
             <a href={contato.curriculo} download className="btn btn-linha-escuro">
               Baixar currículo
@@ -80,14 +79,59 @@ export default function Hero({ anos }: { anos: number }) {
           </ul>
         </div>
 
-        <div className="entrada lg:col-span-5" style={atraso(420)}>
-          <Ficha anos={anos} />
+        <div className="entrada lg:col-span-5" style={atraso(240)}>
+          {RETRATO ? <Retrato src={RETRATO} anos={anos} /> : <Ficha anos={anos} />}
         </div>
       </div>
     </section>
   );
 }
 
+/** Retrato da sessão de fotos, esmaecendo no fundo da cena, com a ficha resumida por cima da base. */
+function Retrato({ src, anos }: { src: string; anos: number }) {
+  const dados = [
+    { k: "Desde", v: `${INICIO_CARREIRA} · ${anos} anos` },
+    { k: "Stack", v: "Java · Spring · AWS" },
+    { k: "Base", v: "Ribeirão Preto" },
+  ];
+  return (
+    <figure className="relative mx-auto w-full max-w-[460px] lg:mr-0">
+      <div className="retrato-mascara relative aspect-[4/5] w-full">
+        <Image
+          src={src}
+          alt={`Retrato de ${perfil.nome}`}
+          fill
+          preload
+          quality={80}
+          sizes="(min-width: 1024px) 460px, (min-width: 500px) 460px, 92vw"
+          className="object-cover object-top"
+        />
+      </div>
+      <figcaption className="relative -mt-24 px-2 sm:px-4">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="t-card text-[1.375rem] text-claro">{perfil.nome}</p>
+            <p className="mt-1 font-mono text-xs text-claro-suave">Arquitetura Java & Cloud · Mentoria técnica</p>
+          </div>
+          <span className="flex flex-none items-center gap-2 font-mono text-xs text-mel">
+            <span className="h-1.5 w-1.5 animate-[pulso_2.4s_ease-in-out_infinite] rounded-full bg-mel" aria-hidden="true" />
+            Disponível
+          </span>
+        </div>
+        <dl className="mt-4 grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.25fr)_minmax(0,0.95fr)] gap-px overflow-hidden rounded border border-traco bg-traco">
+          {dados.map((d) => (
+            <div key={d.k} className="min-w-0 bg-noite/85 px-3 py-2.5 backdrop-blur-sm">
+              <dt className="t-eyebrow text-claro-suave">{d.k}</dt>
+              <dd className="mt-1 truncate text-[13px] text-claro">{d.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </figcaption>
+    </figure>
+  );
+}
+
+/** Ficha técnica usada quando não há retrato. */
 function Ficha({ anos }: { anos: number }) {
   const linhas = [
     { k: "Nome", v: perfil.nome },
@@ -99,11 +143,6 @@ function Ficha({ anos }: { anos: number }) {
 
   return (
     <figure className="relative overflow-hidden rounded border border-traco bg-tinta/80 backdrop-blur-sm">
-      {RETRATO ? (
-        <div className="relative aspect-[4/5] w-full">
-          <Image src={RETRATO} alt={`Retrato de ${perfil.nome}`} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
-        </div>
-      ) : null}
       <div className="flex items-center justify-between border-b border-traco px-5 py-3">
         <span className="t-eyebrow text-claro-suave">Ficha técnica</span>
         <span className="flex items-center gap-2 font-mono text-xs text-mel">
@@ -119,9 +158,6 @@ function Ficha({ anos }: { anos: number }) {
           </div>
         ))}
       </dl>
-      <figcaption className="border-t border-traco px-5 py-5 text-[15px] leading-relaxed text-claro-suave">
-        <span className="text-claro">{perfil.apresentacao}</span> {perfil.crenca}
-      </figcaption>
     </figure>
   );
 }
