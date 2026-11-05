@@ -26,16 +26,16 @@ const diagramas: Record<DiagramaId, { largura: number; altura: number; nos: Flow
     nos: [
       { x: 8, y: 20, w: 112, h: 56, titulo: "Monolito", sub: "on-premise" },
       { x: 144, y: 20, w: 112, h: 56, titulo: "Docker", sub: "imagens" },
-      { x: 280, y: 20, w: 112, h: 56, titulo: "AWS", sub: "EC2 · S3 · ECS", destaque: true },
+      { x: 272, y: 20, w: 124, h: 56, titulo: "AWS", sub: "EC2 · S3 · ECS", destaque: true },
       { x: 8, y: 150, w: 112, h: 56, titulo: "Testes", sub: "JUnit" },
       { x: 144, y: 150, w: 112, h: 56, titulo: "CI/CD", sub: "pipelines" },
     ],
     ligacoes: [
       { d: "M120 48 H144" },
-      { d: "M256 48 H280" },
+      { d: "M256 48 H272" },
       { d: "M120 178 H144" },
       { d: "M200 150 V76" },
-      { d: "M256 178 C304 178 336 140 336 76" },
+      { d: "M256 178 C304 178 334 140 334 76" },
     ],
   },
   "tempo-real": {
@@ -43,13 +43,13 @@ const diagramas: Record<DiagramaId, { largura: number; altura: number; nos: Flow
     altura: 220,
     rotulo: "Catracas com cartão e biometria enviando acessos para uma API REST em Spring Boot, exibidos em tempo real em monitores e celulares",
     nos: [
-      { x: 8, y: 82, w: 140, h: 56, titulo: "Catracas", sub: "cartão · biometria" },
+      { x: 4, y: 82, w: 150, h: 56, titulo: "Catracas", sub: "cartão · biometria" },
       { x: 172, y: 82, w: 100, h: 56, titulo: "API REST", sub: "Spring Boot", destaque: true },
       { x: 300, y: 30, w: 92, h: 52, titulo: "Monitores", sub: "React" },
       { x: 300, y: 138, w: 92, h: 52, titulo: "Mobile", sub: "React" },
     ],
     ligacoes: [
-      { d: "M148 110 H172" },
+      { d: "M154 110 H172" },
       { d: "M272 110 C288 110 286 56 300 56" },
       { d: "M272 110 C288 110 286 164 300 164" },
     ],
