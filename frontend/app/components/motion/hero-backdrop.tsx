@@ -7,19 +7,27 @@ const comum = { alt: "", sizes: "100vw", quality: 75, loading: "eager" as const,
 const { props: desktop } = getImageProps({ ...comum, src: "/images/visual-chave-desktop.jpg", width: 1672, height: 941 });
 const { props: celular } = getImageProps({ ...comum, src: "/images/visual-chave-mobile.jpg", width: 941, height: 1672 });
 
+const VIDEO_CELULAR = "/videos/visual-chave-loop.mp4";
+const VIDEO_DESKTOP = "/videos/visual-chave-loop-desktop.mp4";
+
 /**
  * Fundo do hero com o visual-chave "Arquitetura em Movimento".
- * Desktop: imagem 16:9 com deriva lenta. Celular: imagem 9:16 e, por cima, o vídeo em loop.
- * O <picture> faz cada aparelho baixar só a sua imagem. O vídeo não carrega com movimento reduzido ou economia de dados.
+ * Cada aparelho mostra primeiro a sua imagem (16:9 no desktop, 9:16 no celular) e, por cima, o vídeo em loop
+ * no mesmo formato, que aparece com um fade quando começa a tocar. O <picture> faz cada aparelho baixar só a
+ * sua imagem. O vídeo não carrega com movimento reduzido ou economia de dados; aí fica a imagem com deriva lenta.
  */
 export default function HeroBackdrop() {
-  const [video, setVideo] = useState(false);
+  const [video, setVideo] = useState<string | null>(null);
+  const [tocando, setTocando] = useState(false);
 
   useEffect(() => {
     const celularMq = window.matchMedia("(max-width: 767px)");
     const reduzidoMq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const economia = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
-    const atualizar = () => setVideo(celularMq.matches && !reduzidoMq.matches && !economia);
+    const atualizar = () => {
+      setTocando(false);
+      setVideo(reduzidoMq.matches || economia ? null : celularMq.matches ? VIDEO_CELULAR : VIDEO_DESKTOP);
+    };
     atualizar();
     celularMq.addEventListener("change", atualizar);
     reduzidoMq.addEventListener("change", atualizar);
@@ -44,13 +52,15 @@ export default function HeroBackdrop() {
         </picture>
         {video ? (
           <video
-            src="/videos/visual-chave-loop.mp4"
+            key={video}
+            src={video}
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 h-full w-full object-cover object-bottom"
+            onPlaying={() => setTocando(true)}
+            className={`absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-700 md:object-right ${tocando ? "opacity-100" : "opacity-0"}`}
           />
         ) : null}
         <div className="absolute inset-0 bg-noite/35 md:hidden" />

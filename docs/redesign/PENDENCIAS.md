@@ -35,9 +35,12 @@
 | 4 | Bloco de **formatos de trabalho** e frases de NDA e continuidade nas perguntas frequentes | Sim (itens 8 e 9 acima) |
 | 5 | Dados da empresa no rodapé e no JSON-LD | Sim (item 1 acima) |
 | 6 | **Versão em inglês** do site (i18n) | Sim (item 15 acima) |
-| 7 | Vídeo em loop **16:9 para o desktop** | Opcional |
 
 ## Já resolvido
+
+### Vídeo do desktop (06/11/2026)
+
+- **Vídeo em loop 16:9 no hero do desktop**, com emenda sem corte, sem áudio (404 KB) e entrada em fade sobre a imagem; não carrega com movimento reduzido ou economia de dados.
 
 ### Rodada de robustez (05/11/2026)
 

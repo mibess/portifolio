@@ -37,7 +37,7 @@ lib/
   projects-data.ts         projetos autorais
   personal-data.ts         fotos de "Além do código"
 assets/fonts/              fontes estáticas (OFL) usadas nas imagens geradas
-public/videos/             vídeos dos projetos (MP4, 1280 px, sem áudio)
+public/videos/             vídeos dos projetos e do hero (MP4, sem áudio)
 ```
 
 Para trocar textos, edite `lib/content.ts`. Quando a foto da sessão chegar, preencha `RETRATO` no mesmo arquivo.
